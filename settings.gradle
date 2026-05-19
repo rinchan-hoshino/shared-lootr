@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.neoforged.net/releases' }
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        maven { url = 'https://maven.neoforged.net/releases' }
+        maven { url = 'https://api.modrinth.com/maven' }
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'shared-lootr'
+include 'neoforge'
