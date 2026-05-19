@@ -21,13 +21,13 @@ public abstract class LootrSavedDataMixin {
     private Map<UUID, LootrInventory> inventories;
 
     @Inject(method = "getInventory(Ljava/util/UUID;)Lnoobanidus/mods/lootr/common/data/LootrInventory;", at = @At("HEAD"), cancellable = true, remap = false)
-    private void sharedLootr$getSharedInventory(UUID playerId, CallbackInfoReturnable<LootrInventory> cir) {
+    private void sharedLootr$getSharedInventory(UUID ignoredPlayerId, CallbackInfoReturnable<LootrInventory> cir) {
         LootrInventory shared = inventories.get(SHARED_LOOTR_INVENTORY_ID);
-        if (shared == null && playerId != null) {
-            shared = inventories.get(playerId);
-            if (shared != null) {
-                inventories.put(SHARED_LOOTR_INVENTORY_ID, shared);
-            }
+        if (shared == null && !inventories.isEmpty()) {
+            shared = inventories.values().iterator().next();
+            inventories.clear();
+            inventories.put(SHARED_LOOTR_INVENTORY_ID, shared);
+            ((LootrSavedData) (Object) this).markChanged();
         }
         if (shared != null) {
             shared.setInfo((LootrSavedData) (Object) this);
@@ -40,6 +40,8 @@ public abstract class LootrSavedDataMixin {
         LootrInventory created = cir.getReturnValue();
         if (created != null) {
             inventories.put(SHARED_LOOTR_INVENTORY_ID, created);
+            inventories.remove(player.getUUID());
+            ((LootrSavedData) (Object) this).markChanged();
         }
     }
 }
