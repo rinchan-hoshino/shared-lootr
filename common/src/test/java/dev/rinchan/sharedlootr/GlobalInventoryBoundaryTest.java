@@ -13,12 +13,14 @@ class GlobalInventoryBoundaryTest {
     void everyLootrInventoryLookupUsesOneServerGlobalOwner() throws IOException {
         String source = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/LootrSavedDataMixin.java");
         assertTrue(source.contains("method = \"getInventory"));
+        assertTrue(source.contains("inventories.get(GLOBAL_INVENTORY_OWNER)"));
         assertTrue(source.contains("selectCanonicalInventory()"));
-        assertTrue(source.contains("inventories.size() > 1"));
-        assertTrue(source.contains("inventories.put(owner, inventory)"));
+        assertTrue(source.contains("inventories.put(GLOBAL_INVENTORY_OWNER, inventory)"));
         assertTrue(source.contains("occupiedSlots(candidate.getValue())"));
         assertTrue(source.contains("cir.setReturnValue(inventory)"));
-        assertFalse(source.contains("@ModifyArg"));
+        assertTrue(source.contains("@ModifyArg"));
+        assertTrue(source.contains("return GLOBAL_INVENTORY_OWNER"));
+        assertFalse(source.contains("inventories.clear()"));
         assertFalse(source.contains("inventories.remove(player.getUUID())"));
     }
 

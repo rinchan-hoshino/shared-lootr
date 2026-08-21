@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LootrSavedData.class)
@@ -24,19 +25,28 @@ public abstract class LootrSavedDataMixin {
             remap = false
     )
     private void sharedLootr$getGlobalInventory(UUID ignoredPlayerId, CallbackInfoReturnable<LootrInventory> cir) {
-        Map.Entry<UUID, LootrInventory> canonical = selectCanonicalInventory();
-        if (canonical == null) {
-            return;
-        }
-        UUID owner = canonical.getKey();
-        LootrInventory inventory = canonical.getValue();
-        if (inventories.size() > 1) {
-            inventories.clear();
-            inventories.put(owner, inventory);
+        LootrInventory inventory = inventories.get(GLOBAL_INVENTORY_OWNER);
+        if (inventory == null) {
+            Map.Entry<UUID, LootrInventory> legacy = selectCanonicalInventory();
+            if (legacy == null) {
+                return;
+            }
+            inventory = legacy.getValue();
+            inventories.put(GLOBAL_INVENTORY_OWNER, inventory);
             ((LootrSavedData) (Object) this).markChanged();
         }
         inventory.setInfo((LootrSavedData) (Object) this);
         cir.setReturnValue(inventory);
+    }
+
+    @ModifyArg(
+            method = "createInventory(Lnoobanidus/mods/lootr/common/api/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/LootFiller;)Lnoobanidus/mods/lootr/common/data/LootrInventory;",
+            at = @At(value = "INVOKE", target = "Ljava/util/Map;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"),
+            index = 0,
+            remap = false
+    )
+    private Object sharedLootr$storeNewInventoryGlobally(Object ignoredPlayerId) {
+        return GLOBAL_INVENTORY_OWNER;
     }
 
     private Map.Entry<UUID, LootrInventory> selectCanonicalInventory() {
