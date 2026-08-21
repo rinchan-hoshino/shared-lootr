@@ -5,8 +5,8 @@ Shared Lootr is a small NeoForge addon for Lootr.
 ## Behavior
 
 - All players see and modify the same stored contents for each Lootr container.
-- Preserves Lootr's container conversion, loot generation, menu opening, lid behavior, opener tracking, and update packets.
-- If `LootrHasBeenOpened` is true, the client treats the container as opened for Lootr's unopened visual feedback.
+- Preserves Lootr's container conversion, loot generation, menu opening, lid behavior, and opener tracking.
+- The first open broadcasts Lootr's persistent `LootrHasBeenOpened` marker to every tracking client, so unopened visual feedback is shared instead of per-player.
 
 ## Supported target
 
@@ -17,5 +17,5 @@ Shared Lootr is a small NeoForge addon for Lootr.
 ## Build
 
 ```bash
-./gradlew :neoforge:build
+./gradlew test :neoforge:build
 ```
