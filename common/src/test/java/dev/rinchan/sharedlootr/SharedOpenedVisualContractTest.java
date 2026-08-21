@@ -29,7 +29,8 @@ class SharedOpenedVisualContractTest {
     void openedRenderingUsesOnlyTheGlobalMarkerAndNeverThePlayerUuid() throws IOException {
         String source = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/ClientOpenersMixin.java");
         assertTrue(source.contains("IClientOpeners.class"));
-        assertTrue(source.contains("method = \"hasClientOpened\""));
+        assertTrue(source.contains("public interface ClientOpenersMixin"));
+        assertTrue(source.contains("method = \"hasClientOpened(Ljava/util/UUID;)Z\""));
         assertTrue(source.contains("self.isClientOpened()"));
         assertTrue(source.contains("UUID ignoredPlayerId"));
 
