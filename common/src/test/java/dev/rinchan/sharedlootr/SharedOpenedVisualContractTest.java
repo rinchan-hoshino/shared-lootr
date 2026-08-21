@@ -25,6 +25,18 @@ class SharedOpenedVisualContractTest {
         assertTrue(mixins.contains("\"LootrBlockEntityMixin\""));
     }
 
+    @Test
+    void openedRenderingUsesOnlyTheGlobalMarkerAndNeverThePlayerUuid() throws IOException {
+        String source = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/ClientOpenersMixin.java");
+        assertTrue(source.contains("IClientOpeners.class"));
+        assertTrue(source.contains("method = \"hasClientOpened\""));
+        assertTrue(source.contains("self.isClientOpened()"));
+        assertTrue(source.contains("UUID ignoredPlayerId"));
+
+        String mixins = readSource("common/src/main/resources/shared_lootr.mixins.json");
+        assertTrue(mixins.contains("\"ClientOpenersMixin\""));
+    }
+
     private static String readSource(String relative) throws IOException {
         Path current = Path.of("").toAbsolutePath();
         while (current != null) {
