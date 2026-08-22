@@ -40,7 +40,7 @@ public abstract class LootrSavedDataMixin {
     }
 
     @ModifyArg(
-            method = "createInventory(Lnoobanidus/mods/lootr/common/api/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/LootFiller;)Lnoobanidus/mods/lootr/common/data/LootrInventory;",
+            method = "createInventory(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/data/LootFiller;)Lnoobanidus/mods/lootr/common/data/LootrInventory;",
             at = @At(value = "INVOKE", target = "Ljava/util/Map;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"),
             index = 0,
             remap = false

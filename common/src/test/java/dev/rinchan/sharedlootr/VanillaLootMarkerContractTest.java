@@ -18,6 +18,10 @@ class VanillaLootMarkerContractTest {
         assertTrue(savedData.contains("LootrSavedData"));
         assertTrue(savedData.contains("GLOBAL_INVENTORY_OWNER"));
         assertTrue(savedData.contains("createInventory"));
+        assertTrue(savedData.contains("common/api/data/ILootrInfoProvider"));
+        assertTrue(savedData.contains("common/api/data/LootFiller"));
+        assertFalse(savedData.contains("common/api/ILootrInfoProvider"));
+        assertFalse(savedData.contains("common/api/LootFiller"));
         assertTrue(savedData.contains("selectCanonicalInventory"));
         assertTrue(openers.contains("IClientOpeners"));
         assertTrue(openers.contains("self.isClientOpened()"));
