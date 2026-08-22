@@ -30,7 +30,11 @@ class VanillaLootMarkerContractTest {
         assertTrue(instance.contains("clientOpened = tag.getBoolean"));
         assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
         assertTrue(instance.contains("ci.cancel()"));
-        assertTrue(openBroadcast.contains("handleProviderOpen"));
+        assertTrue(openBroadcast.contains(
+                "handleProviderOpen(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;"
+                        + "Lnet/minecraft/server/level/ServerPlayer;"
+                        + "Lnoobanidus/mods/lootr/common/api/MenuBuilder;)V"
+        ));
         assertTrue(openBroadcast.contains("provider.performOpen()"));
     }
 
