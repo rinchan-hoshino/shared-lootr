@@ -4,11 +4,9 @@
   "package": "dev.rinchan.sharedlootr.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ChestBlockEntityMixin",
-    "RandomizableContainerBlockEntityMixin"
-  ],
-  "client": [
-    "client.ChestRendererMixin"
+    "ClientOpenersMixin",
+    "LootrSavedDataMixin",
+    "SimpleLootrInstanceMixin"
   ],
   "injectors": {
     "defaultRequire": 1

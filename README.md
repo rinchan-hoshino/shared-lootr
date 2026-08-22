@@ -1,15 +1,14 @@
 # Shared Lootr
 
-Shared Lootr keeps generated vanilla loot chests globally shared while reusing Lootr's own chest materials for their visual state.
+Shared Lootr is a thin compatibility layer for Lootr. Lootr remains the sole owner of container conversion, block entities, menus, renderers, models, textures, particles, packets, and persistence; this project changes only inventory and opened-state ownership from per-player to global.
 
 ## Behavior
 
-- Generated vanilla chests retain vanilla one-inventory loot generation, so all players see the same remaining contents.
-- The chest stores one global opened marker and broadcasts its first transition to tracking clients.
-- Unopened and opened chests use Lootr's own current or old chest materials according to Lootr's texture setting.
-- Trapped loot chests use Lootr's matching trapped variants.
-- No custom icon, billboard, overlay, particle, or texture is rendered.
-- Ordinary player-placed chests remain vanilla.
+- Lootr converts supported generated chests, trapped chests, barrels, shulker boxes, minecarts, and tagged custom inventories through its native paths.
+- Every player sees and modifies the same inventory for a given Lootr container.
+- Opening a container once marks it opened globally while preserving Lootr's native unopened and opened visuals.
+- Existing per-player Lootr inventories are retained; the populated canonical inventory becomes the shared one on first access.
+- No vanilla container mixin, custom block entity, renderer, model, texture, particle, or packet is provided here.
 
 ## Compatibility target
 
