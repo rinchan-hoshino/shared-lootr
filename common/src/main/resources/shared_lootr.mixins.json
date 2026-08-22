@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ClientOpenersMixin",
+    "DefaultLootrAPIImplMixin",
     "LootrSavedDataMixin",
     "SimpleLootrInstanceMixin"
   ],

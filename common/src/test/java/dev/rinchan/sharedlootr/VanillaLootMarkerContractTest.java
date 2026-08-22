@@ -14,6 +14,7 @@ class VanillaLootMarkerContractTest {
         String savedData = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/LootrSavedDataMixin.java");
         String openers = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/ClientOpenersMixin.java");
         String instance = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/SimpleLootrInstanceMixin.java");
+        String openBroadcast = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/DefaultLootrAPIImplMixin.java");
 
         assertTrue(savedData.contains("LootrSavedData"));
         assertTrue(savedData.contains("GLOBAL_INVENTORY_OWNER"));
@@ -26,6 +27,11 @@ class VanillaLootMarkerContractTest {
         assertTrue(openers.contains("IClientOpeners"));
         assertTrue(openers.contains("self.isClientOpened()"));
         assertTrue(instance.contains("NBTConstants.HAS_BEEN_OPENED"));
+        assertTrue(instance.contains("clientOpened = tag.getBoolean"));
+        assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
+        assertTrue(instance.contains("ci.cancel()"));
+        assertTrue(openBroadcast.contains("handleProviderOpen"));
+        assertTrue(openBroadcast.contains("provider.performOpen()"));
     }
 
     @Test
@@ -34,6 +40,7 @@ class VanillaLootMarkerContractTest {
         assertTrue(mixins.contains("LootrSavedDataMixin"));
         assertTrue(mixins.contains("ClientOpenersMixin"));
         assertTrue(mixins.contains("SimpleLootrInstanceMixin"));
+        assertTrue(mixins.contains("DefaultLootrAPIImplMixin"));
         assertFalse(mixins.contains("ChestBlockEntityMixin"));
         assertFalse(mixins.contains("RandomizableContainerBlockEntityMixin"));
         assertFalse(mixins.contains("ChestRendererMixin"));
