@@ -1,3 +1,3 @@
 {
-  "modmenu.descriptionTranslation.shared_lootr": "Makes Lootr containers share one loot inventory while keeping Lootr's opened marker behavior."
+  "modmenu.descriptionTranslation.shared_lootr": "Keeps generated vanilla loot chests globally shared and renders their unopened and opened states with Lootr's own chest materials."
 }

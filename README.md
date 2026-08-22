@@ -1,16 +1,15 @@
 # Shared Lootr
 
-Shared Lootr keeps Lootr's gold-trimmed world-generation containers while replacing its per-player semantics with one server-global state per container.
+Shared Lootr keeps generated vanilla loot chests globally shared while reusing Lootr's own chest materials for their visual state.
 
 ## Behavior
 
-- Lootr still converts and renders its gold-trimmed chest, barrel, shulker, decorated-pot, and brushable container variants.
-- Each converted container generates exactly one loot inventory from the first legitimate opener's loot context.
-- Every later player opens that same persisted inventory; no player UUID owns a second loot roll.
-- The server persists one `hasBeenOpened` marker and broadcasts its first transition to every tracking client.
-- Client rendering answers `hasClientOpened(...)` only from that global marker and ignores the queried player UUID.
-- Existing saves with player-keyed inventories migrate one existing inventory to the global owner on first access.
-- Physical lid animation and concurrent viewers remain Lootr-managed.
+- Generated vanilla chests retain vanilla one-inventory loot generation, so all players see the same remaining contents.
+- The chest stores one global opened marker and broadcasts its first transition to tracking clients.
+- Unopened and opened chests use Lootr's own current or old chest materials according to Lootr's texture setting.
+- Trapped loot chests use Lootr's matching trapped variants.
+- No custom icon, billboard, overlay, particle, or texture is rendered.
+- Ordinary player-placed chests remain vanilla.
 
 ## Compatibility target
 
