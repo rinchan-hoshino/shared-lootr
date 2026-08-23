@@ -12,7 +12,6 @@ class VanillaLootMarkerContractTest {
     @Test
     void sharingInterceptsOnlyLootrInventoryOwnership() throws Exception {
         String savedData = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/LootrSavedDataMixin.java");
-        String openers = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/ClientOpenersMixin.java");
         String instance = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/SimpleLootrInstanceMixin.java");
         String openBroadcast = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/DefaultLootrAPIImplMixin.java");
 
@@ -24,8 +23,6 @@ class VanillaLootMarkerContractTest {
         assertFalse(savedData.contains("common/api/ILootrInfoProvider"));
         assertFalse(savedData.contains("common/api/LootFiller"));
         assertTrue(savedData.contains("selectCanonicalInventory"));
-        assertTrue(openers.contains("IClientOpeners"));
-        assertTrue(openers.contains("self.isClientOpened()"));
         assertTrue(instance.contains("NBTConstants.HAS_BEEN_OPENED"));
         assertTrue(instance.contains("clientOpened = tag.getBoolean"));
         assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
@@ -35,6 +32,9 @@ class VanillaLootMarkerContractTest {
                         + "Lnet/minecraft/server/level/ServerPlayer;"
                         + "Lnoobanidus/mods/lootr/common/api/MenuBuilder;)V"
         ));
+        assertTrue(openBroadcast.contains("addOpener(Lnet/minecraft/world/entity/player/Player;)Z"));
+        assertTrue(openBroadcast.contains("boolean added = provider.addOpener(player)"));
+        assertTrue(openBroadcast.contains("if (!added)"));
         assertTrue(openBroadcast.contains("provider.performOpen()"));
     }
 
@@ -42,7 +42,6 @@ class VanillaLootMarkerContractTest {
     void lootrRemainsTheOnlyContainerAndRendererOwner() throws Exception {
         String mixins = readSource("common/src/main/resources/shared_lootr.mixins.json");
         assertTrue(mixins.contains("LootrSavedDataMixin"));
-        assertTrue(mixins.contains("ClientOpenersMixin"));
         assertTrue(mixins.contains("SimpleLootrInstanceMixin"));
         assertTrue(mixins.contains("DefaultLootrAPIImplMixin"));
         assertFalse(mixins.contains("ChestBlockEntityMixin"));
