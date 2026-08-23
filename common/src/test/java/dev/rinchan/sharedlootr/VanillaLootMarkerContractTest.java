@@ -39,6 +39,23 @@ class VanillaLootMarkerContractTest {
     }
 
     @Test
+    void jadeStopsCallingGeneratedSharedLootUnopened() throws Exception {
+        String integration = readSource(
+                "common/src/main/java/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java"
+        );
+
+        assertTrue(integration.contains("registration.registerBlockDataProvider"));
+        assertTrue(integration.contains("BlockEntity.class"));
+        assertTrue(integration.contains("instanceof ILootrInfoProvider provider"));
+        assertTrue(integration.contains("provider.hasBeenOpened()"));
+        assertTrue(integration.contains("tag.remove(\"Loot\")"));
+        assertTrue(integration.contains("return 1100"));
+        assertFalse(integration.contains("LootrAPI.getData"));
+        assertFalse(integration.contains("LootrAPI.getInventory"));
+        assertFalse(integration.contains("tooltip.remove"));
+    }
+
+    @Test
     void lootrRemainsTheOnlyContainerAndRendererOwner() throws Exception {
         String mixins = readSource("common/src/main/resources/shared_lootr.mixins.json");
         assertTrue(mixins.contains("LootrSavedDataMixin"));
