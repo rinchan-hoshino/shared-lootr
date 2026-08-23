@@ -16,8 +16,9 @@ class PublishedVersionContractTest {
             properties.load(reader);
         }
         String version = properties.getProperty("mod_version");
-        assertEquals("1.1.0", version);
+        assertEquals("1.1.1", version);
         assertFalse(version.contains("private"));
+        assertEquals("GPL-3.0-or-later", properties.getProperty("mod_license"));
     }
 
     private static Path findProjectFile(String relative) {

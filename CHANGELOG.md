@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+### Fixed
+
+- Align packaged mod metadata with the repository's GPL-3.0-or-later license.
+
 ## 1.1.0
 
 ### Changed
