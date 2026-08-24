@@ -3,8 +3,8 @@ package dev.rinchan.sharedlootr;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import dev.rinchan.rinlib.state.SharedOwnerState;
 import dev.rinchan.sharedlootr.mixin.LootrSavedDataMixin;
-import dev.rinchan.sharedlootr.state.SharedInventoryState;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +21,7 @@ class SharedInventoryStateTest {
         inventories.put(UUID.randomUUID(), null);
         assertFalse(state.sharedLootr$hasSharedInventory());
 
-        inventories.put(SharedInventoryState.GLOBAL_INVENTORY_OWNER, null);
+        inventories.put(SharedOwnerState.OWNER, null);
         assertTrue(state.sharedLootr$hasSharedInventory());
     }
 

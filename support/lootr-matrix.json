@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-24",
+  "coverageRule": "Every Minecraft-version and loader combination listed by Lootr on Modrinth, plus CurseForge's 26.1.1 compatibility alias; snapshots are included.",
+  "sources": {
+    "modrinthProject": "https://modrinth.com/mod/lootr",
+    "modrinthProjectId": "EltpO5cN",
+    "curseForgeForgeNeoForgeProjectId": 361276,
+    "curseForgeFabricProjectId": 615106,
+    "upstreamSource": "https://github.com/LootrMinecraft/Lootr"
+  },
+  "labelCount": 33,
+  "cellCount": 60,
+  "targets": [
+    {
+      "gameVersion": "1.12.2",
+      "loader": "forge",
+      "stability": "release",
+      "era": "legacy_1_12",
+      "releaseLine": "1.12.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "fTrJqmfv",
+        "versionNumber": "0.6.2",
+        "fileName": "lootr-1.12.2-0.6.2.jar",
+        "sha512": "cf15857809c317c3c1683b6fa7c3528f490ea9bb9b9b1eb225d199c1fc254e8c36b376e4968d86ddaf14632c02c789bf32ed57841e77381d74a8d120d1614f91"
+      },
+      "evidence": "modrinth:fTrJqmfv",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.16.4",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.16.5",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "3chnbfTW",
+        "versionNumber": "0.1.15.46",
+        "fileName": "lootr-1.16.5-0.2.18.49.jar",
+        "sha512": "004de597bec2f8d353e0f65eb3571936d5c7719807b0c45670585513cf577467af18b9255a4352234b66475f8210a0d8b6b0e6b4328ea79ef297d9bd57c26f23"
+      },
+      "evidence": "modrinth:3chnbfTW",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.16.5",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.16.5",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "msdGS3NS",
+        "versionNumber": "0.2.19.51",
+        "fileName": "lootr-1.16.5-0.2.19.52.jar",
+        "sha512": "4fc7ed42d6f53abd862044c597aeb3202f3ee52497667d21957392b0a767cab0b4e62329acc6fcae1184df7dad72b53af95c3a3e4f8eecffea7316ebcce97e9b"
+      },
+      "evidence": "modrinth:msdGS3NS",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.17.1",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.17.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "zemwxYHC",
+        "versionNumber": "0.0.10.31",
+        "fileName": "lootr-1.17.1-0.0.11.32.jar",
+        "sha512": "ba4aa0f44deba1b15c0d534509c357b16f498dfaed69b80e32e7eaf4087b49b949c4a8dcd7844b6f626434cfce54b6355f380e8f0d2c5868d0819f8f821ee7ea"
+      },
+      "evidence": "modrinth:zemwxYHC",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "5k9iUxGP",
+        "versionNumber": "0.2.23.60",
+        "fileName": "lootr-1.18-0.2.23.60.jar",
+        "sha512": "f7fd6dc15e1497a4ec97644d56a82c29da415dda9c435eae273bca490fd37e6d2cf81faf0020a078d122b75b5aa270adbad6d8cf4b4d98566918db0d4b97f283"
+      },
+      "evidence": "modrinth:5k9iUxGP",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "z6mkEaZp",
+        "versionNumber": "0.3.24.61",
+        "fileName": "lootr-1.18.2-0.3.24.61.jar",
+        "sha512": "6423a14c557d5310bc7d718591c20e16e1be1ff4c71fd38f7527b0fe40c5672429bc85bf2b233f59d203fa66ad28c0f5a5d831e2977d3f8b816e78c1787d5cab"
+      },
+      "evidence": "modrinth:z6mkEaZp",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18.1",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "5k9iUxGP",
+        "versionNumber": "0.2.23.60",
+        "fileName": "lootr-1.18-0.2.23.60.jar",
+        "sha512": "f7fd6dc15e1497a4ec97644d56a82c29da415dda9c435eae273bca490fd37e6d2cf81faf0020a078d122b75b5aa270adbad6d8cf4b4d98566918db0d4b97f283"
+      },
+      "evidence": "modrinth:5k9iUxGP",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "z6mkEaZp",
+        "versionNumber": "0.3.24.61",
+        "fileName": "lootr-1.18.2-0.3.24.61.jar",
+        "sha512": "6423a14c557d5310bc7d718591c20e16e1be1ff4c71fd38f7527b0fe40c5672429bc85bf2b233f59d203fa66ad28c0f5a5d831e2977d3f8b816e78c1787d5cab"
+      },
+      "evidence": "modrinth:z6mkEaZp",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18.2",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "LQP5jrCT",
+        "versionNumber": "0.3.30.74",
+        "fileName": "lootr-forge-1.18.2-0.3.30.74.jar",
+        "sha512": "8652196c2185e71685868f50344d75f9183e663365bc5caa728e0c679700ece1953688fc341fd708911dd71c1d04957afd8d25184584e33ae1f36a31a0772d2a"
+      },
+      "evidence": "modrinth:LQP5jrCT",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.18.2",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.18.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "w2hEo5la",
+        "versionNumber": "0.3.28.65",
+        "fileName": "lootr-1.18.2-0.3.28.65.jar",
+        "sha512": "80f94e7dfc77a6e3f724be8bba946d9cf7dd2dd7c87c71c0bee9700b6da2350b2ec7ac3557d6f4e08a3fb1c67091cd8d255ca48ed945c1aa05dc8c8a9f1c425e"
+      },
+      "evidence": "modrinth:w2hEo5la",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "6ULhni05",
+        "versionNumber": "0.4.28.75",
+        "fileName": "lootr-forge-1.19-0.4.29.76.jar",
+        "sha512": "d5587b26a675ceb01c6c22918deec45a0ce91da75dd1a8b6d54d0697820c553737177be7608284ca72ab2d1f72543e43038cc1b1113f2b12d543559cff2ddae7"
+      },
+      "evidence": "modrinth:6ULhni05",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "7WyuvACZ",
+        "versionNumber": "0.4.29.72",
+        "fileName": "lootr-fabric-1.19-0.4.29.72.jar",
+        "sha512": "d6a8cb55863cb67d3116e33c7aa85389c152ee7ac42262136756b874c505e0a42b82ca227b264102bf7879f0ade42570bcb1f6244ae26676539ede511b639fe0"
+      },
+      "evidence": "modrinth:7WyuvACZ",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "22w24a",
+      "loader": "fabric",
+      "stability": "snapshot",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "RXVA6nvn",
+        "versionNumber": "0.3.20.58",
+        "fileName": "lootr-1.19-0.3.20.58.jar",
+        "sha512": "447f3108e54cf961f0a932bfe28c4fa25eb870f26682a85363a171fb27dae8b6f93048c6c17044f6264f91f8c0b662de10f25565cf63be10ec4c4394a9193741"
+      },
+      "evidence": "modrinth:RXVA6nvn",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.1",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "6ULhni05",
+        "versionNumber": "0.4.28.75",
+        "fileName": "lootr-forge-1.19-0.4.29.76.jar",
+        "sha512": "d5587b26a675ceb01c6c22918deec45a0ce91da75dd1a8b6d54d0697820c553737177be7608284ca72ab2d1f72543e43038cc1b1113f2b12d543559cff2ddae7"
+      },
+      "evidence": "modrinth:6ULhni05",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "7WyuvACZ",
+        "versionNumber": "0.4.29.72",
+        "fileName": "lootr-fabric-1.19-0.4.29.72.jar",
+        "sha512": "d6a8cb55863cb67d3116e33c7aa85389c152ee7ac42262136756b874c505e0a42b82ca227b264102bf7879f0ade42570bcb1f6244ae26676539ede511b639fe0"
+      },
+      "evidence": "modrinth:7WyuvACZ",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.2",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "6ULhni05",
+        "versionNumber": "0.4.28.75",
+        "fileName": "lootr-forge-1.19-0.4.29.76.jar",
+        "sha512": "d5587b26a675ceb01c6c22918deec45a0ce91da75dd1a8b6d54d0697820c553737177be7608284ca72ab2d1f72543e43038cc1b1113f2b12d543559cff2ddae7"
+      },
+      "evidence": "modrinth:6ULhni05",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.2",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "7WyuvACZ",
+        "versionNumber": "0.4.29.72",
+        "fileName": "lootr-fabric-1.19-0.4.29.72.jar",
+        "sha512": "d6a8cb55863cb67d3116e33c7aa85389c152ee7ac42262136756b874c505e0a42b82ca227b264102bf7879f0ade42570bcb1f6244ae26676539ede511b639fe0"
+      },
+      "evidence": "modrinth:7WyuvACZ",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.3",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "HmhkyU8X",
+        "versionNumber": "0.7.35.91",
+        "fileName": "lootr-forge-1.20-0.7.35.91.jar",
+        "sha512": "9b576ec6008a5c86ce9ea218285bc133f49e9eaf8f4b854fa49170a9cc3c8de028b236f2e563493405732277fd1d2909520d5961076b3ddbffcb0c7c539b4826"
+      },
+      "evidence": "modrinth:HmhkyU8X",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.3",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "pFr53NCP",
+        "versionNumber": "0.5.29.70",
+        "fileName": "lootr-1.19.3-0.5.29.70.jar",
+        "sha512": "2d6349f362d55bebac64747c63a934d2b97d31cda32fe193b12fac1df74eca8c31711ea3833219a652823f9d28f3dcde7c645756016b3c79a4bad0c2e7864a88"
+      },
+      "evidence": "modrinth:pFr53NCP",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.4",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "HmhkyU8X",
+        "versionNumber": "0.7.35.91",
+        "fileName": "lootr-forge-1.20-0.7.35.91.jar",
+        "sha512": "9b576ec6008a5c86ce9ea218285bc133f49e9eaf8f4b854fa49170a9cc3c8de028b236f2e563493405732277fd1d2909520d5961076b3ddbffcb0c7c539b4826"
+      },
+      "evidence": "modrinth:HmhkyU8X",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.19.4",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.19.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "vswD4Si0",
+        "versionNumber": "0.6.28.69",
+        "fileName": "lootr-1.19.4-0.6.28.69.jar",
+        "sha512": "e55a89021ece2d0eaefbb2583d98a01cd8fc288ca15aff84ec266a96fbdd799b6c55d3aa3cf5ed691c9146eaea5718588215e5e57781ee45a12466eecc0bf74c"
+      },
+      "evidence": "modrinth:vswD4Si0",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "mWTXC1ZX",
+        "versionNumber": "0.7.35.94",
+        "fileName": "lootr-forge-1.20-0.7.35.94.jar",
+        "sha512": "a04c6371376bfdac2b10cbb2bb9af7ded10ac26faaeb252b59aab2f02c2b2064c2c4ab665fb6ea218243e89d6f237d878c6951638bb948edead2c0a604dd023a"
+      },
+      "evidence": "modrinth:mWTXC1ZX",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "nj1zDLc6",
+        "versionNumber": "0.7.35.86",
+        "fileName": "lootr-fabric-1.20-0.7.35.86.jar",
+        "sha512": "73b303bf9566b85fe5cf484783c29a1afa9df35e791f20570bde39f6ec1993a32f4a88bceb298245d2f989510d0c19f8053371a69468769dccad5427c217c1e8"
+      },
+      "evidence": "modrinth:nj1zDLc6",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20.1",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "mWTXC1ZX",
+        "versionNumber": "0.7.35.94",
+        "fileName": "lootr-forge-1.20-0.7.35.94.jar",
+        "sha512": "a04c6371376bfdac2b10cbb2bb9af7ded10ac26faaeb252b59aab2f02c2b2064c2c4ab665fb6ea218243e89d6f237d878c6951638bb948edead2c0a604dd023a"
+      },
+      "evidence": "modrinth:mWTXC1ZX",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "nj1zDLc6",
+        "versionNumber": "0.7.35.86",
+        "fileName": "lootr-fabric-1.20-0.7.35.86.jar",
+        "sha512": "73b303bf9566b85fe5cf484783c29a1afa9df35e791f20570bde39f6ec1993a32f4a88bceb298245d2f989510d0c19f8053371a69468769dccad5427c217c1e8"
+      },
+      "evidence": "modrinth:nj1zDLc6",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20.2",
+      "loader": "forge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "ZqSHctHT",
+        "versionNumber": "0.7.34.85",
+        "fileName": "lootr-forge-1.20-0.7.34.85.jar",
+        "sha512": "ef84c0941cb2640a469614b28b8576abc5b4a0963d45854e7711a9d214f42f8db1f1b5d543bceca6f61560dff75957cb152ecad5128f4c64e5721d7cae2d9127"
+      },
+      "evidence": "modrinth:ZqSHctHT",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20.4",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "oENq02ZK",
+        "versionNumber": "0.8.31.74",
+        "fileName": "lootr-1.20-0.8.31.74.jar",
+        "sha512": "7ad45ef8e3d2a3d988fa93ea8ae32128f5d68256687e3e03c52fabbcb8f616126d7c1bae6f923baf251bc6a139b6f030c7d5537190aa01aae74fc0933904f75f"
+      },
+      "evidence": "modrinth:oENq02ZK",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.20.4",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "chest_data",
+      "releaseLine": "1.20.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "xuoeOnYI",
+        "versionNumber": "0.8.31.78",
+        "fileName": "lootr-1.20.4-0.8.31.78.jar",
+        "sha512": "2eedfa74280f548578c380760e3160e2bb229bf55bc34f449b5e7d092e73945a9d87f2f3afd9f1072d43e8f3f565e2c95d5bff3cedd015bcd9aa54b31bf5555b"
+      },
+      "evidence": "modrinth:xuoeOnYI",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "q5IlMBVM",
+        "versionNumber": "1.10.35.99",
+        "fileName": "lootr-neoforge-1.21-1.10.35.99.jar",
+        "sha512": "e5ebc62767c7a085bfdcb85a3111f47a30e25baf2328ae1c51e441e07188e9719f9dae9a63fd1ddd6f7a0b4ae74e79307a9c8c6f998f35fb98b3b64d8da1ee0a"
+      },
+      "evidence": "modrinth:q5IlMBVM",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "cOrO8AXN",
+        "versionNumber": "1.10.35.99",
+        "fileName": "lootr-fabric-1.21-1.10.35.99.jar",
+        "sha512": "fdc54efbf4553e0c5b0b36069a12d7e64a794fc0cc6212355976b6aa447f5e55d545e6d9e6e6e4443f1a9458425bc37beb76fac8dd6722bf1d2890fa4dd4a7da"
+      },
+      "evidence": "modrinth:cOrO8AXN",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.1",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "Trh49IZt",
+        "versionNumber": "1.21.1-1.11.38.124",
+        "fileName": "lootr-neoforge-1.21.1-1.11.38.124.jar",
+        "sha512": "b425225f416e1810146eae2cddaf178042756e21a2401f33704dcde8409b16db21b87f81121aae962d62b9bd94d227a8b393da352b04fdbcbc5ef575dce13c86"
+      },
+      "evidence": "modrinth:Trh49IZt",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "rNCVo4w9",
+        "versionNumber": "1.21.1-1.11.38.124",
+        "fileName": "lootr-fabric-1.21.1-1.11.38.124.jar",
+        "sha512": "13b32dcc91253b4260f767c9da44db5075fffeb1e13fd1382ed900c737560bde9a2a09f90d5557bdabc985f9773117e2d425baf1bd886fa57fd1ba1d2ee4b688"
+      },
+      "evidence": "modrinth:rNCVo4w9",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.2",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "BOekLUYi",
+        "versionNumber": "1.11.35.87",
+        "fileName": "lootr-neoforge-1.21.2-1.11.35.87.jar",
+        "sha512": "10789b0931f2f5efcc1dadb262a5f81bb0993b837caec2a54375a25b7151d6ac7999b8468a63d1c064fb55e9feb4f1e5630ee9de7d0b8a80de0ea6586c0f9156"
+      },
+      "evidence": "modrinth:BOekLUYi",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.2",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "JG1WQ9lU",
+        "versionNumber": "1.11.35.87",
+        "fileName": "lootr-fabric-1.21.2-1.11.35.87.jar",
+        "sha512": "983a7e4bf824210b2cec0ca510aebc4fb039308b4fc93cf9aa876f291c3eae20469efa3a7ce19b4406a220f32c369a383d63ecd51e1f080ae9ddcd997079c16e"
+      },
+      "evidence": "modrinth:JG1WQ9lU",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.3",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "BOekLUYi",
+        "versionNumber": "1.11.35.87",
+        "fileName": "lootr-neoforge-1.21.2-1.11.35.87.jar",
+        "sha512": "10789b0931f2f5efcc1dadb262a5f81bb0993b837caec2a54375a25b7151d6ac7999b8468a63d1c064fb55e9feb4f1e5630ee9de7d0b8a80de0ea6586c0f9156"
+      },
+      "evidence": "modrinth:BOekLUYi",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.3",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.3",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "JG1WQ9lU",
+        "versionNumber": "1.11.35.87",
+        "fileName": "lootr-fabric-1.21.2-1.11.35.87.jar",
+        "sha512": "983a7e4bf824210b2cec0ca510aebc4fb039308b4fc93cf9aa876f291c3eae20469efa3a7ce19b4406a220f32c369a383d63ecd51e1f080ae9ddcd997079c16e"
+      },
+      "evidence": "modrinth:JG1WQ9lU",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.4",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "Z0vjfoTl",
+        "versionNumber": "1.13.36.89",
+        "fileName": "lootr-neoforge-1.21.4-1.13.36.89.jar",
+        "sha512": "58d34aeb03e16655cffa7d8043f5ce7c3e466d1ce71d8982baf1090c93166934694dd257a0850391ee6735b18cfdf7918d564f4f207f97cb40b0eb1f40d19a31"
+      },
+      "evidence": "modrinth:Z0vjfoTl",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.4",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.4",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "HmnhGIXV",
+        "versionNumber": "1.13.36.89",
+        "fileName": "lootr-fabric-1.21.4-1.13.36.89.jar",
+        "sha512": "d562c598dd494c35b2b87e215257767f9c4e57bd08e2cbc654d9f237586a100d43b2947cbd3e04da2a78662ffd634c57fa49ebe8a0db78c80876d05aa369d5d5"
+      },
+      "evidence": "modrinth:HmnhGIXV",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.5",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.5",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "QKFussTX",
+        "versionNumber": "1.21.5-1.14.38.93",
+        "fileName": "lootr-neoforge-1.21.5-1.14.38.93.jar",
+        "sha512": "5a79fbc9da623493a92d1e68fc5d024a4786aa10c41701cf59ecfa5ed0e0439ca850db6abd87b68f7636609d83afcb38c36de3b15d33cdb9fec748159ce29000"
+      },
+      "evidence": "modrinth:QKFussTX",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.5",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.5",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "C5cP6if7",
+        "versionNumber": "1.21.5-1.14.38.93",
+        "fileName": "lootr-fabric-1.21.5-1.14.38.93.jar",
+        "sha512": "84f0f66074d66b33c37284e75c6f1a7b81f4437a7adfda91805efbdcfe06edf6319de37570845352b50f37d6a90b100737c29f9fc83be02f2a4af495480b8a03"
+      },
+      "evidence": "modrinth:C5cP6if7",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.6",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.6",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "z2WTRSw1",
+        "versionNumber": "1.21.6-1.16.40.97",
+        "fileName": "lootr-neoforge-1.21.6-1.16.40.97.jar",
+        "sha512": "eac491aae2d1970edef1112b0fd4d58b8f393b0e55354d5fd29d4c10aa3dd4b5240373a71b31f8afde7e47d90774130e90084b420046fa6116cf3176c1ff55ee"
+      },
+      "evidence": "modrinth:z2WTRSw1",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.6",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.6",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "tNxLeJ6M",
+        "versionNumber": "1.21.6-1.16.40.97",
+        "fileName": "lootr-fabric-1.21.6-1.16.40.97.jar",
+        "sha512": "cad2ae0e1cc87c61643c6e8d3bd7355f5fd5f402e2c86db1a1b13801d372d4be685a59eb14cbabcfae342aa50fa06c0795ef5f1f5041328d92937ebd05b2f31b"
+      },
+      "evidence": "modrinth:tNxLeJ6M",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.7",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.7",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "JqozAadU",
+        "versionNumber": "neoforge-1.21.7-1.15.38.94",
+        "fileName": "lootr-neoforge-1.21.7-1.15.38.94.jar",
+        "sha512": "0159faa008d5ea4bbe632e7e4be1d8f3691a4564cd1741eb83079459a89111e2dd217288fc971e7b462833061a81f0ab3b399401f7033901b9ed7d323409596e"
+      },
+      "evidence": "modrinth:JqozAadU",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.7",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.7",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "YWFcEVur",
+        "versionNumber": "fabric-1.21.7-1.15.38.94",
+        "fileName": "lootr-fabric-1.21.7-1.15.38.94.jar",
+        "sha512": "afdb13ab17d8b629317028494ccc84bddc0e1e369b6a491551ba4ccdb0b88f6e63217a8fca8f29e7fccc61d7882c2940a0fd1367f7608ba4d1bcb2993f928612"
+      },
+      "evidence": "modrinth:YWFcEVur",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.8",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.8",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "hC6JovnB",
+        "versionNumber": "1.21.8-1.16.40.96",
+        "fileName": "lootr-neoforge-1.21.8-1.16.40.96.jar",
+        "sha512": "52a32954b5a14eb78964b1874ba52372577ef3fb9dd65efc5ad0e076a5f43bceca25878f2f753a7395f3f1f0b54b488a472cbde09cc6cf517d6a1a5cc2a06669"
+      },
+      "evidence": "modrinth:hC6JovnB",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.8",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.8",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "KCO39N1z",
+        "versionNumber": "1.21.8-1.16.40.96",
+        "fileName": "lootr-fabric-1.21.8-1.16.40.96.jar",
+        "sha512": "a1f762dc8b7ff62d4299adbd304eedcffed08747538b3ce2a1112096899e89a70f1a611f16babb1ab5deaca8a10c4d923aa9fe61a0972c437e646a77d50d60ac"
+      },
+      "evidence": "modrinth:KCO39N1z",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.9",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.9",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "vUmIsKx0",
+        "versionNumber": "1.21.9-1.17.31.98",
+        "fileName": "lootr-neoforge-1.21.9-1.17.31.98.jar",
+        "sha512": "5fae6d962b57bb4b662e7200ddf9cc6500c817192ce70ac870fbbfb34a9e22a4181d188a10e75fec6c7cef2ed3f3d0e5d504965ccdec01a2baf53838e6b9cf28"
+      },
+      "evidence": "modrinth:vUmIsKx0",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.9",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.9",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "67HkQPZn",
+        "versionNumber": "1.21.9-1.17.31.98",
+        "fileName": "lootr-fabric-1.21.9-1.17.31.98.jar",
+        "sha512": "8906ddc5fdf8254b4ad3a2e1e95978cc2c740aa4a585ab27d773acc1c66df34823856bf86af8cc3027f58e8e4290ba6297bee0b5014a5dfa5d9abc3a3d2b39aa"
+      },
+      "evidence": "modrinth:67HkQPZn",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.10",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.10",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "72pESX4q",
+        "versionNumber": "1.21.10-1.18.32.99",
+        "fileName": "lootr-neoforge-1.21.10-1.18.32.99.jar",
+        "sha512": "b1fd667acc083ac92a0f771de24e04ddcb621e5dba45e24e9765620da037f91632758d5a021ec283f77c4e388a9977728d53de240d7cc150741a099a91df9502"
+      },
+      "evidence": "modrinth:72pESX4q",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.10",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.10",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "tBqlJU85",
+        "versionNumber": "1.21.10-1.18.32.99",
+        "fileName": "lootr-fabric-1.21.10-1.18.32.99.jar",
+        "sha512": "99799732f2772b1b941c31c833cef4d0b0045c5edb08b51cc88365a767c4af2fbcb5fa4900f9b03fd41fa6baff1f4521a268100a23e5d33c90b1d03c5214b2e5"
+      },
+      "evidence": "modrinth:tBqlJU85",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.11",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.11",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "TBkxTN54",
+        "versionNumber": "1.21.11-1.20.34.104",
+        "fileName": "lootr-neoforge-1.21.11-1.20.34.104.jar",
+        "sha512": "3c69c048191e9ae5a676fb39db3cc956bda2499eac5739dde4ded62964279ed0144bd32fc83e89336d4b26f630723c4fb16631d45d2be13befda5316ec7f3814"
+      },
+      "evidence": "modrinth:TBkxTN54",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "1.21.11",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "saved_data",
+      "releaseLine": "1.21.11",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "efKMR8nl",
+        "versionNumber": "1.21.11-1.20.34.104",
+        "fileName": "lootr-fabric-1.21.11-1.20.34.104.jar",
+        "sha512": "d0ef0981586691cd916471087f35614449a5b4638ec15ce129a4b293f0603d3731bc5db14ae7b28be2ef5f98fb1f1d7ef45e0bcfbc852e33dd9ddfcd3c841cbe"
+      },
+      "evidence": "modrinth:efKMR8nl",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "L0hqF4wC",
+        "versionNumber": "1.21.35.106",
+        "fileName": "lootr-neoforge-26.1-1.21.35.106.jar",
+        "sha512": "e2edd0d90c395eea7923b09340ea4e37b03c192219b7bae34b3a21a68c3b2b493153be055da45100686277c31d31bd59ad0fed4602ea27393f04128ea68c1b64"
+      },
+      "evidence": "modrinth:L0hqF4wC",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "vXoVbinO",
+        "versionNumber": "1.21.35.106",
+        "fileName": "lootr-fabric-26.1-1.21.35.106.jar",
+        "sha512": "66b1860349ab2e38ccdc57afb9c2fb44f9f6209b82ce356919dc12e02016bb433a9e83561d1428c5774a425c868bab848e6d70e5ebd9cef0bee5eafaae507460"
+      },
+      "evidence": "modrinth:vXoVbinO",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1.1",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "L0hqF4wC",
+        "versionNumber": "1.21.35.106",
+        "fileName": "lootr-neoforge-26.1-1.21.35.106.jar",
+        "sha512": "e2edd0d90c395eea7923b09340ea4e37b03c192219b7bae34b3a21a68c3b2b493153be055da45100686277c31d31bd59ad0fed4602ea27393f04128ea68c1b64"
+      },
+      "evidence": "curseforge:361276:26.1-build-declares-26.1.1",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1.1",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "vXoVbinO",
+        "versionNumber": "1.21.35.106",
+        "fileName": "lootr-fabric-26.1-1.21.35.106.jar",
+        "sha512": "66b1860349ab2e38ccdc57afb9c2fb44f9f6209b82ce356919dc12e02016bb433a9e83561d1428c5774a425c868bab848e6d70e5ebd9cef0bee5eafaae507460"
+      },
+      "evidence": "curseforge:361276:26.1-build-declares-26.1.1",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1.2",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "yUf7Q96A",
+        "versionNumber": "1.23.38.120",
+        "fileName": "lootr-neoforge-26.1.2-1.23.38.120.jar",
+        "sha512": "2f16cdf49853ff3882a66b6db0dcbd1a9f40fe0c423a02a42da2b798ff4529c95d934a993a18915a8e6430184d0ba8efb1b6fb1c0cb7db1ac37732170b927f6a"
+      },
+      "evidence": "modrinth:yUf7Q96A",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.1.2",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.1.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "m1PLActz",
+        "versionNumber": "1.23.38.120",
+        "fileName": "lootr-fabric-26.1.2-1.23.38.120.jar",
+        "sha512": "a76db1e5200ac4a574594d7f109aeb119c77e7d6dd33ea2ddb437e53aa0aabb2f0ea2c28472f0ab011eaf82500636fe55c8a86c8c2953af21c4eae72ef0d73a5"
+      },
+      "evidence": "modrinth:m1PLActz",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.2",
+      "loader": "neoforge",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "mWjELssH",
+        "versionNumber": "1.24.39.121",
+        "fileName": "lootr-neoforge-26.2-1.24.39.121.jar",
+        "sha512": "54a8124a2b7cc50902e2c90d1f65c3ba4a644ce06b68043a946da09126a6ff6b6a260143c780a4568484d4eaba9251d837841e589c30d4e4e3f7f38b0967a7de"
+      },
+      "evidence": "modrinth:mWjELssH",
+      "status": "planned",
+      "proof": []
+    },
+    {
+      "gameVersion": "26.2",
+      "loader": "fabric",
+      "stability": "release",
+      "era": "inventory_store",
+      "releaseLine": "26.2",
+      "lootr": {
+        "projectId": "EltpO5cN",
+        "versionId": "k00AgeE7",
+        "versionNumber": "1.24.39.121",
+        "fileName": "lootr-fabric-26.2-1.24.39.121.jar",
+        "sha512": "7763f8ba03978f9e967980f4f35deba13cb90348a2a0e8cad3145a7ab1cf2fad6349784f0647aeadb4ffa56ee222aca415008e2751ab913b35c0d302002e4375"
+      },
+      "evidence": "modrinth:k00AgeE7",
+      "status": "planned",
+      "proof": []
+    }
+  ]
+}

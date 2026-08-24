@@ -1,5 +1,6 @@
 package dev.rinchan.sharedlootr.mixin;
 
+import dev.rinchan.rinlib.state.StickyBoolean;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -9,6 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(SimpleLootrInstance.class)
@@ -16,11 +18,9 @@ public abstract class SimpleLootrInstanceMixin {
     @Shadow(remap = false)
     protected boolean clientOpened;
 
-    @Inject(method = "setClientOpened", at = @At("HEAD"), cancellable = true, remap = false)
-    private void sharedLootr$keepGlobalOpenedVisual(boolean opened, CallbackInfo ci) {
-        if (!opened && clientOpened) {
-            ci.cancel();
-        }
+    @ModifyVariable(method = "setClientOpened", at = @At("HEAD"), argsOnly = true, remap = false)
+    private boolean sharedLootr$keepGlobalOpenedVisual(boolean opened) {
+        return StickyBoolean.next(clientOpened, opened);
     }
 
     @Inject(method = "loadAdditional", at = @At("TAIL"), remap = false)
@@ -30,7 +30,7 @@ public abstract class SimpleLootrInstanceMixin {
             CallbackInfo callback
     ) {
         if (tag.contains(NBTConstants.HAS_BEEN_OPENED, Tag.TAG_BYTE)) {
-            clientOpened = tag.getBoolean(NBTConstants.HAS_BEEN_OPENED);
+            clientOpened = StickyBoolean.next(clientOpened, tag.getBoolean(NBTConstants.HAS_BEEN_OPENED));
         }
     }
 }

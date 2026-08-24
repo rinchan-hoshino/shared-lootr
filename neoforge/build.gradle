@@ -17,6 +17,7 @@ sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessRe
         neo_version_range      : rootProject.neo_version_range,
         loader_version_range   : rootProject.loader_version_range,
         lootr_version_range    : rootProject.lootr_version_range,
+        rinlib_version_range   : rootProject.rinlib_version_range,
         mod_id                 : rootProject.mod_id,
         mod_name               : rootProject.mod_name,
         mod_license            : rootProject.mod_license,
@@ -53,16 +54,21 @@ neoForge {
 neoForge.ideSyncTask tasks.named('generateModMetadata')
 
 repositories {
+    mavenLocal()
     maven { url = 'https://api.modrinth.com/maven' }
 }
 
 dependencies {
     compileOnly "maven.modrinth:lootr:${rootProject.lootr_version}"
     runtimeOnly "maven.modrinth:lootr:${rootProject.lootr_version}"
+    compileOnly "dev.rinchan:rinlib-neoforge:${rootProject.rinlib_version}"
+    runtimeOnly "dev.rinchan:rinlib-neoforge:${rootProject.rinlib_version}"
+    testImplementation "dev.rinchan:rinlib-neoforge:${rootProject.rinlib_version}"
     compileOnly "maven.modrinth:jade:${rootProject.jade_version}"
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'com.google.code.gson:gson:2.11.0'
 }
 
 tasks.withType(Test).configureEach {

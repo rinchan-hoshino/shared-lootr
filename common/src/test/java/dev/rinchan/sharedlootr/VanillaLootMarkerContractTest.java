@@ -16,19 +16,19 @@ class VanillaLootMarkerContractTest {
         String openBroadcast = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/DefaultLootrAPIImplMixin.java");
 
         assertTrue(savedData.contains("LootrSavedData"));
-        assertTrue(savedData.contains("GLOBAL_INVENTORY_OWNER"));
+        assertTrue(savedData.contains("SharedOwnerState.OWNER"));
         assertTrue(savedData.contains("createInventory"));
         assertTrue(savedData.contains("common/api/data/ILootrInfoProvider"));
         assertTrue(savedData.contains("common/api/data/LootFiller"));
         assertFalse(savedData.contains("common/api/ILootrInfoProvider"));
         assertFalse(savedData.contains("common/api/LootFiller"));
         assertTrue(savedData.contains("SharedInventoryState"));
-        assertTrue(savedData.contains("inventories.containsKey(GLOBAL_INVENTORY_OWNER)"));
+        assertTrue(savedData.contains("SharedOwnerState.contains(inventories)"));
+        assertTrue(savedData.contains("SharedOwnerState.get(inventories)"));
         assertTrue(savedData.contains("cir.setReturnValue(inventory)"));
         assertTrue(instance.contains("NBTConstants.HAS_BEEN_OPENED"));
-        assertTrue(instance.contains("clientOpened = tag.getBoolean"));
+        assertTrue(instance.contains("StickyBoolean.next"));
         assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
-        assertTrue(instance.contains("ci.cancel()"));
         assertTrue(openBroadcast.contains(
                 "handleProviderOpen(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;"
                         + "Lnet/minecraft/server/level/ServerPlayer;"

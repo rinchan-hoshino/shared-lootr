@@ -32,3 +32,10 @@ type="required"
 versionRange="${lootr_version_range}"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="rinlib"
+type="required"
+versionRange="${rinlib_version_range}"
+ordering="BEFORE"
+side="BOTH"

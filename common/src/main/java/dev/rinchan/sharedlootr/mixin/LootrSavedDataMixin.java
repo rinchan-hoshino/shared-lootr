@@ -1,5 +1,6 @@
 package dev.rinchan.sharedlootr.mixin;
 
+import dev.rinchan.rinlib.state.SharedOwnerState;
 import dev.rinchan.sharedlootr.state.SharedInventoryState;
 import java.util.Map;
 import java.util.UUID;
@@ -24,7 +25,7 @@ public abstract class LootrSavedDataMixin implements SharedInventoryState {
             remap = false
     )
     private void sharedLootr$getGlobalInventory(UUID ignoredPlayerId, CallbackInfoReturnable<LootrInventory> cir) {
-        LootrInventory inventory = inventories.get(GLOBAL_INVENTORY_OWNER);
+        LootrInventory inventory = SharedOwnerState.get(inventories);
         if (inventory != null) {
             inventory.setInfo((LootrSavedData) (Object) this);
         }
@@ -38,11 +39,11 @@ public abstract class LootrSavedDataMixin implements SharedInventoryState {
             remap = false
     )
     private Object sharedLootr$storeNewInventoryGlobally(Object ignoredPlayerId) {
-        return GLOBAL_INVENTORY_OWNER;
+        return SharedOwnerState.OWNER;
     }
 
     @Override
     public boolean sharedLootr$hasSharedInventory() {
-        return inventories.containsKey(GLOBAL_INVENTORY_OWNER);
+        return SharedOwnerState.contains(inventories);
     }
 }
