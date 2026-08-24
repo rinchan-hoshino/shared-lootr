@@ -11,21 +11,16 @@ class VanillaLootMarkerContractTest {
 
     @Test
     void sharingInterceptsOnlyLootrInventoryOwnership() throws Exception {
-        String savedData = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/LootrSavedDataMixin.java");
+        String savedData = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/SharedInventoryMixin.java");
         String instance = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/SimpleLootrInstanceMixin.java");
         String openBroadcast = readSource("common/src/main/java/dev/rinchan/sharedlootr/mixin/DefaultLootrAPIImplMixin.java");
 
-        assertTrue(savedData.contains("LootrSavedData"));
+        assertTrue(savedData.contains("noobanidus.mods.lootr.common.data.LootrSavedData"));
+        assertTrue(savedData.contains("implements SharedInventoryState"));
         assertTrue(savedData.contains("SharedOwnerState.OWNER"));
-        assertTrue(savedData.contains("createInventory"));
-        assertTrue(savedData.contains("common/api/data/ILootrInfoProvider"));
-        assertTrue(savedData.contains("common/api/data/LootFiller"));
-        assertFalse(savedData.contains("common/api/ILootrInfoProvider"));
-        assertFalse(savedData.contains("common/api/LootFiller"));
-        assertTrue(savedData.contains("SharedInventoryState"));
         assertTrue(savedData.contains("SharedOwnerState.contains(inventories)"));
-        assertTrue(savedData.contains("SharedOwnerState.get(inventories)"));
-        assertTrue(savedData.contains("cir.setReturnValue(inventory)"));
+        assertTrue(savedData.contains("Ljava/util/Map;get(Ljava/lang/Object;)Ljava/lang/Object;"));
+        assertTrue(savedData.contains("Ljava/util/Map;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"));
         assertTrue(instance.contains("NBTConstants.HAS_BEEN_OPENED"));
         assertTrue(instance.contains("StickyBoolean.next"));
         assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
@@ -59,7 +54,7 @@ class VanillaLootMarkerContractTest {
     @Test
     void lootrRemainsTheOnlyContainerAndRendererOwner() throws Exception {
         String mixins = readSource("common/src/main/resources/shared_lootr.mixins.json");
-        assertTrue(mixins.contains("LootrSavedDataMixin"));
+        assertTrue(mixins.contains("SharedInventoryMixin"));
         assertTrue(mixins.contains("SimpleLootrInstanceMixin"));
         assertTrue(mixins.contains("DefaultLootrAPIImplMixin"));
         assertFalse(mixins.contains("ChestBlockEntityMixin"));
