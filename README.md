@@ -13,9 +13,11 @@ Shared Lootr is a thin compatibility layer for Lootr. Lootr remains the sole own
 
 ## Incompatible upgrade
 
-Shared Lootr 1.2.0 does not migrate per-player inventories created by Lootr or Shared Lootr 1.1.x. Existing player-owned inventory entries are ignored; opening such a container under 1.2.0 creates a new shared inventory from its loot table. This can make old loot available again.
+Shared Lootr 1.2.0 does not migrate per-player inventories created by Lootr or Shared Lootr 1.1.x. When 1.2.0 is installed in an existing world:
 
-Use 1.2.0 for new worlds, or back up the world and reset Lootr's saved data before upgrading. Do not switch an existing world in place if preserving previously generated Lootr inventory contents matters.
+- Existing player-owned inventory entries remain stored but are not used.
+- The first player to open each affected container creates a new shared inventory from its loot table.
+- As a result, previously collected loot can become available again.
 
 ## Compatibility target
 

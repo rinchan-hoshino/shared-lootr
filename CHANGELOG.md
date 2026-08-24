@@ -10,7 +10,7 @@
 
 ### Breaking
 
-- Stop migrating or selecting legacy per-player Lootr inventories. Existing worlds must reset Lootr's saved data or continue using 1.1.x.
+- Stop migrating or selecting legacy per-player Lootr inventories. In existing worlds those entries remain stored but unused, and affected containers generate new shared loot on their next open, so previously collected loot can become available again.
 
 ## 1.1.1
 

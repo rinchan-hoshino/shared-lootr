@@ -27,7 +27,8 @@ class PublishedVersionContractTest {
         String readme = Files.readString(findProjectFile("README.md"));
         assertTrue(readme.contains("## Incompatible upgrade"));
         assertTrue(readme.contains("does not migrate"));
-        assertTrue(readme.contains("reset Lootr's saved data"));
+        assertTrue(readme.contains("previously collected loot can become available again"));
+        assertTrue(readme.contains("remain stored but are not used"));
     }
 
     private static Path findProjectFile(String relative) {
