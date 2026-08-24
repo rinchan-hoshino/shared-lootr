@@ -1,4 +1,8 @@
 .gradle/
+**/.gradle/
 build/
-*/build/
-*/run/
+**/build/
+run/
+**/run/
+run-client/
+**/run-client/

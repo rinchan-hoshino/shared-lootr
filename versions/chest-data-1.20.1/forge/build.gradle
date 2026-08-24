@@ -1,0 +1,79 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle'
+    id 'org.spongepowered.mixin'
+}
+
+base {
+    archivesName = 'shared_lootr-forge-1.20.1'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+sourceSets.main.java.srcDir rootProject.file('shared/src/main/java')
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+
+    runs {
+        client {
+            workingDirectory project.file('run-client')
+            mods {
+                shared_lootr { source sourceSets.main }
+            }
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'sharedLootr.smoke', System.getProperty('sharedLootr.smoke', 'false')
+            args '--nogui'
+            mods {
+                shared_lootr { source sourceSets.main }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("maven.modrinth:lootr:${lootr_forge_version}")
+    implementation fg.deobf("dev.rinchan:rinlib-forge:${rinlib_version}")
+    compileOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
+    runtimeOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+    add sourceSets.main, 'shared_lootr-forge.refmap.json'
+    config 'shared_lootr-forge.mixins.json'
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            'MixinConfigs': 'shared_lootr-forge.mixins.json'
+        ])
+    }
+}
+
+def primaryJar = tasks.named('jar', Jar)
+def normalizeReobfJar = tasks.register('normalizeReobfJar', Zip) {
+    dependsOn tasks.named('reobfJar')
+    from { zipTree(primaryJar.get().archiveFile.get().asFile) }
+    destinationDirectory = layout.buildDirectory.dir('normalized')
+    archiveFileName = primaryJar.flatMap { it.archiveFileName }.map { "normalized-${it}" }
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    doLast {
+        java.nio.file.Files.move(
+                archiveFile.get().asFile.toPath(),
+                primaryJar.get().archiveFile.get().asFile.toPath(),
+                java.nio.file.StandardCopyOption.REPLACE_EXISTING
+        )
+    }
+}
+
+tasks.named('build').configure {
+    finalizedBy normalizeReobfJar
+}

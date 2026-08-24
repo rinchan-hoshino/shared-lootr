@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0-or-later"
+
+[[mods]]
+modId="shared_lootr"
+version="${file.jarVersion}"
+displayName="Shared Lootr"
+description='''Makes each Lootr container use one shared inventory.'''
+
+[[dependencies.shared_lootr]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.shared_lootr]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.shared_lootr]]
+modId="rinlib"
+mandatory=true
+versionRange="[0.2.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.shared_lootr]]
+modId="lootr"
+mandatory=true
+versionRange="[0.7.35.94,)"
+ordering="AFTER"
+side="BOTH"

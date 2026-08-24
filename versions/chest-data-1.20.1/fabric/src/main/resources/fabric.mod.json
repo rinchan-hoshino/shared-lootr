@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "shared_lootr",
+  "version": "${version}",
+  "name": "Shared Lootr",
+  "description": "Makes each Lootr container use one shared inventory.",
+  "authors": ["RinChan"],
+  "license": "GPL-3.0-or-later",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.rinchan.sharedlootr.SharedLootrFabric"]
+  },
+  "mixins": ["shared_lootr-fabric.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17",
+    "rinlib": ">=0.2.0",
+    "lootr": ">=0.7.35.86"
+  }
+}
