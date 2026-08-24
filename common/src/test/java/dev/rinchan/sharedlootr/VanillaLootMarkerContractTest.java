@@ -22,7 +22,9 @@ class VanillaLootMarkerContractTest {
         assertTrue(savedData.contains("common/api/data/LootFiller"));
         assertFalse(savedData.contains("common/api/ILootrInfoProvider"));
         assertFalse(savedData.contains("common/api/LootFiller"));
-        assertTrue(savedData.contains("selectCanonicalInventory"));
+        assertTrue(savedData.contains("SharedInventoryState"));
+        assertTrue(savedData.contains("inventories.containsKey(GLOBAL_INVENTORY_OWNER)"));
+        assertTrue(savedData.contains("cir.setReturnValue(inventory)"));
         assertTrue(instance.contains("NBTConstants.HAS_BEEN_OPENED"));
         assertTrue(instance.contains("clientOpened = tag.getBoolean"));
         assertTrue(instance.contains("sharedLootr$keepGlobalOpenedVisual"));
@@ -32,9 +34,8 @@ class VanillaLootMarkerContractTest {
                         + "Lnet/minecraft/server/level/ServerPlayer;"
                         + "Lnoobanidus/mods/lootr/common/api/MenuBuilder;)V"
         ));
-        assertTrue(openBroadcast.contains("addOpener(Lnet/minecraft/world/entity/player/Player;)Z"));
-        assertTrue(openBroadcast.contains("boolean added = provider.addOpener(player)"));
-        assertTrue(openBroadcast.contains("if (!added)"));
+        assertTrue(openBroadcast.contains("performOpen(Lnet/minecraft/server/level/ServerPlayer;)V"));
+        assertTrue(openBroadcast.contains("SharedInventoryState.hasSharedInventory(provider)"));
         assertTrue(openBroadcast.contains("provider.performOpen()"));
     }
 
@@ -47,7 +48,7 @@ class VanillaLootMarkerContractTest {
         assertTrue(integration.contains("registration.registerBlockDataProvider"));
         assertTrue(integration.contains("BlockEntity.class"));
         assertTrue(integration.contains("instanceof ILootrInfoProvider provider"));
-        assertTrue(integration.contains("provider.hasBeenOpened()"));
+        assertTrue(integration.contains("SharedInventoryState.hasSharedInventory(provider)"));
         assertTrue(integration.contains("tag.remove(\"Loot\")"));
         assertTrue(integration.contains("return 1100"));
         assertFalse(integration.contains("LootrAPI.getData"));

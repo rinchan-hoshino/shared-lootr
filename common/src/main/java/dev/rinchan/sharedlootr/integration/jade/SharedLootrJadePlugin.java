@@ -1,6 +1,7 @@
 package dev.rinchan.sharedlootr.integration.jade;
 
 import dev.rinchan.sharedlootr.SharedLootr;
+import dev.rinchan.sharedlootr.state.SharedInventoryState;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -29,7 +30,7 @@ public final class SharedLootrJadePlugin implements IWailaPlugin {
         @Override
         public void appendServerData(CompoundTag tag, BlockAccessor accessor) {
             if (accessor.getBlockEntity() instanceof ILootrInfoProvider provider
-                    && provider.hasBeenOpened()) {
+                    && SharedInventoryState.hasSharedInventory(provider)) {
                 tag.remove("Loot");
             }
         }

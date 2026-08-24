@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0
+
+### Changed
+
+- Make the shared inventory's existence the single server-side source of truth for generated loot, the opened appearance, and Jade's generated-loot state.
+- Keep Lootr's native block event and NBT only as the client-side projection of that shared state.
+- Remove the extra reopen broadcast fallback.
+
+### Breaking
+
+- Stop migrating or selecting legacy per-player Lootr inventories. Existing worlds must reset Lootr's saved data or continue using 1.1.x.
+
 ## 1.1.1
 
 ### Fixed
