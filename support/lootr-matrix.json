@@ -926,8 +926,16 @@
         "sha512": "e2edd0d90c395eea7923b09340ea4e37b03c192219b7bae34b3a21a68c3b2b493153be055da45100686277c31d31bd59ad0fed4602ea27393f04128ea68c1b64"
       },
       "evidence": "modrinth:L0hqF4wC",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1-build",
+        "shared_lootr_1.3.0+26.1-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.1",
@@ -943,8 +951,16 @@
         "sha512": "66b1860349ab2e38ccdc57afb9c2fb44f9f6209b82ce356919dc12e02016bb433a9e83561d1428c5774a425c868bab848e6d70e5ebd9cef0bee5eafaae507460"
       },
       "evidence": "modrinth:vXoVbinO",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1-build",
+        "shared_lootr_1.3.0+26.1-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.1.1",
@@ -960,8 +976,16 @@
         "sha512": "e2edd0d90c395eea7923b09340ea4e37b03c192219b7bae34b3a21a68c3b2b493153be055da45100686277c31d31bd59ad0fed4602ea27393f04128ea68c1b64"
       },
       "evidence": "curseforge:361276:26.1-build-declares-26.1.1",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1.1-build",
+        "shared_lootr_1.3.0+26.1.1-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.1.1",
@@ -977,8 +1001,16 @@
         "sha512": "66b1860349ab2e38ccdc57afb9c2fb44f9f6209b82ce356919dc12e02016bb433a9e83561d1428c5774a425c868bab848e6d70e5ebd9cef0bee5eafaae507460"
       },
       "evidence": "curseforge:361276:26.1-build-declares-26.1.1",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1.1-build",
+        "shared_lootr_1.3.0+26.1.1-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.1.2",
@@ -1044,8 +1076,16 @@
         "sha512": "54a8124a2b7cc50902e2c90d1f65c3ba4a644ce06b68043a946da09126a6ff6b6a260143c780a4568484d4eaba9251d837841e589c30d4e4e3f7f38b0967a7de"
       },
       "evidence": "modrinth:mWjELssH",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.2-build",
+        "shared_lootr_1.3.0+26.2-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.2",
@@ -1061,8 +1101,16 @@
         "sha512": "7763f8ba03978f9e967980f4f35deba13cb90348a2a0e8cad3145a7ab1cf2fad6349784f0647aeadb4ffa56ee222aca415008e2751ab913b35c0d302002e4375"
       },
       "evidence": "modrinth:k00AgeE7",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.2-build",
+        "shared_lootr_1.3.0+26.2-build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     }
   ]
 }

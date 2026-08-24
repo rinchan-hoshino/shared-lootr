@@ -3,6 +3,7 @@ package dev.rinchan.sharedlootr;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -69,6 +70,17 @@ class RepresentativeLineContractTest {
         assertTrue(truth.contains("getInventory(SharedOwnerState.OWNER)"));
         assertTrue(jade.contains("SharedInventoryTruth.exists(instance)"));
         assertTrue(jade.contains("data.remove(\"Loot\")"));
+
+        Path earlyLine = ROOT.resolve("versions/inventory-store-26.1");
+        String earlyMixin = read(earlyLine.resolve("shared/src/main/java/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java"));
+        String earlyHarness = read(earlyLine.resolve("shared/src/main/java/dev/rinchan/sharedlootr/InventoryStoreSmokeHarness.java"));
+        String profiles = read(ROOT.resolve("support/inventory-store-profiles.json"));
+        assertTrue(earlyMixin.contains("method = \"createInventory\""));
+        assertTrue(earlyHarness.contains("store.createInventory(instance, player, filler)"));
+        for (String version : List.of("26.1", "26.1.1", "26.1.2", "26.2")) {
+            assertTrue(profiles.contains("\"gameVersion\": \"" + version + "\""));
+            assertTrue(profiles.contains("\"rinlib_version\": \"0.2.0+" + version + "\""));
+        }
     }
 
     private static String read(Path path) throws IOException {
