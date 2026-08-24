@@ -83,6 +83,27 @@ class RepresentativeLineContractTest {
         }
     }
 
+    @Test
+    void savedDataLineUsesSharedTruthForInventoryAppearanceAndJade() throws IOException {
+        Path line = ROOT.resolve("versions/saved-data-1.21.1");
+        String mixin = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/mixin/SavedDataInventoryMixin.java"));
+        String truth = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/state/SharedSavedDataTruth.java"));
+        String jade = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java"));
+        String harness = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/SavedDataSmokeHarness.java"));
+        String fabricBuild = read(line.resolve("fabric/build.gradle"));
+        String neoBuild = read(line.resolve("neoforge/build.gradle"));
+
+        assertTrue(mixin.contains("LootrSavedData.class"));
+        assertTrue(mixin.contains("SharedOwnerState.get"));
+        assertTrue(mixin.contains("SharedOwnerState.put"));
+        assertTrue(truth.contains("getInventory(SharedOwnerState.OWNER)"));
+        assertTrue(jade.contains("SharedSavedDataTruth.exists(provider)"));
+        assertTrue(jade.contains("data.remove(\"Loot\")"));
+        assertTrue(harness.contains("Legacy player inventory was still readable"));
+        assertTrue(fabricBuild.contains("dev.rinchan:rinlib-fabric"));
+        assertTrue(neoBuild.contains("dev.rinchan:rinlib-neoforge"));
+    }
+
     private static String read(Path path) throws IOException {
         assertTrue(Files.isRegularFile(path), () -> "missing representative source: " + path);
         return Files.readString(path);
