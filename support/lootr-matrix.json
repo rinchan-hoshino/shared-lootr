@@ -994,8 +994,16 @@
         "sha512": "2f16cdf49853ff3882a66b6db0dcbd1a9f40fe0c423a02a42da2b798ff4529c95d934a993a18915a8e6430184d0ba8efb1b6fb1c0cb7db1ac37732170b927f6a"
       },
       "evidence": "modrinth:yUf7Q96A",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1.2_build",
+        "shared_lootr_1.3.0+26.1.2_build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.1.2",
@@ -1011,8 +1019,16 @@
         "sha512": "a76db1e5200ac4a574594d7f109aeb119c77e7d6dd33ea2ddb437e53aa0aabb2f0ea2c28472f0ab011eaf82500636fe55c8a86c8c2953af21c4eae72ef0d73a5"
       },
       "evidence": "modrinth:m1PLActz",
-      "status": "planned",
-      "proof": []
+      "status": "representative_runtime_pass",
+      "proof": [
+        "rinlib_0.2.0+26.1.2_build",
+        "shared_lootr_1.3.0+26.1.2_build",
+        "dedicated_server_load",
+        "shared_inventory_create_lookup_clear_and_legacy_rejection",
+        "global_opened_truth_and_projection_targets",
+        "jade_shared_truth_provider_registration",
+        "client_resource_reload"
+      ]
     },
     {
       "gameVersion": "26.2",

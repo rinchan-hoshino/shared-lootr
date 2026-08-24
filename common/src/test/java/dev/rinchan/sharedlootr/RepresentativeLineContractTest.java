@@ -52,6 +52,25 @@ class RepresentativeLineContractTest {
         assertTrue(smoke.contains("Opened projection was not stored under the shared owner"));
     }
 
+    @Test
+    void inventoryStoreLineUsesOneCommonLootrAdapterAndNormalRinLibDependencies() throws IOException {
+        Path line = ROOT.resolve("versions/inventory-store-26.1.2");
+        String mixin = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java"));
+        String neoBuild = read(line.resolve("neoforge/build.gradle"));
+        String fabricBuild = read(line.resolve("fabric/build.gradle"));
+        String jade = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java"));
+        String truth = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/state/SharedInventoryTruth.java"));
+
+        assertTrue(mixin.contains("LootrInventoryStore.class"));
+        assertTrue(mixin.contains("SharedOwnerState.get"));
+        assertTrue(mixin.contains("SharedOwnerState.put"));
+        assertTrue(neoBuild.contains("dev.rinchan:rinlib-neoforge"));
+        assertTrue(fabricBuild.contains("dev.rinchan:rinlib-fabric"));
+        assertTrue(truth.contains("getInventory(SharedOwnerState.OWNER)"));
+        assertTrue(jade.contains("SharedInventoryTruth.exists(instance)"));
+        assertTrue(jade.contains("data.remove(\"Loot\")"));
+    }
+
     private static String read(Path path) throws IOException {
         assertTrue(Files.isRegularFile(path), () -> "missing representative source: " + path);
         return Files.readString(path);
