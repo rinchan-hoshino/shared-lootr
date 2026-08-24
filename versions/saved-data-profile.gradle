@@ -1,0 +1,30 @@
+import groovy.json.JsonSlurper
+
+def requestedProfile = providers.gradleProperty("profile").orNull
+if (requestedProfile != null) {
+    def profileFile = rootProject.file("../../support/saved-data-profiles.json")
+    def profile = new JsonSlurper().parse(profileFile).profiles[requestedProfile]
+    if (profile == null) {
+        throw new GradleException("Unknown saved-data profile: ${requestedProfile}")
+    }
+    if (profile.sourceLine != rootProject.projectDir.name) {
+        throw new GradleException("Profile ${requestedProfile} belongs to ${profile.sourceLine}, not ${rootProject.projectDir.name}")
+    }
+    def mapped = [
+            minecraft_version: profile.minecraft_version,
+            minecraft_version_range: "[${profile.minecraft_version}]",
+            mod_version: profile.mod_version,
+            fabric_loader_version: profile.fabric_loader_version,
+            fabric_api_version: profile.fabric_api_version,
+            fabric_cloth_config_version: profile.cloth_config_version,
+            neo_version: profile.neo_version,
+            neo_version_range: "[${profile.neo_version},)",
+            rinlib_version: profile.rinlib_version,
+            lootr_version: profile.lootr_version,
+            lootr_fabric_version: profile.lootr_fabric_versionId,
+            lootr_neoforge_version: profile.lootr_neoforge_versionId,
+            jade_fabric_version: profile.jade_fabric_version,
+            jade_neoforge_version: profile.jade_neoforge_version
+    ]
+    mapped.each { key, value -> rootProject.ext.set(key, value) }
+}

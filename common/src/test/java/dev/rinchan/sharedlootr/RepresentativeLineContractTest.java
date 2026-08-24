@@ -102,6 +102,21 @@ class RepresentativeLineContractTest {
         assertTrue(harness.contains("Legacy player inventory was still readable"));
         assertTrue(fabricBuild.contains("dev.rinchan:rinlib-fabric"));
         assertTrue(neoBuild.contains("dev.rinchan:rinlib-neoforge"));
+
+        String profiles = read(ROOT.resolve("support/saved-data-profiles.json"));
+        for (String version : List.of(
+                "1.21", "1.21.1", "1.21.2", "1.21.3", "1.21.4", "1.21.5",
+                "1.21.6", "1.21.7", "1.21.8", "1.21.9", "1.21.10", "1.21.11"
+        )) {
+            assertTrue(profiles.contains("\"" + version + "\""));
+            assertTrue(profiles.contains("\"rinlib_version\": \"0.2.0+" + version + "\""));
+        }
+        for (String sourceLine : List.of(
+                "saved-data-1.21.1", "saved-data-player-legacy-menu",
+                "saved-data-player-legacy", "saved-data-player-modern", "saved-data-player"
+        )) {
+            assertTrue(Files.isDirectory(ROOT.resolve("versions").resolve(sourceLine)));
+        }
     }
 
     private static String read(Path path) throws IOException {

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.rinchan.sharedlootr.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SavedDataInventoryMixin",
+    "SavedDataOpenedStateMixin",
+    "ProviderOpenBroadcastMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
