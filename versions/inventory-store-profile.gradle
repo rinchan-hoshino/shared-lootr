@@ -1,0 +1,20 @@
+import groovy.json.JsonSlurper
+
+def requestedProfile = providers.gradleProperty('profile').orNull
+if (!requestedProfile) {
+    throw new GradleException('Missing -Pprofile=<minecraft-version>')
+}
+def profileFile = rootProject.file('../../support/inventory-store-profiles.json')
+def profile = new JsonSlurper().parse(profileFile).profiles.find { it.gameVersion == requestedProfile }
+if (profile == null) {
+    throw new GradleException("Unknown inventory-store profile: ${requestedProfile}")
+}
+def expectedLine = new File(profile.sourceLine as String).name
+if (expectedLine != rootProject.projectDir.name) {
+    throw new GradleException("Profile ${requestedProfile} belongs to ${expectedLine}, not ${rootProject.projectDir.name}")
+}
+profile.properties.each { key, value ->
+    if (value != null) {
+        rootProject.ext.set(key as String, value)
+    }
+}

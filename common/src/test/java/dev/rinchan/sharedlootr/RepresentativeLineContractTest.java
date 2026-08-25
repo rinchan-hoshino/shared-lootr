@@ -111,6 +111,13 @@ class RepresentativeLineContractTest {
             assertTrue(profiles.contains("\"gameVersion\": \"" + version + "\""));
             assertTrue(profiles.contains("\"rinlib_version\": \"0.2.0+" + version + "\""));
         }
+        String profileScript = read(ROOT.resolve("versions/inventory-store-profile.gradle"));
+        assertTrue(profileScript.contains("support/inventory-store-profiles.json"));
+        assertTrue(profileScript.contains("providers.gradleProperty('profile')"));
+        for (String sourceLine : List.of("inventory-store-26.1", "inventory-store-26.1.2")) {
+            String build = read(ROOT.resolve("versions").resolve(sourceLine).resolve("build.gradle"));
+            assertTrue(build.contains("inventory-store-profile.gradle"));
+        }
     }
 
     @Test

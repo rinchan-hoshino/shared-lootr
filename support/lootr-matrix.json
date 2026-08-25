@@ -1382,7 +1382,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1407,7 +1408,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1432,7 +1434,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1457,7 +1460,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1482,7 +1486,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1507,7 +1512,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1532,7 +1538,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     },
     {
@@ -1557,7 +1564,8 @@
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
         "jade_shared_truth_provider_registration",
-        "client_resource_reload"
+        "client_resource_reload",
+        "deterministic_build"
       ]
     }
   ]
