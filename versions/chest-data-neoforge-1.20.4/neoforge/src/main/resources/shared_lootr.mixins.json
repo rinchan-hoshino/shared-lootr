@@ -7,7 +7,7 @@
   "mixins": [
     "NeoForgeChestDataMixin",
     "NeoForgeOpenedProjectionMixin",
-    "ForgeMinecartOpenedConsumerMixin",
+    "NeoForgeMinecartOpenedConsumerMixin",
     "NeoForgeMinecartOpenProjectionMixin"
   ],
   "client": [

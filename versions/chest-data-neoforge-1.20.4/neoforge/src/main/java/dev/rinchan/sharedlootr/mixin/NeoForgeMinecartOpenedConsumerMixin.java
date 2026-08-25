@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(LootrChestMinecartEntity.class)
-public abstract class ForgeMinecartOpenedConsumerMixin {
+public abstract class NeoForgeMinecartOpenedConsumerMixin {
     @ModifyArg(
         method = "startSeenByPlayer",
         at = @At(value = "INVOKE", target = "Ljava/util/Set;contains(Ljava/lang/Object;)Z", remap = false),
