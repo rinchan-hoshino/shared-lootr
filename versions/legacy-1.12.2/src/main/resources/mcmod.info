@@ -1,0 +1,10 @@
+[
+  {
+    "modid": "shared_lootr",
+    "name": "Shared Lootr",
+    "description": "One shared inventory for every Lootr container.",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "requiredMods": ["rinlib", "lootr"]
+  }
+]

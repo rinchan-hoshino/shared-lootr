@@ -1,0 +1,34 @@
+import groovy.json.JsonSlurper
+
+def profileName = providers.gradleProperty('profile').orNull
+if (!profileName) {
+    throw new GradleException('Missing -Pprofile=<minecraft-version>')
+}
+def profilesFile = rootProject.file('../../support/chest-data-profiles.json')
+def profiles = new JsonSlurper().parse(profilesFile)
+def profile = profiles[profileName]
+if (!profile) {
+    throw new GradleException("Unknown ChestData profile: ${profileName}")
+}
+def expectedLines = profile.source_lines ?: [profile.source_line]
+if (!expectedLines.contains(rootProject.projectDir.name)) {
+    throw new GradleException("Profile ${profileName} belongs to ${expectedLines}, not ${rootProject.projectDir.name}")
+}
+profile.each { key, value ->
+    if (value != null && !(value instanceof List)) {
+        rootProject.ext.set(key as String, value)
+    }
+}
+def legacyJava = ['1.16.4', '1.16.5'].contains(profileName) ? 8 : (profileName == '1.17.1' ? 16 : 17)
+rootProject.ext.set('java_version', legacyJava)
+rootProject.ext.set('mod_version', "1.3.0+${profileName}")
+if (profile.forge_version) {
+    rootProject.ext.set('forge_major', (profile.forge_version as String).tokenize('.')[0])
+}
+if (profileName.startsWith('1.')) {
+    def parts = profileName.tokenize('.').collect { it as int }
+    def upper = parts.size() == 2
+            ? "${parts[0]}.${parts[1] + 1}"
+            : "${parts[0]}.${parts[1]}.${parts[2] + 1}"
+    rootProject.ext.set('minecraft_upper', upper)
+}

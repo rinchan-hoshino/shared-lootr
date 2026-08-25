@@ -1,0 +1,35 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.141' apply false
+}
+
+apply from: rootProject.file('../chest-data-profile.gradle')
+ext.minecraft_version_range = '[1.20.4,1.20.5)'
+ext.neo_version_range = '[20.4,)'
+ext.loader_version_range = '[1,)'
+ext.lootr_version = '0'
+
+subprojects {
+    group = rootProject.mod_group_id
+    version = rootProject.mod_version
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.neoforged.net/releases' }
+        maven { url = 'https://api.modrinth.com/maven' }
+        maven { url = 'https://maven.shedaniel.me' }
+    }
+
+    plugins.withType(JavaPlugin).configureEach {
+        java.toolchain.languageVersion = JavaLanguageVersion.of(rootProject.java_version as int)
+        tasks.withType(JavaCompile).configureEach {
+            options.encoding = 'UTF-8'
+        }
+    }
+
+    tasks.withType(AbstractArchiveTask).configureEach {
+        preserveFileTimestamps = false
+        reproducibleFileOrder = true
+    }
+}

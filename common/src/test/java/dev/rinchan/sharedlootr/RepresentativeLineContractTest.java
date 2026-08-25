@@ -51,6 +51,36 @@ class RepresentativeLineContractTest {
         assertTrue(fabricJade.contains("data.remove(\"Loot\")"));
         assertTrue(smoke.contains("Legacy player inventory was still readable"));
         assertTrue(smoke.contains("Opened projection was not stored under the shared owner"));
+        assertTrue(forgeMixin.contains("SharedOwnerState.remove"));
+        assertTrue(fabricMixin.contains("SharedOwnerState.remove"));
+        assertTrue(smoke.contains("Shared inventory clear did not remove shared truth"));
+
+        String profiles = read(ROOT.resolve("support/chest-data-profiles.json"));
+        for (String version : List.of(
+                "1.16.4", "1.16.5", "1.17.1", "1.18", "1.18.1", "1.18.2",
+                "1.19", "1.19.1", "1.19.2", "1.19.3", "1.19.4",
+                "1.20", "1.20.2", "1.20.4", "22w24a"
+        )) {
+            assertTrue(profiles.contains("\"" + version + "\""));
+            assertTrue(profiles.contains("\"rinlib_version\": \"0.2.0+" + version + "\""));
+        }
+        for (String sourceLine : List.of(
+                "chest-data-forge-1.16", "chest-data-forge-1.17.1",
+                "chest-data-legacy-direct", "chest-data-legacy", "chest-data-modern",
+                "chest-data-modern-1.20.2", "chest-data-snapshot",
+                "chest-data-fabric-1.20.4", "chest-data-neoforge-1.20.4"
+        )) {
+            assertTrue(Files.isDirectory(ROOT.resolve("versions").resolve(sourceLine)));
+        }
+
+        String legacyTransformer = read(ROOT.resolve(
+                "versions/legacy-1.12.2/src/main/java/dev/rinchan/sharedlootr/core/SharedLootrTransformer.java"
+        ));
+        assertTrue(legacyTransformer.contains("SharedOwnerState"));
+        assertTrue(legacyTransformer.contains("java/util/Map"));
+        assertTrue(legacyTransformer.contains("java/util/Set"));
+        String matrix = read(ROOT.resolve("support/lootr-matrix.json"));
+        assertFalse(matrix.contains("\"status\": \"planned\""));
     }
 
     @Test

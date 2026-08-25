@@ -1,0 +1,88 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+group = 'dev.rinchan'
+version = '1.3.0+1.12.2'
+archivesBaseName = 'shared_lootr-forge-1.12.2'
+sourceCompatibility = targetCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    maven { url = 'https://api.modrinth.com/maven' }
+}
+
+minecraft {
+    version = '1.12.2-14.23.5.2847'
+    runDir = 'run'
+    mappings = 'snapshot_20171003'
+}
+
+dependencies {
+    compile 'dev.rinchan:rinlib-forge:0.2.0+1.12.2'
+    compile 'maven.modrinth:lootr:fTrJqmfv'
+    testCompile 'junit:junit:4.13.2'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('mcmod.info') {
+        expand version: project.version
+    }
+}
+
+tasks.withType(JavaExec) {
+    systemProperty 'sharedLootr.smoke', System.getProperty('sharedLootr.smoke', 'false')
+}
+
+jar {
+    manifest {
+        attributes(
+                'FMLCorePluginContainsFMLMod': 'true',
+                'FMLCorePlugin': 'dev.rinchan.sharedlootr.core.SharedLootrCorePlugin',
+                'ForceLoadAsMod': 'true'
+        )
+    }
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+task normalizeArtifacts {
+    doLast {
+        fileTree("$buildDir/libs").matching { include '*.jar' }.files.each { artifact ->
+            def temporary = new File(artifact.parentFile, artifact.name + '.normalized')
+            def input = new java.util.zip.ZipFile(artifact)
+            def output = new java.util.zip.ZipOutputStream(new FileOutputStream(temporary))
+            try {
+                input.entries().toList().sort { it.name }.each { original ->
+                    def entry = new java.util.zip.ZipEntry(original.name)
+                    entry.time = 315532800000L
+                    output.putNextEntry(entry)
+                    if (!original.directory) {
+                        input.getInputStream(original).withCloseable { stream ->
+                            byte[] buffer = new byte[8192]
+                            for (int read; (read = stream.read(buffer)) >= 0; ) output.write(buffer, 0, read)
+                        }
+                    }
+                    output.closeEntry()
+                }
+            } finally {
+                output.close()
+                input.close()
+            }
+            if (!artifact.delete() || !temporary.renameTo(artifact)) {
+                throw new GradleException("Failed to normalize ${artifact}")
+            }
+        }
+    }
+}
+
+build.finalizedBy normalizeArtifacts

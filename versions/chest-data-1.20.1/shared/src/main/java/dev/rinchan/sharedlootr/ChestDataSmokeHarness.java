@@ -97,6 +97,17 @@ public final class ChestDataSmokeHarness {
                 throw new IllegalStateException("Shared inventory lookup did not return the created inventory");
             }
 
+            Method clearInventory = chestDataClass.getMethod("clearInventory", UUID.class);
+            if (!Boolean.TRUE.equals(clearInventory.invoke(chestData, playerId))) {
+                throw new IllegalStateException("Shared inventory clear did not report success");
+            }
+            if (inventories.containsKey(SharedOwnerState.OWNER) || getInventory.invoke(chestData, player) != null) {
+                throw new IllegalStateException("Shared inventory clear did not remove shared truth");
+            }
+            if (!inventories.containsKey(playerId)) {
+                throw new IllegalStateException("Shared inventory clear removed legacy player data");
+            }
+
             Class<?> infoProviderClass = Class.forName(infoProviderName);
             Set<UUID> openers = new HashSet<>();
             Object provider = Proxy.newProxyInstance(

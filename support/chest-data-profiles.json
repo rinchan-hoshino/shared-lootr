@@ -1,0 +1,204 @@
+{
+  "1.16.4": {
+    "minecraft_version": "1.16.4",
+    "rinlib_version": "0.2.0+1.16.4",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-forge-1.16",
+    "lootr_forge_version": "3chnbfTW",
+    "forge_version": "35.1.37",
+    "jade_forge_version": "z8VJxqga"
+  },
+  "1.16.5": {
+    "minecraft_version": "1.16.5",
+    "rinlib_version": "0.2.0+1.16.5",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-forge-1.16",
+    "lootr_forge_version": "msdGS3NS",
+    "forge_version": "36.2.42",
+    "jade_forge_version": "z8VJxqga"
+  },
+  "1.17.1": {
+    "minecraft_version": "1.17.1",
+    "rinlib_version": "0.2.0+1.17.1",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-forge-1.17.1",
+    "lootr_forge_version": "zemwxYHC",
+    "forge_version": "37.1.1",
+    "jade_forge_version": "9GFhyVbZ"
+  },
+  "1.18": {
+    "minecraft_version": "1.18",
+    "rinlib_version": "0.2.0+1.18",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy-direct",
+    "lootr_forge_version": "5k9iUxGP",
+    "forge_version": "38.0.17",
+    "jade_forge_version": "wYVlZH8l",
+    "lootr_fabric_version": "z6mkEaZp",
+    "fabric_api_version": "0.44.0+1.18",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": null,
+    "cloth_config_version": "BLMp2TRt"
+  },
+  "1.18.1": {
+    "minecraft_version": "1.18.1",
+    "rinlib_version": "0.2.0+1.18.1",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy-direct",
+    "lootr_forge_version": "5k9iUxGP",
+    "forge_version": "39.1.2",
+    "jade_forge_version": "wYVlZH8l",
+    "lootr_fabric_version": "z6mkEaZp",
+    "fabric_api_version": "0.46.6+1.18",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": null,
+    "cloth_config_version": "BLMp2TRt"
+  },
+  "1.18.2": {
+    "minecraft_version": "1.18.2",
+    "rinlib_version": "0.2.0+1.18.2",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "LQP5jrCT",
+    "forge_version": "40.2.21",
+    "jade_forge_version": "L2um3gq1",
+    "lootr_fabric_version": "w2hEo5la",
+    "fabric_api_version": "0.77.0+1.18.2",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": "MSJGBHIo",
+    "cloth_config_version": "BLMp2TRt"
+  },
+  "1.19": {
+    "minecraft_version": "1.19",
+    "rinlib_version": "0.2.0+1.19",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "6ULhni05",
+    "forge_version": "41.1.0",
+    "jade_forge_version": "kp0HjPre",
+    "lootr_fabric_version": "7WyuvACZ",
+    "fabric_api_version": "0.58.0+1.19",
+    "lootr_fabric_dependencies": [
+      "9s6osm5g"
+    ],
+    "jade_fabric_version": null,
+    "cloth_config_version": "ZpV0fKbO"
+  },
+  "1.19.1": {
+    "minecraft_version": "1.19.1",
+    "rinlib_version": "0.2.0+1.19.1",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "6ULhni05",
+    "forge_version": "42.0.9",
+    "jade_forge_version": "kp0HjPre",
+    "lootr_fabric_version": "7WyuvACZ",
+    "fabric_api_version": "0.58.5+1.19.1",
+    "lootr_fabric_dependencies": [
+      "9s6osm5g"
+    ],
+    "jade_fabric_version": "ZASePpsm",
+    "cloth_config_version": "ZpV0fKbO"
+  },
+  "1.19.2": {
+    "minecraft_version": "1.19.2",
+    "rinlib_version": "0.2.0+1.19.2",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "6ULhni05",
+    "forge_version": "43.4.20",
+    "jade_forge_version": "kp0HjPre",
+    "lootr_fabric_version": "7WyuvACZ",
+    "fabric_api_version": "0.77.0+1.19.2",
+    "lootr_fabric_dependencies": [
+      "9s6osm5g"
+    ],
+    "jade_fabric_version": "ZASePpsm",
+    "cloth_config_version": "ZpV0fKbO"
+  },
+  "1.19.3": {
+    "minecraft_version": "1.19.3",
+    "rinlib_version": "0.2.0+1.19.3",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "HmhkyU8X",
+    "forge_version": "44.1.23",
+    "jade_forge_version": "uaCBZukC",
+    "lootr_fabric_version": "pFr53NCP",
+    "fabric_api_version": "0.76.1+1.19.3",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": "HIL9jJQF",
+    "cloth_config_version": "w2VZSLTf"
+  },
+  "1.19.4": {
+    "minecraft_version": "1.19.4",
+    "rinlib_version": "0.2.0+1.19.4",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-legacy",
+    "lootr_forge_version": "HmhkyU8X",
+    "forge_version": "45.4.2",
+    "jade_forge_version": "qIHOeHzS",
+    "lootr_fabric_version": "vswD4Si0",
+    "fabric_api_version": "0.87.2+1.19.4",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": "4bCqgRsR",
+    "cloth_config_version": "ZTMfeJij"
+  },
+  "1.20": {
+    "minecraft_version": "1.20",
+    "rinlib_version": "0.2.0+1.20",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-modern",
+    "lootr_forge_version": "mWTXC1ZX",
+    "forge_version": "46.0.14",
+    "jade_forge_version": "xJQHCmWJ",
+    "lootr_fabric_version": "nj1zDLc6",
+    "fabric_api_version": "0.83.0+1.20",
+    "lootr_fabric_dependencies": [
+      "9s6osm5g"
+    ],
+    "jade_fabric_version": "ahavHbAT",
+    "cloth_config_version": "2xQdCMyG"
+  },
+  "1.20.2": {
+    "minecraft_version": "1.20.2",
+    "rinlib_version": "0.2.0+1.20.2",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-modern-1.20.2",
+    "lootr_forge_version": "ZqSHctHT",
+    "forge_version": "48.1.0",
+    "jade_forge_version": "K048p8ZE"
+  },
+  "1.20.4": {
+    "minecraft_version": "1.20.4",
+    "rinlib_version": "0.2.0+1.20.4",
+    "fabric_loader_version": "0.15.11",
+    "lootr_neoforge_version": "oENq02ZK",
+    "neo_version": "20.4.251",
+    "jade_neoforge_version": "9rrZAORZ",
+    "lootr_fabric_version": "xuoeOnYI",
+    "fabric_api_version": "0.97.3+1.20.4",
+    "lootr_fabric_dependencies": [
+      "P7dR8mSH",
+      "9s6osm5g"
+    ],
+    "jade_fabric_version": "fNHCa6bl",
+    "cloth_config_version": "2deYQULk",
+    "source_lines": [
+      "chest-data-fabric-1.20.4",
+      "chest-data-neoforge-1.20.4"
+    ]
+  },
+  "22w24a": {
+    "minecraft_version": "22w24a",
+    "rinlib_version": "0.2.0+22w24a",
+    "fabric_loader_version": "0.15.11",
+    "source_line": "chest-data-snapshot",
+    "lootr_fabric_version": "RXVA6nvn",
+    "fabric_api_version": "0.58.0+1.19",
+    "lootr_fabric_dependencies": [],
+    "jade_fabric_version": null,
+    "cloth_config_version": "ZpV0fKbO",
+    "minecraft_dependency": "1.19.1-alpha.22.24.a"
+  }
+}

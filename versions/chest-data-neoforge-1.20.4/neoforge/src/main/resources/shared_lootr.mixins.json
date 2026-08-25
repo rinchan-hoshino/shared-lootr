@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.rinchan.sharedlootr.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "shared_lootr-forge.refmap.json",
+  "mixins": [
+    "NeoForgeChestDataMixin",
+    "NeoForgeOpenedProjectionMixin",
+    "ForgeMinecartOpenedConsumerMixin",
+    "NeoForgeMinecartOpenProjectionMixin"
+  ],
+  "client": [
+    "NeoForgeBarrelOpenedConsumerMixin",
+    "NeoForgeChestOpenedConsumerMixin",
+    "NeoForgeShulkerOpenedConsumerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

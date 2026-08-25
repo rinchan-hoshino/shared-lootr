@@ -1,0 +1,47 @@
+plugins {
+    id 'fabric-loom'
+}
+
+base {
+    archivesName = "shared_lootr-fabric-${minecraft_version}"
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version as int)
+}
+
+sourceSets.main.java.srcDir rootProject.file('shared/src/main/java')
+
+loom {
+    runs {
+        server {
+            server()
+            runDir 'run'
+            vmArg "-DsharedLootr.smoke=${System.getProperty('sharedLootr.smoke', 'false')}"
+            programArg '--nogui'
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    if (rootProject.ext.has('fabric_api_version')) {
+        modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+        modImplementation "maven.modrinth:lootr:${lootr_fabric_version}"
+        modRuntimeOnly "maven.modrinth:cloth-config:${cloth_config_version}"
+        modImplementation("dev.rinchan:rinlib-fabric:${rinlib_version}") {
+            transitive = false
+        }
+    }
+}
+
+processResources {
+    inputs.properties version: project.version, minecraft_version: '1.19.1-alpha.22.24.a',
+            java_version: java_version, rinlib_version: rinlib_version
+    filesMatching('fabric.mod.json') {
+        expand version: project.version, minecraft_version: '1.19.1-alpha.22.24.a',
+                java_version: java_version, rinlib_version: rinlib_version
+    }
+}

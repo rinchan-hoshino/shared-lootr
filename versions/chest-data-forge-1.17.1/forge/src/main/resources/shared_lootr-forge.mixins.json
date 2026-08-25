@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.rinchan.sharedlootr.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "shared_lootr-forge.refmap.json",
+  "mixins": [
+    "ForgeChestDataMixin",
+    "ForgeOpenedProjectionMixin",
+    "ForgeMinecartOpenBroadcastMixin"
+  ],
+  "client": [
+    "ForgeBarrelOpenedConsumerMixin",
+    "ForgeChestOpenedConsumerMixin",
+    "ForgeShulkerOpenedConsumerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
