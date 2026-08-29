@@ -78,5 +78,20 @@ class ReleaseSourceContractTest(unittest.TestCase):
         self.assertEqual([], references)
 
 
+    def test_loader_mixins_are_registered_by_release_resources(self) -> None:
+        for module in REPOSITORY_ROOT.glob("versions/*/*"):
+            if module.name not in {"fabric", "forge", "neoforge"}:
+                continue
+            source_root = module / "src/main/java"
+            if not source_root.is_dir():
+                continue
+            configs = []
+            for path in (module / "src/main/resources").glob("*.mixins.json"):
+                configs.append(path.read_text())
+            registered_text = "\n".join(configs)
+            for mixin in source_root.rglob("*Mixin.java"):
+                self.assertIn(f'"{mixin.stem}"', registered_text, str(mixin))
+
+
 if __name__ == "__main__":
     unittest.main()
