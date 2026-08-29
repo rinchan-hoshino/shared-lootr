@@ -78,6 +78,11 @@ class ReleaseSourceContractTest(unittest.TestCase):
         self.assertEqual([], references)
 
 
+    def test_legacy_forge_inventory_redirect_targets_the_player_overload(self) -> None:
+        source = (REPOSITORY_ROOT / "versions/chest-data-legacy-direct/forge/src/main/java/dev/rinchan/sharedlootr/mixin/ForgeChestDataMixin.java").read_text()
+        self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", source)
+        self.assertNotIn("getInventory(Ljava/util/UUID;)", source)
+
     def test_loader_mixins_are_registered_by_release_resources(self) -> None:
         for module in REPOSITORY_ROOT.glob("versions/*/*"):
             if module.name not in {"fabric", "forge", "neoforge"}:
