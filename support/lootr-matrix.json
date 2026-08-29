@@ -29,7 +29,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.12.2-build",
-        "shared_lootr_1.3.0+1.12.2-build",
+        "shared_lootr_1.3.1+1.12.2-build",
         "forge_14.23.5.2847_mixinbooter_11.15",
         "production_dedicated_server_load",
         "shared_inventory_lookup_clear_and_legacy_rejection",
@@ -56,7 +56,7 @@
       "status": "blocked_upstream_lootr_release",
       "proof": [
         "rinlib_0.2.0+1.16.4-build",
-        "shared_lootr_1.3.0+1.16.4-build",
+        "shared_lootr_1.3.1+1.16.4-build",
         "deterministic_build",
         "official_lootr_version_id_3chnbfTW",
         "declares_javafml_36_on_minecraft_1.16.4",
@@ -80,7 +80,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.16.5-build",
-        "shared_lootr_1.3.0+1.16.5-build",
+        "shared_lootr_1.3.1+1.16.5-build",
         "dedicated_server_load",
         "shared_inventory_lookup_clear_and_legacy_rejection",
         "creation_redirect_target_loaded",
@@ -107,7 +107,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.17.1-build",
-        "shared_lootr_1.3.0+1.17.1-build",
+        "shared_lootr_1.3.1+1.17.1-build",
         "dedicated_server_load",
         "shared_inventory_lookup_clear_and_legacy_rejection",
         "creation_redirect_target_loaded",
@@ -134,7 +134,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18-build",
-        "shared_lootr_1.3.0+1.18-build",
+        "shared_lootr_1.3.1+1.18-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -160,7 +160,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18-build",
-        "shared_lootr_1.3.0+1.18-build",
+        "shared_lootr_1.3.1+1.18-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -186,7 +186,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18.1-build",
-        "shared_lootr_1.3.0+1.18.1-build",
+        "shared_lootr_1.3.1+1.18.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -212,7 +212,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18.1-build",
-        "shared_lootr_1.3.0+1.18.1-build",
+        "shared_lootr_1.3.1+1.18.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -238,7 +238,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18.2-build",
-        "shared_lootr_1.3.0+1.18.2-build",
+        "shared_lootr_1.3.1+1.18.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -264,7 +264,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.18.2-build",
-        "shared_lootr_1.3.0+1.18.2-build",
+        "shared_lootr_1.3.1+1.18.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -290,7 +290,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19-build",
-        "shared_lootr_1.3.0+1.19-build",
+        "shared_lootr_1.3.1+1.19-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -316,7 +316,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19-build",
-        "shared_lootr_1.3.0+1.19-build",
+        "shared_lootr_1.3.1+1.19-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -342,7 +342,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+22w24a-build",
-        "shared_lootr_1.3.0+22w24a-build",
+        "shared_lootr_1.3.1+22w24a-build",
         "canonical_fabric_minecraft_version_1.19.1-alpha.22.24.a",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
@@ -369,7 +369,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.1-build",
-        "shared_lootr_1.3.0+1.19.1-build",
+        "shared_lootr_1.3.1+1.19.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -395,7 +395,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.1-build",
-        "shared_lootr_1.3.0+1.19.1-build",
+        "shared_lootr_1.3.1+1.19.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -421,7 +421,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.2-build",
-        "shared_lootr_1.3.0+1.19.2-build",
+        "shared_lootr_1.3.1+1.19.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -447,7 +447,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.2-build",
-        "shared_lootr_1.3.0+1.19.2-build",
+        "shared_lootr_1.3.1+1.19.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -473,7 +473,7 @@
       "status": "blocked_upstream_lootr_release",
       "proof": [
         "rinlib_0.2.0+1.19.3-build",
-        "shared_lootr_1.3.0+1.19.3-build",
+        "shared_lootr_1.3.1+1.19.3-build",
         "deterministic_build",
         "production_server_lootr_construct_crash_no_shared_lootr_entry",
         "java.lang.NoSuchFieldError_f_279569_",
@@ -497,7 +497,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.3-build",
-        "shared_lootr_1.3.0+1.19.3-build",
+        "shared_lootr_1.3.1+1.19.3-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -523,7 +523,7 @@
       "status": "blocked_upstream_lootr_release",
       "proof": [
         "rinlib_0.2.0+1.19.4-build",
-        "shared_lootr_1.3.0+1.19.4-build",
+        "shared_lootr_1.3.1+1.19.4-build",
         "deterministic_build",
         "production_server_lootr_construct_crash_no_shared_lootr_entry",
         "java.lang.NoSuchFieldError_f_279569_",
@@ -547,7 +547,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.19.4-build",
-        "shared_lootr_1.3.0+1.19.4-build",
+        "shared_lootr_1.3.1+1.19.4-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -573,7 +573,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20-build",
-        "shared_lootr_1.3.0+1.20-build",
+        "shared_lootr_1.3.1+1.20-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -599,7 +599,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20-build",
-        "shared_lootr_1.3.0+1.20-build",
+        "shared_lootr_1.3.1+1.20-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -625,7 +625,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20.1-build",
-        "shared_lootr_1.3.0+1.20.1-build",
+        "shared_lootr_1.3.1+1.20.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -651,7 +651,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20.1-build",
-        "shared_lootr_1.3.0+1.20.1-build",
+        "shared_lootr_1.3.1+1.20.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -677,7 +677,7 @@
       "status": "blocked_upstream_lootr_release",
       "proof": [
         "rinlib_0.2.0+1.20.2-build",
-        "shared_lootr_1.3.0+1.20.2-build",
+        "shared_lootr_1.3.1+1.20.2-build",
         "deterministic_build",
         "dedicated_server_lootr_construct_crash_no_shared_lootr_entry",
         "java.lang.NoClassDefFoundError_net.minecraft.world.level.storage.loot.Serializer",
@@ -701,7 +701,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20.4-build",
-        "shared_lootr_1.3.0+1.20.4-build",
+        "shared_lootr_1.3.1+1.20.4-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -727,7 +727,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.20.4-build",
-        "shared_lootr_1.3.0+1.20.4-build",
+        "shared_lootr_1.3.1+1.20.4-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_projection_target",
@@ -753,7 +753,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21-build",
-        "shared_lootr_1.3.0+1.21-build",
+        "shared_lootr_1.3.1+1.21-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -779,7 +779,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21-build",
-        "shared_lootr_1.3.0+1.21-build",
+        "shared_lootr_1.3.1+1.21-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -805,7 +805,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.1-build",
-        "shared_lootr_1.3.0+1.21.1-build",
+        "shared_lootr_1.3.1+1.21.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -831,7 +831,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.1-build",
-        "shared_lootr_1.3.0+1.21.1-build",
+        "shared_lootr_1.3.1+1.21.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -857,7 +857,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.2-build",
-        "shared_lootr_1.3.0+1.21.2-build",
+        "shared_lootr_1.3.1+1.21.2-build",
         "dedicated_server_without_jade_due_upstream_jade_16.0.1_clientlevel_crash",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -883,7 +883,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.2-build",
-        "shared_lootr_1.3.0+1.21.2-build",
+        "shared_lootr_1.3.1+1.21.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -909,7 +909,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.3-build",
-        "shared_lootr_1.3.0+1.21.3-build",
+        "shared_lootr_1.3.1+1.21.3-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -935,7 +935,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.3-build",
-        "shared_lootr_1.3.0+1.21.3-build",
+        "shared_lootr_1.3.1+1.21.3-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -961,7 +961,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.4-build",
-        "shared_lootr_1.3.0+1.21.4-build",
+        "shared_lootr_1.3.1+1.21.4-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -987,7 +987,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.4-build",
-        "shared_lootr_1.3.0+1.21.4-build",
+        "shared_lootr_1.3.1+1.21.4-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1013,7 +1013,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.5-build",
-        "shared_lootr_1.3.0+1.21.5-build",
+        "shared_lootr_1.3.1+1.21.5-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1039,7 +1039,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.5-build",
-        "shared_lootr_1.3.0+1.21.5-build",
+        "shared_lootr_1.3.1+1.21.5-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1065,7 +1065,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.6-build",
-        "shared_lootr_1.3.0+1.21.6-build",
+        "shared_lootr_1.3.1+1.21.6-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1091,7 +1091,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.6-build",
-        "shared_lootr_1.3.0+1.21.6-build",
+        "shared_lootr_1.3.1+1.21.6-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1117,7 +1117,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.7-build",
-        "shared_lootr_1.3.0+1.21.7-build",
+        "shared_lootr_1.3.1+1.21.7-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1143,7 +1143,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.7-build",
-        "shared_lootr_1.3.0+1.21.7-build",
+        "shared_lootr_1.3.1+1.21.7-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1169,7 +1169,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.8-build",
-        "shared_lootr_1.3.0+1.21.8-build",
+        "shared_lootr_1.3.1+1.21.8-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1195,7 +1195,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.8-build",
-        "shared_lootr_1.3.0+1.21.8-build",
+        "shared_lootr_1.3.1+1.21.8-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1221,7 +1221,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.9-build",
-        "shared_lootr_1.3.0+1.21.9-build",
+        "shared_lootr_1.3.1+1.21.9-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1247,7 +1247,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.9-build",
-        "shared_lootr_1.3.0+1.21.9-build",
+        "shared_lootr_1.3.1+1.21.9-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1273,7 +1273,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.10-build",
-        "shared_lootr_1.3.0+1.21.10-build",
+        "shared_lootr_1.3.1+1.21.10-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1299,7 +1299,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.10-build",
-        "shared_lootr_1.3.0+1.21.10-build",
+        "shared_lootr_1.3.1+1.21.10-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1325,7 +1325,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.11-build",
-        "shared_lootr_1.3.0+1.21.11-build",
+        "shared_lootr_1.3.1+1.21.11-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1351,7 +1351,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+1.21.11-build",
-        "shared_lootr_1.3.0+1.21.11-build",
+        "shared_lootr_1.3.1+1.21.11-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_broadcast_projection",
@@ -1377,7 +1377,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1-build",
-        "shared_lootr_1.3.0+26.1-build",
+        "shared_lootr_1.3.1+26.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1403,7 +1403,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1-build",
-        "shared_lootr_1.3.0+26.1-build",
+        "shared_lootr_1.3.1+26.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1429,7 +1429,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1.1-build",
-        "shared_lootr_1.3.0+26.1.1-build",
+        "shared_lootr_1.3.1+26.1.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1455,7 +1455,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1.1-build",
-        "shared_lootr_1.3.0+26.1.1-build",
+        "shared_lootr_1.3.1+26.1.1-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1481,7 +1481,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1.2_build",
-        "shared_lootr_1.3.0+26.1.2_build",
+        "shared_lootr_1.3.1+26.1.2_build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1507,7 +1507,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.1.2_build",
-        "shared_lootr_1.3.0+26.1.2_build",
+        "shared_lootr_1.3.1+26.1.2_build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1533,7 +1533,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.2-build",
-        "shared_lootr_1.3.0+26.2-build",
+        "shared_lootr_1.3.1+26.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",
@@ -1559,7 +1559,7 @@
       "status": "representative_runtime_pass",
       "proof": [
         "rinlib_0.2.0+26.2-build",
-        "shared_lootr_1.3.0+26.2-build",
+        "shared_lootr_1.3.1+26.2-build",
         "dedicated_server_load",
         "shared_inventory_create_lookup_clear_and_legacy_rejection",
         "global_opened_truth_and_projection_targets",

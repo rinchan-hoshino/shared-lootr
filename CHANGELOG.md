@@ -1,33 +1,11 @@
 # Changelog
 
-## 1.2.0
+## 1.3.1
 
-### Changed
+- Removed internal smoke harnesses and their startup/property activation from production JARs across every supported source line.
+- Preserved the harness implementations as test-only sources.
+- Upgraded the repository Gradle wrapper to 9.5.1 for the current Loom profiles.
 
-- Make the shared inventory's existence the single server-side source of truth for generated loot, the opened appearance, and Jade's generated-loot state.
-- Keep Lootr's native block event and NBT only as the client-side projection of that shared state.
-- Remove the extra reopen broadcast fallback.
+## 1.3.0
 
-### Breaking
-
-- Stop migrating or selecting legacy per-player Lootr inventories. In existing worlds those entries remain stored but unused, and affected containers generate new shared loot on their next open, so previously collected loot can become available again.
-
-## 1.1.1
-
-### Fixed
-
-- Align packaged mod metadata with the repository's GPL-3.0-or-later license.
-
-## 1.1.0
-
-### Changed
-
-- Delegate container conversion, block entities, menus, rendering, models, textures, particles, packets and persistence to Lootr's native implementation.
-- Share one canonical Lootr inventory globally while retaining existing per-player copies and selecting populated legacy contents on first shared access.
-- Share and persist Lootr's opened visual state globally.
-
-### Fixed
-
-- Target Lootr 1.11.37's current inventory and open-handler descriptors.
-- Broadcast the opened state when a shared container is reopened.
-- Keep Jade from reporting generated shared loot as ungenerated after the Lootr container has been opened.
+- Published the chest-data, saved-data, and inventory-store compatibility matrix across supported Minecraft loaders and versions.

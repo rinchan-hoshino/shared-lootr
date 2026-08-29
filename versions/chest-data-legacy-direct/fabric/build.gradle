@@ -17,7 +17,6 @@ loom {
         server {
             server()
             runDir 'run'
-            vmArg "-DsharedLootr.smoke=${System.getProperty('sharedLootr.smoke', 'false')}"
             programArg '--nogui'
         }
     }

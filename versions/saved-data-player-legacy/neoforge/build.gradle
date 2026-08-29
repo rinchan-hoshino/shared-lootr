@@ -43,7 +43,6 @@ neoForge {
         server {
             server()
             programArgument '--nogui'
-            systemProperty 'sharedLootr.smoke', System.getProperty('sharedLootr.smoke', 'false')
         }
         configureEach {
             logLevel = org.slf4j.event.Level.INFO

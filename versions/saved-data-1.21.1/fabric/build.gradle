@@ -49,11 +49,6 @@ processResources {
 }
 
 loom {
-    runs {
-        server {
-            vmArg "-DsharedLootr.smoke=${System.getProperty('sharedLootr.smoke', 'false')}"
-        }
-    }
 }
 
 publishing {

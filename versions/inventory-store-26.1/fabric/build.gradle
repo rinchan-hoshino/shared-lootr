@@ -16,11 +16,6 @@ sourceSets.main.java.srcDir root.file('shared/src/main/java')
 sourceSets.main.resources.srcDir root.file('shared/src/main/resources')
 
 loom {
-    runs {
-        server {
-            vmArg "-DsharedLootr.smoke=${System.getProperty('sharedLootr.smoke', 'false')}"
-        }
-    }
 }
 
 dependencies {

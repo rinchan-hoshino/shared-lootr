@@ -38,7 +38,6 @@ minecraft {
         }
         server {
             workingDirectory project.file('run')
-            property 'sharedLootr.smoke', System.getProperty('sharedLootr.smoke', 'false')
             args '--nogui'
             mods {
                 shared_lootr { source sourceSets.main }

@@ -32,7 +32,7 @@ class RepresentativeLineContractTest {
                 "fabric/src/main/java/dev/rinchan/sharedlootr/integration/jade/FabricSharedLootrJadePlugin.java"
         ));
         String smoke = read(line.resolve(
-                "shared/src/main/java/dev/rinchan/sharedlootr/ChestDataSmokeHarness.java"
+                "shared/src/test/java/dev/rinchan/sharedlootr/ChestDataSmokeHarness.java"
         ));
 
         assertTrue(forgeMixin.contains("noobanidus.mods.lootr.data.ChestData"));
@@ -103,7 +103,7 @@ class RepresentativeLineContractTest {
 
         Path earlyLine = ROOT.resolve("versions/inventory-store-26.1");
         String earlyMixin = read(earlyLine.resolve("shared/src/main/java/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java"));
-        String earlyHarness = read(earlyLine.resolve("shared/src/main/java/dev/rinchan/sharedlootr/InventoryStoreSmokeHarness.java"));
+        String earlyHarness = read(earlyLine.resolve("shared/src/test/java/dev/rinchan/sharedlootr/InventoryStoreSmokeHarness.java"));
         String profiles = read(ROOT.resolve("support/inventory-store-profiles.json"));
         assertTrue(earlyMixin.contains("method = \"createInventory\""));
         assertTrue(earlyHarness.contains("store.createInventory(instance, player, filler)"));
@@ -126,7 +126,7 @@ class RepresentativeLineContractTest {
         String mixin = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/mixin/SavedDataInventoryMixin.java"));
         String truth = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/state/SharedSavedDataTruth.java"));
         String jade = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java"));
-        String harness = read(line.resolve("shared/src/main/java/dev/rinchan/sharedlootr/SavedDataSmokeHarness.java"));
+        String harness = read(line.resolve("shared/src/test/java/dev/rinchan/sharedlootr/SavedDataSmokeHarness.java"));
         String fabricBuild = read(line.resolve("fabric/build.gradle"));
         String neoBuild = read(line.resolve("neoforge/build.gradle"));
 
