@@ -14,7 +14,7 @@ public abstract class ForgeChestDataMixin {
     private static final String MAP_PUT = "Ljava/util/Map;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;";
 
     @Redirect(
-            method = "getInventory(Ljava/util/UUID;)Lnoobanidus/mods/lootr/data/SpecialChestInventory;",
+            method = "getInventory(Lnet/minecraft/server/level/ServerPlayer;)Lnoobanidus/mods/lootr/data/SpecialChestInventory;",
             at = @At(value = "INVOKE", target = "Ljava/util/Map;get(Ljava/lang/Object;)Ljava/lang/Object;"),
             require = 1
     )
