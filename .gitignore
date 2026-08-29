@@ -6,3 +6,7 @@ run/
 **/run/
 run-client/
 **/run-client/
+
+# Python test caches
+__pycache__/
+*.py[cod]
