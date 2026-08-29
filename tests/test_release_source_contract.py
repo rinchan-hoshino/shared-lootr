@@ -83,6 +83,13 @@ class ReleaseSourceContractTest(unittest.TestCase):
         self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", source)
         self.assertNotIn("getInventory(Ljava/util/UUID;)", source)
 
+    def test_forge_minecart_mixins_cover_the_production_method_name(self) -> None:
+        for path in REPOSITORY_ROOT.glob("versions/*/forge/src/main/java/**/ForgeMinecart*Mixin.java"):
+            source = path.read_text()
+            if "startSeenByPlayer" in source:
+                self.assertIn('{"startSeenByPlayer", "m_6457_"}', source, str(path))
+                self.assertNotIn("m_5856_", source, str(path))
+
     def test_loader_mixins_are_registered_by_release_resources(self) -> None:
         for module in REPOSITORY_ROOT.glob("versions/*/*"):
             if module.name not in {"fabric", "forge", "neoforge"}:

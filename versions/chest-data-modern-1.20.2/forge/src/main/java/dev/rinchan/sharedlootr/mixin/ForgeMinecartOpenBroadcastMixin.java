@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(LootrChestMinecartEntity.class)
 public abstract class ForgeMinecartOpenBroadcastMixin {
     @Redirect(
-        method = {"startOpen", "m_5856_"},
+        method = {"startSeenByPlayer", "m_6457_"},
         at = @At(
             value = "INVOKE",
             target = "Lnoobanidus/mods/lootr/network/PacketHandler;sendToInternal(Ljava/lang/Object;Lnet/minecraft/server/level/ServerPlayer;)V",
