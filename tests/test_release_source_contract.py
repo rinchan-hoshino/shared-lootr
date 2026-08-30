@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import unittest
 
@@ -104,6 +105,26 @@ class ReleaseSourceContractTest(unittest.TestCase):
             registered_text = "\n".join(configs)
             for mixin in source_root.rglob("*Mixin.java"):
                 self.assertIn(f'"{mixin.stem}"', registered_text, str(mixin))
+
+    def test_every_fabric_release_descriptor_declares_fabric_api(self) -> None:
+        descriptors = list(REPOSITORY_ROOT.glob("versions/*/fabric/src/main/resources/fabric.mod.json"))
+        self.assertGreater(len(descriptors), 0)
+        for path in descriptors:
+            metadata = json.loads(path.read_text())
+            self.assertIn("fabric-api", metadata.get("depends", {}), str(path))
+
+    def test_every_parameterized_forge_jar_binds_file_jar_version(self) -> None:
+        builds = list(REPOSITORY_ROOT.glob("versions/*/forge/build.gradle"))
+        self.assertGreater(len(builds), 0)
+        for path in builds:
+            source = path.read_text()
+            self.assertIn("'Implementation-Version': project.version.toString()", source, str(path))
+
+    def test_legacy_mixin_dependency_is_declared_to_the_loader(self) -> None:
+        annotation = REPOSITORY_ROOT / "versions/legacy-1.12.2/src/main/java/dev/rinchan/sharedlootr/SharedLootr.java"
+        descriptor = REPOSITORY_ROOT / "versions/legacy-1.12.2/src/main/resources/mcmod.info"
+        self.assertIn("required-after:mixinbooter", annotation.read_text())
+        self.assertIn("mixinbooter", json.loads(descriptor.read_text())[0]["requiredMods"])
 
 
 if __name__ == "__main__":

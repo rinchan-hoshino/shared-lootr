@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "repository": "shared-lootr",
+  "owner": "GameTest",
+  "status": "not_executed",
+  "reason": "Requires real Lootr containers, server ticks, saved-data flush/reload, and concurrent player interaction.",
+  "scenarios": [
+    {
+      "id": "two-player-single-generation",
+      "preconditions": [
+        "Place one unopened Lootr container with deterministic loot.",
+        "Create two survival players at the container."
+      ],
+      "steps": [
+        "Schedule both players to open the container in the same server tick.",
+        "Have the first player remove one marked stack.",
+        "Have the second player reopen the container."
+      ],
+      "assertions": [
+        "Loot generation occurs exactly once.",
+        "Both players observe the same inventory identity and slot contents.",
+        "The removed marked stack is absent for both players and is not duplicated."
+      ]
+    },
+    {
+      "id": "save-restart-clear-lifecycle",
+      "preconditions": [
+        "Generate a shared Lootr inventory and mutate a known slot."
+      ],
+      "steps": [
+        "Flush saved data and stop the test server cleanly.",
+        "Restart with the same world and open the container as a different player.",
+        "Invoke the supported clear/reset path and open it again."
+      ],
+      "assertions": [
+        "After restart the different player sees the persisted shared mutation.",
+        "No legacy player-keyed inventory becomes readable.",
+        "Clear removes shared inventory truth once and the next generation occurs once."
+      ]
+    }
+  ]
+}

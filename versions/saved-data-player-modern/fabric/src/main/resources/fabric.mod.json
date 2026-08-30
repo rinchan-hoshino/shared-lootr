@@ -14,6 +14,7 @@
   "mixins": ["shared_lootr.mixins.json"],
   "depends": {
     "fabricloader": ">=0.17.0",
+    "fabric-api": "*",
     "minecraft": "${minecraft_version}",
     "java": ">=21",
     "lootr": "*",

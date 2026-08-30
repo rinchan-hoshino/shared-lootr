@@ -61,7 +61,8 @@ mixin {
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
-            'MixinConfigs': 'shared_lootr-forge.mixins.json'
+            'MixinConfigs': 'shared_lootr-forge.mixins.json',
+            'Implementation-Version': project.version.toString()
         ])
     }
 }
