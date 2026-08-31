@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.2
+
+- Declared the required Fabric API and legacy MixinBooter dependencies in release metadata.
+- Added the implementation version to legacy Forge manifests so `${file.jarVersion}` resolves correctly.
+- Does not change the shared-loot gameplay contract or supported matrix.
+
 ## 1.3.1
 
 - Removed internal smoke harnesses and their startup/property activation from production JARs across every supported source line.

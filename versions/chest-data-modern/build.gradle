@@ -8,7 +8,7 @@ apply from: rootProject.file('../chest-data-profile.gradle')
 
 allprojects {
     group = 'dev.rinchan'
-    version = "1.3.1+${minecraft_version}"
+    version = "1.3.2+${minecraft_version}"
 
     repositories {
         mavenLocal()

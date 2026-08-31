@@ -4,7 +4,7 @@
     "1.21": {
       "sourceLine": "saved-data-player-legacy-menu",
       "minecraft_version": "1.21",
-      "mod_version": "1.3.1+1.21",
+      "mod_version": "1.3.2+1.21",
       "rinlib_version": "0.2.0+1.21",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.10.35.99",
@@ -19,7 +19,7 @@
     "1.21.1": {
       "sourceLine": "saved-data-1.21.1",
       "minecraft_version": "1.21.1",
-      "mod_version": "1.3.1+1.21.1",
+      "mod_version": "1.3.2+1.21.1",
       "rinlib_version": "0.2.0+1.21.1",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.11.38.124",
@@ -34,7 +34,7 @@
     "1.21.2": {
       "sourceLine": "saved-data-player-legacy",
       "minecraft_version": "1.21.2",
-      "mod_version": "1.3.1+1.21.2",
+      "mod_version": "1.3.2+1.21.2",
       "rinlib_version": "0.2.0+1.21.2",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.11.35.87",
@@ -49,7 +49,7 @@
     "1.21.3": {
       "sourceLine": "saved-data-player-legacy",
       "minecraft_version": "1.21.3",
-      "mod_version": "1.3.1+1.21.3",
+      "mod_version": "1.3.2+1.21.3",
       "rinlib_version": "0.2.0+1.21.3",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.11.35.87",
@@ -64,7 +64,7 @@
     "1.21.4": {
       "sourceLine": "saved-data-player-legacy",
       "minecraft_version": "1.21.4",
-      "mod_version": "1.3.1+1.21.4",
+      "mod_version": "1.3.2+1.21.4",
       "rinlib_version": "0.2.0+1.21.4",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.13.36.89",
@@ -79,7 +79,7 @@
     "1.21.5": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.5",
-      "mod_version": "1.3.1+1.21.5",
+      "mod_version": "1.3.2+1.21.5",
       "rinlib_version": "0.2.0+1.21.5",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.14.38.93",
@@ -94,7 +94,7 @@
     "1.21.6": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.6",
-      "mod_version": "1.3.1+1.21.6",
+      "mod_version": "1.3.2+1.21.6",
       "rinlib_version": "0.2.0+1.21.6",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.16.40.97",
@@ -109,7 +109,7 @@
     "1.21.7": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.7",
-      "mod_version": "1.3.1+1.21.7",
+      "mod_version": "1.3.2+1.21.7",
       "rinlib_version": "0.2.0+1.21.7",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.15.38.94",
@@ -124,7 +124,7 @@
     "1.21.8": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.8",
-      "mod_version": "1.3.1+1.21.8",
+      "mod_version": "1.3.2+1.21.8",
       "rinlib_version": "0.2.0+1.21.8",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.16.40.96",
@@ -139,7 +139,7 @@
     "1.21.9": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.9",
-      "mod_version": "1.3.1+1.21.9",
+      "mod_version": "1.3.2+1.21.9",
       "rinlib_version": "0.2.0+1.21.9",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.17.31.98",
@@ -154,7 +154,7 @@
     "1.21.10": {
       "sourceLine": "saved-data-player-modern",
       "minecraft_version": "1.21.10",
-      "mod_version": "1.3.1+1.21.10",
+      "mod_version": "1.3.2+1.21.10",
       "rinlib_version": "0.2.0+1.21.10",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.18.32.99",
@@ -169,7 +169,7 @@
     "1.21.11": {
       "sourceLine": "saved-data-player",
       "minecraft_version": "1.21.11",
-      "mod_version": "1.3.1+1.21.11",
+      "mod_version": "1.3.2+1.21.11",
       "rinlib_version": "0.2.0+1.21.11",
       "fabric_loader_version": "0.19.2",
       "lootr_version": "1.20.34.104",
