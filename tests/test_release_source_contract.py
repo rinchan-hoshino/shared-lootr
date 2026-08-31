@@ -79,11 +79,14 @@ class ReleaseSourceContractTest(unittest.TestCase):
         self.assertEqual([], references)
 
 
-    def test_legacy_forge_inventory_redirect_targets_the_map_get_overload(self) -> None:
-        for path in REPOSITORY_ROOT.glob("versions/chest-data-legacy*/forge/src/main/java/**/ForgeChestDataMixin.java"):
-            source = path.read_text()
-            self.assertIn("getInventory(Ljava/util/UUID;)", source, str(path))
-            self.assertNotIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", source, str(path))
+    def test_legacy_forge_inventory_redirect_targets_each_provider_shape(self) -> None:
+        direct = (REPOSITORY_ROOT / "versions/chest-data-legacy-direct/forge/src/main/java/dev/rinchan/sharedlootr/mixin/ForgeChestDataMixin.java").read_text()
+        self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", direct)
+        self.assertNotIn("getInventory(Ljava/util/UUID;)", direct)
+
+        shared = (REPOSITORY_ROOT / "versions/chest-data-legacy/forge/src/main/java/dev/rinchan/sharedlootr/mixin/ForgeChestDataMixin.java").read_text()
+        self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", shared)
+        self.assertIn("getInventory(Ljava/util/UUID;)", shared)
 
     def test_forge_minecart_mixins_cover_the_production_method_name(self) -> None:
         for path in REPOSITORY_ROOT.glob("versions/*/forge/src/main/java/**/ForgeMinecart*Mixin.java"):
