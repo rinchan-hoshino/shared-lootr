@@ -5,6 +5,9 @@
 
 Lootr normally gives each player a separate inventory when they open the same container. Shared Lootr changes that rule: every player now interacts with the same server-owned inventory for that Lootr container.
 
+![Two real clients sharing one Lootr container](docs/screenshots/shared-lootr-team.png)
+
+![The shared Lootr inventory in game](docs/screenshots/shared-lootr-inventory.png)
 
 ## What changes in game
 
