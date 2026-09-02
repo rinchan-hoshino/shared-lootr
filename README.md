@@ -1,6 +1,7 @@
 # Shared Lootr
 
 <!-- PROJECT_PAGE_START -->
+
 **One Lootr chest. One shared inventory for the whole team.**
 
 Lootr normally gives each player a separate inventory when they open the same container. Shared Lootr changes that rule: every player now interacts with the same server-owned inventory for that Lootr container.
@@ -58,6 +59,19 @@ When reporting an issue, include:
 - A minimal reproduction without unrelated mods when possible
 
 Source and issue tracker: https://github.com/rinchan-hoshino/shared-lootr
+
+## Screenshots
+
+### One Lootr chest, one shared inventory
+
+![TeamMate holding the four diamonds taken from the shared Lootr chest](docs/screenshots/shared-lootr-teammate-holds-diamonds.png)
+
+TeamMate has taken the four diamonds from the Lootr chest through the normal chest menu.
+
+![TeamLead opening the same Lootr chest with the original diamond slot now empty](docs/screenshots/shared-lootr-same-slot-empty.png)
+
+When TeamLead opens the same chest, the original diamond slot is empty while the other items remain. Both players resolve to the same shared inventory state.
+
 <!-- PROJECT_PAGE_END -->
 
 ---
