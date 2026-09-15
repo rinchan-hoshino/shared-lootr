@@ -1,52 +1,24 @@
-"""Original 64px pixel illustration. No source images or textures are read."""
+"""Pixel-grid fitting of the existing colored vector art; geometry is sourced unchanged."""
 from pathlib import Path
-from PIL import Image, ImageDraw
+from PIL import Image,ImageDraw
 R=Path(__file__).resolve().parents[1]/"docs"
-im=Image.new('RGBA',(64,64));d=ImageDraw.Draw(im)
-ink='#302b35';gold='#d7ac57';light='#f3d889';wood='#956043';dark='#624237';skin='#d39a75';skinlight='#edbd91';skinshade='#ad735e'
-def p(points,c): d.polygon(points,fill=c)
-def l(points,c,w=1): d.line(points,fill=c,width=w)
-# Open lid: stepped silhouette, warm timber and broad brass bands.
-p([(17,28),(18,13),(35,7),(42,10),(39,25),(23,32)],ink)
-p([(19,14),(35,9),(40,11),(37,24),(22,29)],gold)
-p([(22,16),(35,12),(37,13),(35,22),(24,26)],dark)
-p([(24,17),(34,14),(33,21),(25,24)],wood)
-l([(20,14),(35,10),(39,11)],light)
-l([(21,17),(20,25)],light)
-p([(29,11),(32,10),(32,13),(30,14)],light)
-# Chest body and distinct recessed opening.
-p([(16,31),(34,24),(46,32),(44,45),(29,52),(17,44)],ink)
-p([(18,33),(29,39),(29,49),(19,43)],wood)
-p([(30,39),(44,33),(42,44),(30,49)],dark)
-p([(19,31),(34,26),(43,32),(29,37)],gold)
-p([(23,31),(34,28),(39,32),(29,35)],ink)
-l([(18,32),(29,38),(44,32)],light,2)
-l([(19,35),(20,43),(28,47)],gold)
-l([(30,40),(30,48),(42,43)],gold)
-l([(23,37),(23,44)],dark)
-l([(35,39),(34,45)],wood)
-p([(34,37),(37,36),(37,40),(34,41)],gold)
-d.point((35,38),fill=light)
-# Three hands use the same outline, two skin planes and blocky cuff treatment.
-p([(6,39),(19,29),(24,32),(24,36),(12,46),(8,45)],ink)
-p([(10,39),(20,31),(23,33),(20,36),(12,42)],skinlight)
-p([(12,42),(20,36),(23,34),(22,37),(13,44)],skinshade)
-p([(5,40),(9,37),(15,44),(10,48),(6,45)],ink)
-p([(7,40),(9,39),(13,44),(10,46),(7,44)],'#548e9b')
-l([(8,40),(11,44)],'#83b8b4')
-p([(40,28),(44,26),(57,33),(56,39),(52,41),(40,34)],ink)
-p([(42,29),(44,28),(54,33),(52,36),(42,32)],skinlight)
-p([(42,32),(52,36),(54,34),(54,38),(52,39),(42,34)],skinshade)
-p([(54,31),(59,33),(59,38),(55,42),(51,40)],ink)
-p([(55,33),(57,34),(57,38),(55,40),(53,39)],'#548e9b')
-l([(55,34),(54,37)],'#83b8b4')
-p([(30,40),(34,37),(38,39),(43,50),(40,55),(36,54)],ink)
-p([(32,41),(35,39),(37,40),(41,50),(38,52)],skinlight)
-p([(37,41),(42,50),(40,53),(38,52)],skinshade)
-p([(37,52),(42,49),(47,56),(46,59),(42,61),(39,58)],ink)
-p([(39,53),(42,52),(45,56),(44,58),(42,59)],'#70986b')
-l([(40,54),(42,57)],'#a6be83')
-im.save(R/'shared-lootr-icon-64.png')
-im.resize((400,400),Image.Resampling.NEAREST).save(R/'shared-lootr-icon.png')
-im.resize((512,512),Image.Resampling.NEAREST).save(R/'preview.png')
-print('64x64; palette:',len(im.getcolors(4096)), '; alpha:',sorted(set(im.getchannel('A').getdata())))
+source='from pathlib import Path\nfrom PIL import Image,ImageDraw\nimport math\nR=Path(__file__).resolve().parents[1]/"docs"\nS=480;K=3;ink=\'#34312e\';paper=\'#ffffff\';width=5\nim=Image.new(\'RGB\',(S*K,S*K),paper);d=ImageDraw.Draw(im)\nsvg=[f\'<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480"><rect width="480" height="480" fill="white"/><g stroke="{ink}" stroke-width="{width}" stroke-linejoin="miter" stroke-linecap="square">\']\ncolors=iter(["#f2d184","#a7793d","#d6aa59","#956445","#b78253","#805538","#e3bb6b","#49382e","#f2d184"])\ndef poly(pts,color=None):\n if color is None: color=next(colors)\n svg.append(\'<polygon points="\'+\' \'.join(f\'{x:.2f},{y:.2f}\' for x,y in pts)+f\'" fill="{color}"/>\')\n pp=[(round(x*K),round(y*K)) for x,y in pts];d.polygon(pp,fill=color);d.line(pp+[pp[0]],fill=ink,width=width*K)\ndef line(pts,w=width):\n svg.append(\'<polyline points="\'+\' \'.join(f\'{x:.2f},{y:.2f}\' for x,y in pts)+f\'" fill="none" stroke-width="{w}"/>\')\n d.line([(round(x*K),round(y*K)) for x,y in pts],fill=ink,width=w*K)\n# The raised lid and rear rim share the same hinge edge.\n# Every chest edge belongs to one of the same three parallel directions.\npoly([(218,88),(228,82),(348,132),(338,138)])\npoly([(338,138),(348,132),(348,262),(338,268)])\npoly([(218,88),(338,138),(338,268),(218,218)])\npoly([(230,109),(326,149),(326,247),(230,207)])\n# Base: left/front plane and right plane, then the open top rim.\npoly([(148,265),(268,315),(268,402),(148,352)])\npoly([(268,315),(338,268),(338,355),(268,402)])\npoly([(148,265),(218,218),(338,268),(268,315)])\npoly([(166,264),(220,228),(320,270),(266,306)])\n# Lock plate follows the front face perspective.\npoly([(202,288),(220,295),(220,317),(202,310)])\n# Rectangular arms with one sleeve boundary each.\ndef hand(start,end,sleeve):\n x,y=start;ex,ey=end;dx=ex-x;dy=ey-y;n=math.hypot(dx,dy);v=(-dy/n,dx/n)\n poly([(x+v[0]*16,y+v[1]*16),(ex+v[0]*16,ey+v[1]*16),(ex-v[0]*16,ey-v[1]*16),(x-v[0]*16,y-v[1]*16)],"#deb18a")\n cx=x+dx/n*26;cy=y+dy/n*26\n poly([(x+v[0]*16,y+v[1]*16),(cx+v[0]*16,cy+v[1]*16),(cx-v[0]*16,cy-v[1]*16),(x-v[0]*16,y-v[1]*16)],sleeve)\nhand((66,315),(190,270),"#5495a0")\nhand((413,317),(312,281),"#5495a0")\nhand((289,440),(245,330),"#83a572")\nsvg.append(\'</g></svg>\')\n(R/\'shared-lootr-colored.svg\').write_text(\'\\n\'.join(svg))\nim.resize((480,480),Image.Resampling.LANCZOS).save(R/\'shared-lootr-colored.png\')\n\n# Rasterize at the existing coordinates, reduce to 96px, then snap to the\n# illustration palette without dithering. Integer 5x nearest-neighbor enlargement.\nhexes=[paper,ink,"#f2d184","#a7793d","#d6aa59","#956445","#b78253","#805538","#e3bb6b","#49382e","#deb18a","#5495a0","#83a572"]\npal=Image.new("P",(1,1))\nrgb=[tuple(bytes.fromhex(h[1:])) for h in hexes]\nflat=[c for t in rgb for c in t]\npal.putpalette(flat+list(rgb[0])*(256-len(rgb)))\nsmall=im.resize((96,96),Image.Resampling.NEAREST).quantize(palette=pal,dither=Image.Dither.NONE).convert("RGB")\nsmall.save(R/"shared-lootr-pixel-96.png")\nsmall.resize((480,480),Image.Resampling.NEAREST).save(R/"shared-lootr-pixel.png")\n'
+# Execute only the existing geometry, substituting grid-fitted rasterization.
+setup=source[:source.index('# The raised lid')]
+geometry=source[source.index('# The raised lid'):source.index("svg.append('</g></svg>')")]
+ns={'__file__':str(R/'process.py')};exec(setup,ns)
+im=Image.new('RGB',(48,48),'white');d=ImageDraw.Draw(im)
+ink='#34312e'
+def snap(points):return [(round(x/10),round(y/10)) for x,y in points]
+def poly(points,color=None):
+ if color is None:color=next(ns['colors'])
+ pts=snap(points)
+ # Widen the existing lid frame to one readable pixel after its outlines.
+ if color=='#956445':
+  pts=[(x+(1 if i in (0,3) else -1),y+(1 if i in (0,1) else -1)) for i,(x,y) in enumerate(pts)]
+ d.polygon(pts,fill=color)
+ d.line(pts+[pts[0]],fill=ink,width=1)
+def line(points,w=5):d.line(snap(points),fill=ink,width=1)
+ns.update(poly=poly,line=line);exec(geometry,ns)
+im.save(R/'grid-fitted-48.png')
+im.resize((480,480),Image.Resampling.NEAREST).save(R/'preview.png')
