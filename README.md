@@ -1,6 +1,6 @@
 # Shared Lootr
 
-<p align="center"><img src="docs/shared-lootr-icon.png" alt="An open Lootr chest shared by two Steves and Alex" width="320" /></p>
+<p align="center"><img src="docs/shared-lootr-icon.png" alt="Pixel art of an open treasure chest shared by three adventurers" width="320" /></p>
 
 Play Lootr, but share the loot.
 
