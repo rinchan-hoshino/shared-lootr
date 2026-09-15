@@ -1,0 +1,8 @@
+def release = new Properties()
+rootProject.file('../../gradle.properties').withInputStream { release.load(it) }
+rootProject.ext.set('mod_version', "${release.getProperty('mod_version')}+${rootProject.minecraft_version}")
+
+allprojects {
+    def module = project == rootProject ? 'root' : project.name
+    buildDir = rootProject.file("../../build/profiles/${rootProject.minecraft_version}/${module}")
+}

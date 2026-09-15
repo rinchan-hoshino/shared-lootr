@@ -10,7 +10,6 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(java_version as int)
 }
 
-sourceSets.main.java.srcDir rootProject.file('shared/src/main/java')
 
 loom {
     runs {
@@ -22,15 +21,17 @@ loom {
     }
 }
 
+apply from: rootProject.file('../sources.gradle')
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     if (rootProject.ext.has('fabric_api_version')) {
         modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
-        modImplementation "maven.modrinth:lootr:${lootr_fabric_version}"
+        modImplementation lootrCoordinate
         modRuntimeOnly "maven.modrinth:cloth-config:${cloth_config_version}"
-        modImplementation("dev.rinchan:rinlib-fabric:${rinlib_version}") {
+        modImplementation(rinlibCoordinate) {
             transitive = false
         }
     }

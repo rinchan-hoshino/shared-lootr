@@ -12,7 +12,6 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
-sourceSets.main.java.srcDir rootProject.file('shared/src/main/java')
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
@@ -34,10 +33,12 @@ minecraft {
     }
 }
 
+apply from: rootProject.file('../sources.gradle')
+
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("maven.modrinth:lootr:${lootr_forge_version}")
-    implementation fg.deobf("dev.rinchan:rinlib-forge:${rinlib_version}")
+    implementation fg.deobf(lootrCoordinate)
+    implementation fg.deobf(rinlibCoordinate)
     compileOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
     runtimeOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

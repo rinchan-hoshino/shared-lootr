@@ -1,0 +1,35 @@
+allprojects {
+    beforeEvaluate { p ->
+        if (Boolean.getBoolean('sharedLootr.omitJadeRuntime')) {
+            p.configurations.configureEach { configuration ->
+                if (configuration.name in ['modRuntimeOnly', 'modLocalRuntime']) {
+                    configuration.withDependencies { dependencies ->
+                        dependencies.removeAll { it.group == 'maven.modrinth' && it.name == 'jade' }
+                    }
+                }
+            }
+        }
+    }
+    afterEvaluate { p ->
+        if (p.name == 'fabric') {
+            def probeRoot = new File(System.getProperty('probe.sources'))
+            def probe = p.sourceSets.create('runtimeProbe') {
+                java.srcDir new File(probeRoot, 'java')
+                java.srcDir new File(probeRoot.parentFile, 'players-' + System.getProperty('probe.players', 'modern') + '/java')
+                java.srcDir new File(probeRoot.parentFile, 'fabric/java')
+                resources.srcDir new File(probeRoot.parentFile, 'fabric/resources')
+                compileClasspath += p.sourceSets.main.output + p.sourceSets.main.compileClasspath
+                runtimeClasspath += output + p.sourceSets.main.output + p.sourceSets.main.runtimeClasspath
+            }
+            p.loom.mods {
+                shared_lootr { sourceSet(p.sourceSets.main) }
+                shared_lootr_probe { sourceSet(probe) }
+            }
+            p.tasks.named('runServer').configure { doFirst { workingDir = p.file(System.getProperty('probe.instance')) } }
+            p.loom.runs.server {
+                source(probe)
+                runDir(p.projectDir.toPath().relativize(p.file(System.getProperty('probe.instance')).toPath()).toString())
+            }
+        }
+    }
+}

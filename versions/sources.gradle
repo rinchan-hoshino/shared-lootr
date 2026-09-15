@@ -1,0 +1,52 @@
+import groovy.json.JsonSlurper
+
+// Minecraft profiles select source files by Lootr API shape, never by copying them.
+def repository = rootProject.file('../..')
+def moduleKey = rootProject.name == project.name
+        ? rootProject.projectDir.name
+        : "${rootProject.projectDir.name}/${project.name}"
+def manifest = new JsonSlurper().parse(new File(repository, 'support/source-sets.json'))
+def selected = manifest.modules[moduleKey]
+if (!selected) {
+    throw new GradleException("No Lootr adapter sources registered for ${moduleKey}")
+}
+sourceSets.main.java.setSrcDirs([new File(repository, 'adapters')])
+sourceSets.main.java.setIncludes(selected as Set)
+
+// Use the same pinned RinLib binary for compilation and runtime validation.
+def lock = new JsonSlurper().parse(new File(repository, 'support/release-targets.json'))
+def target = lock.targets.find {
+    it.minecraft == rootProject.minecraft_version.toString() && it.loader == (project == rootProject ? 'forge' : project.name)
+}
+if (target == null) {
+    throw new GradleException("No release target for ${moduleKey}/${rootProject.minecraft_version}")
+}
+ext.rinlibCoordinate = "maven.modrinth:rinlib:${target.rinlib.version_id}"
+ext.lootrCoordinate = "maven.modrinth:lootr:${target.lootr.version_id}"
+
+if (project.name == 'fabric') {
+    def verifyApi = tasks.register('verifyFabricApiDependency') {
+        dependsOn tasks.named('processResources')
+        doLast {
+            def metadata = new JsonSlurper().parse(layout.buildDirectory.file('resources/main/fabric.mod.json').get().asFile)
+            def requested = metadata.depends.keySet().findAll { it in ['fabric', 'fabric-api'] }
+            def available = [] as Set
+            configurations.compileClasspath.files.findAll { it.name.endsWith('.jar') }.each { artifact ->
+                new java.util.jar.JarFile(artifact).withCloseable { jar ->
+                    def entry = jar.getJarEntry('fabric.mod.json')
+                    if (entry != null) {
+                        def dependency = jar.getInputStream(entry).withCloseable { new JsonSlurper().parse(it) }
+                        if (dependency.id in ['fabric', 'fabric-api']) {
+                            available.add(dependency.id)
+                            available.addAll(dependency.provides ?: [])
+                        }
+                    }
+                }
+            }
+            if (requested.size() != 1 || !available.containsAll(requested)) {
+                throw new GradleException("Fabric API dependency ${requested} is not provided by the resolved Fabric API: ${available}")
+            }
+        }
+    }
+    tasks.named('check').configure { dependsOn verifyApi }
+}

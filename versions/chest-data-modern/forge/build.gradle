@@ -12,7 +12,6 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(java_version as int)
 }
 
-sourceSets.main.java.srcDir rootProject.file('shared/src/main/java')
 
 processResources {
     inputs.properties minecraft_version: minecraft_version, minecraft_upper: minecraft_upper,
@@ -46,10 +45,12 @@ minecraft {
     }
 }
 
+apply from: rootProject.file('../sources.gradle')
+
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("maven.modrinth:lootr:${lootr_forge_version}")
-    implementation fg.deobf("dev.rinchan:rinlib-forge:${rinlib_version}")
+    implementation fg.deobf(lootrCoordinate)
+    implementation fg.deobf(rinlibCoordinate)
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 

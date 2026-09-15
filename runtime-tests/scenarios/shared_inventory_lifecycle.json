@@ -1,9 +1,6 @@
 {
   "schemaVersion": 1,
   "repository": "shared-lootr",
-  "owner": "GameTest",
-  "status": "not_executed",
-  "reason": "Requires real Lootr containers, server ticks, saved-data flush/reload, and concurrent player interaction.",
   "scenarios": [
     {
       "id": "two-player-single-generation",
