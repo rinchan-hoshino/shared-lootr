@@ -13,7 +13,6 @@ if (requestedProfile != null) {
     def mapped = [
             minecraft_version: profile.minecraft_version,
             minecraft_version_range: "[${profile.minecraft_version}]",
-            mod_version: profile.mod_version,
             fabric_loader_version: profile.fabric_loader_version,
             fabric_api_version: profile.fabric_api_version,
             fabric_cloth_config_version: profile.cloth_config_version,

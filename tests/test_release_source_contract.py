@@ -1,4 +1,6 @@
 import json
+import re
+from collections import Counter
 from pathlib import Path
 import unittest
 
@@ -11,7 +13,16 @@ SMOKE_HARNESS_SYMBOL = "Smoke" + "Harness"
 
 def is_main_source(path: Path) -> bool:
     parts = path.relative_to(REPOSITORY_ROOT).parts
-    return any(parts[index : index + 2] == ("src", "main") for index in range(len(parts) - 1))
+    return parts[0] == "adapters" or any(parts[index : index + 2] == ("src", "main") for index in range(len(parts) - 1))
+
+
+def module_sources(module):
+    manifest = json.loads((REPOSITORY_ROOT / "support/source-sets.json").read_text())
+    return [REPOSITORY_ROOT / "adapters" / name for name in manifest["modules"][module]]
+
+
+def module_source(module, filename):
+    return next(path for path in module_sources(module) if path.name == filename)
 
 
 def iter_main_source_files():
@@ -80,41 +91,39 @@ class ReleaseSourceContractTest(unittest.TestCase):
 
 
     def test_legacy_forge_inventory_redirect_targets_each_provider_shape(self) -> None:
-        direct = (REPOSITORY_ROOT / "versions/chest-data-legacy-direct/forge/src/main/java/dev/rinchan/sharedlootr/mixin/ForgeChestDataMixin.java").read_text()
+        direct = module_source("chest-data-legacy-direct/forge", "ForgeChestDataMixin.java").read_text()
         self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", direct)
         self.assertNotIn("getInventory(Ljava/util/UUID;)", direct)
 
-        shared = (REPOSITORY_ROOT / "versions/chest-data-legacy/forge/src/main/java/dev/rinchan/sharedlootr/mixin/ForgeChestDataMixin.java").read_text()
+        shared = module_source("chest-data-legacy/forge", "ForgeChestDataMixin.java").read_text()
         self.assertIn("getInventory(Lnet/minecraft/server/level/ServerPlayer;)", shared)
         self.assertIn("getInventory(Ljava/util/UUID;)", shared)
 
     def test_forge_minecart_mixins_cover_the_production_method_name(self) -> None:
-        for path in REPOSITORY_ROOT.glob("versions/*/forge/src/main/java/**/ForgeMinecart*Mixin.java"):
+        for path in (REPOSITORY_ROOT / "adapters").rglob("ForgeMinecart*Mixin.java"):
             source = path.read_text()
             if "startSeenByPlayer" in source:
                 self.assertIn('{"startSeenByPlayer", "m_6457_"}', source, str(path))
                 self.assertNotIn("m_5856_", source, str(path))
 
     def test_loader_mixins_are_registered_by_release_resources(self) -> None:
-        for module in REPOSITORY_ROOT.glob("versions/*/*"):
-            if module.name not in {"fabric", "forge", "neoforge"}:
-                continue
-            source_root = module / "src/main/java"
-            if not source_root.is_dir():
-                continue
-            configs = []
-            for path in (module / "src/main/resources").glob("*.mixins.json"):
-                configs.append(path.read_text())
-            registered_text = "\n".join(configs)
-            for mixin in source_root.rglob("*Mixin.java"):
-                self.assertIn(f'"{mixin.stem}"', registered_text, str(mixin))
+        manifest = json.loads((REPOSITORY_ROOT / "support/source-sets.json").read_text())
+        for module in manifest["modules"]:
+            directory = REPOSITORY_ROOT / "versions" / module
+            resource_dirs = [directory / "src/main/resources",
+                             directory.parent / "shared/src/main/resources"]
+            registered = "\n".join(path.read_text() for root in resource_dirs
+                                   for path in root.glob("*.mixins.json"))
+            for source in module_sources(module):
+                if "@Mixin(" in source.read_text():
+                    self.assertIn(f'"{source.stem}"', registered, str(source))
 
     def test_every_fabric_release_descriptor_declares_fabric_api(self) -> None:
         descriptors = list(REPOSITORY_ROOT.glob("versions/*/fabric/src/main/resources/fabric.mod.json"))
         self.assertGreater(len(descriptors), 0)
         for path in descriptors:
             metadata = json.loads(path.read_text())
-            self.assertIn("fabric-api", metadata.get("depends", {}), str(path))
+            self.assertEqual(1, len({"fabric", "fabric-api"} & metadata.get("depends", {}).keys()), str(path))
 
     def test_every_parameterized_forge_jar_binds_file_jar_version(self) -> None:
         builds = list(REPOSITORY_ROOT.glob("versions/*/forge/build.gradle"))
@@ -124,10 +133,57 @@ class ReleaseSourceContractTest(unittest.TestCase):
             self.assertIn("'Implementation-Version': project.version.toString()", source, str(path))
 
     def test_legacy_mixin_dependency_is_declared_to_the_loader(self) -> None:
-        annotation = REPOSITORY_ROOT / "versions/legacy-1.12.2/src/main/java/dev/rinchan/sharedlootr/SharedLootr.java"
+        annotation = module_source("legacy-1.12.2", "SharedLootr.java")
         descriptor = REPOSITORY_ROOT / "versions/legacy-1.12.2/src/main/resources/mcmod.info"
         self.assertIn("required-after:mixinbooter", annotation.read_text())
         self.assertIn("mixinbooter", json.loads(descriptor.read_text())[0]["requiredMods"])
+
+    def test_source_composition_is_complete_and_unambiguous(self):
+        manifest = json.loads((REPOSITORY_ROOT / "support/source-sets.json").read_text())
+        used = set()
+        for module in manifest["modules"]:
+            names = []
+            for path in module_sources(module):
+                source = path.read_text()
+                package = re.search(r"package ([\w.]+);", source).group(1)
+                names.append(package + "." + path.stem)
+                used.add(path)
+            self.assertEqual(len(names), len(set(names)), module)
+        self.assertEqual(used, set((REPOSITORY_ROOT / "adapters").rglob("*.java")))
+        counts = Counter(path.read_bytes() for path in used)
+        self.assertTrue(all(count == 1 for count in counts.values()), "Duplicate production source")
+
+    def test_every_release_target_selects_a_source_module(self):
+        targets = json.loads((REPOSITORY_ROOT / "support/release-targets.json").read_text())["targets"]
+        self.assertEqual(56, len(targets))
+        self.assertEqual(31, len({target["minecraft"] for target in targets}))
+        for target in targets:
+            module = target["source_line"]
+            if module != "legacy-1.12.2":
+                module += "/" + target["loader"]
+            self.assertTrue(module_sources(module))
+            self.assertTrue(target["rinlib"]["version_id"])
+            self.assertTrue(target["lootr"]["version_id"])
+
+    def test_identical_lootr_releases_share_core_source_files(self):
+        targets = json.loads((REPOSITORY_ROOT / "support/release-targets.json").read_text())["targets"]
+        groups = {}
+        for target in targets:
+            module = target["source_line"]
+            if module != "legacy-1.12.2":
+                module += "/" + target["loader"]
+            core = {path for path in module_sources(module) if "integration" not in path.parts}
+            key = (target["loader"], target["lootr"]["version_id"])
+            if key in groups:
+                self.assertEqual(groups[key], core, str(key))
+            groups[key] = core
+
+    def test_profiles_use_the_canonical_release_version(self):
+        for path in (REPOSITORY_ROOT / "versions").glob("*/build.gradle"):
+            source = re.sub(r"minecraft\s*\{[^}]*\}", "", path.read_text())
+            self.assertNotRegex(source, r"(?m)^\s*version\s*=\s*[\"']\d", str(path))
+        for path in (REPOSITORY_ROOT / "versions").glob("*/gradle.properties"):
+            self.assertNotRegex(path.read_text(), r"(?m)^mod_version=", str(path))
 
 
 if __name__ == "__main__":

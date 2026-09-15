@@ -10,8 +10,11 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+ext.minecraft_version = '1.12.2'
+apply from: rootProject.file('../release.gradle')
+
 group = 'dev.rinchan'
-version = '1.3.2+1.12.2'
+version = rootProject.mod_version
 archivesBaseName = 'shared_lootr-forge-1.12.2'
 sourceCompatibility = targetCompatibility = '1.8'
 
@@ -26,9 +29,11 @@ minecraft {
     mappings = 'snapshot_20171003'
 }
 
+apply from: rootProject.file('../sources.gradle')
+
 dependencies {
-    compile 'dev.rinchan:rinlib-forge:0.2.0+1.12.2'
-    compile 'maven.modrinth:lootr:fTrJqmfv'
+    compile rinlibCoordinate
+    compile lootrCoordinate
     testCompile 'junit:junit:4.13.2'
 }
 

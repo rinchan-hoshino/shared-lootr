@@ -1,0 +1,1406 @@
+{
+  "release": "1.3.3",
+  "complete": true,
+  "targets": [
+    {
+      "minecraft": "26.2",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+26.2.jar",
+          "sha256": "b3f46a859ef522169b2206c4ffb1260975777cd7ec30c4ac904ed48a1731a374"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "menu-r3/26.2-neoforge/phase1.log",
+          "sha256": "e6edb12d09b6f01411f294b24fd5ef61f4a0b3e8bda929cccd65ffe4fa9d272a"
+        },
+        {
+          "file": "menu-r3/26.2-neoforge/phase2.log",
+          "sha256": "6606650dd703bf72a5a4267afffdb7d1cceb79ce7b360c808297d4c5ba18e79b"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.2",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+26.2.jar",
+          "sha256": "5e2a9ddc2fc63c34114666a20a1510925ee4da4ec3890a5e47850d193cb0fbd0"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "runner-final/26.2-fabric/phase1.log",
+          "sha256": "fd790a18046314ec953f45f94bad8194e2e9738d30f90dc30bc2bd51da298444"
+        },
+        {
+          "file": "runner-final/26.2-fabric/phase2.log",
+          "sha256": "5a8a452ad212954d2801a2afcf53fe85d7d9bebe08d2c59228ea8990dc6427f2"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.2",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+26.1.2.jar",
+          "sha256": "e0eb98fc9b07776471fd744a14cbad5f49e37ce1dbd1fb485a6f792d092a246d"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/26.1.2-neoforge/phase1.log",
+          "sha256": "f3a339040e372dca5675dc53b287868c00bd96b1577e6552c399dfd686b80fd4"
+        },
+        {
+          "file": "matrix-runtime/26.1.2-neoforge/phase2.log",
+          "sha256": "5cc96804bfc28401808f4996d482e6bd16a1f10ffc89ff7dceafc6d0532e89e9"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.2",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+26.1.2.jar",
+          "sha256": "157ca616ad6211e7aecd4c301a7f32b7fa5fdf51e218ad9a7e86272dc79460a9"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/26.1.2-fabric/phase1.log",
+          "sha256": "d5eab1c164989abc34e7a55a6e08e2ba941823435c8007f6a917f8fa9fe74288"
+        },
+        {
+          "file": "matrix-runtime/26.1.2-fabric/phase2.log",
+          "sha256": "49acc40ee1a8e006199b9c922adb269f76c063d012089fb012f72fcbb7c54b1b"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.1",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+26.1.1.jar",
+          "sha256": "8b63ae095fce0d387ca3438cf8326a84976c2490b81ebfa6a769414b68bc0d5c"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/26.1.1-neoforge/phase1.log",
+          "sha256": "5a5e8209411d2d5e07325293da2c3f31d1e6a20577f0d25a9f7242f51570d7ba"
+        },
+        {
+          "file": "retry/26.1.1-neoforge/phase2.log",
+          "sha256": "bd07f13d957eecb7afbc0e38253e41e17b8a3c83a0a9dc1ead624d15ad74fef6"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+26.1.1.jar",
+          "sha256": "1fab30ff4f33ee1177672a0ff94108ca84e1370c2339c6b3a97a52e2bb5177cf"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/26.1.1-fabric/phase1.log",
+          "sha256": "8fefa6ce9ed499f23ba77af47863486d8c6bac8e4d72e425eebd87f16484f680"
+        },
+        {
+          "file": "matrix-runtime/26.1.1-fabric/phase2.log",
+          "sha256": "e7c09efdb89e86344298a4f6ac0a18d5db59d7adef60c71d84bb837be6d63b4b"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+26.1.jar",
+          "sha256": "dc6a45807e003eb857c4f796eb254433a329bc055dd90da380119b12ece11589"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "runner-final/26.1-neoforge/phase1.log",
+          "sha256": "4974e184543eb60db0789d56a86afa67949682c427e27ae017b9f88e29f416e2"
+        },
+        {
+          "file": "runner-final/26.1-neoforge/phase2.log",
+          "sha256": "0ac6deeac69ca8373ba2fa8d214a64dab996896c8d10cbc1e4de240312ed012c"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+26.1.jar",
+          "sha256": "2b73d1c00daf9785856616a78bcc30d24ec16379414912b9a353851cbca9efd4"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/26.1-fabric/phase1.log",
+          "sha256": "7a90e17fa7cb251c11167ac82e4d407638703676a9f255228254ff8ef8ef2976"
+        },
+        {
+          "file": "matrix-runtime/26.1-fabric/phase2.log",
+          "sha256": "d0bf7d57909445f2e475e721d4efa29c6e781e5e0d29f752217f3302677b9f3a"
+        }
+      ]
+    },
+    {
+      "minecraft": "22w24a",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-22w24a-1.3.3+22w24a.jar",
+          "sha256": "288c45db1ebf5e8b7e920e8bda6d91589a0b6028702a9b4f00b62c96bcdc767b"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "verified/22w24a-fabric/phase1.log",
+          "sha256": "695ad5aff655ed33742419c41fe7fb573b99095e93431ecf0907debb0011daf2"
+        },
+        {
+          "file": "verified/22w24a-fabric/phase2.log",
+          "sha256": "fa19d63b940f0827dfa9544484fb30a73e81251949af3c8dfd748baed66ac1b7"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.9",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.9.jar",
+          "sha256": "37b83fb0338c4d69d70a45299f8202cfd36a87db15ebb8792ca2449d322e5411"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.9-neoforge/phase1.log",
+          "sha256": "0409ea052d2ee1bda92d066a1a563ed1e1eeed37d8731d7c9f5c237f8279cd8a"
+        },
+        {
+          "file": "matrix-runtime/1.21.9-neoforge/phase2.log",
+          "sha256": "6c5e7bebb2471f13c5c2f4b18b3247092c80e92581f8161da766349ff2540a56"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.9",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.9.jar",
+          "sha256": "6a1472e0dee8f467b9a6607deb0f3e85d68f5921d9eb610b55417790221669a6"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.21.9-fabric/phase1.log",
+          "sha256": "84efe5dda0fa23c1233ddadc8fadb452fb2bbdcf1837748c66ff4bf715115b4a"
+        },
+        {
+          "file": "retry/1.21.9-fabric/phase2.log",
+          "sha256": "8bb2b5b59ff71c36f589ba4b751db1b88e8c8f8f46e4ef9e287dbc3d051bef77"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.8",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.8.jar",
+          "sha256": "584b37ef0f323083b932841c412b6f51ce0f0f5628de875499a46354065b4707"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.8-neoforge/phase1.log",
+          "sha256": "c2a89079108d0d024e91a61276651bc51bf60350d82ce8f905b875353486789c"
+        },
+        {
+          "file": "matrix-runtime/1.21.8-neoforge/phase2.log",
+          "sha256": "23c518ef06bebec763c6df68f4438c31c51a67188e70e723813bfaacc21f3f8a"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.8",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.8.jar",
+          "sha256": "e4f47fc3b353a08951fe1de98fbd030ab57cfd2a7cf29178fb734b9eaa43702f"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.8-fabric/phase1.log",
+          "sha256": "00431b57661400aecb43a4011bd4eb054503a54394a73b87f22ac281ceb30367"
+        },
+        {
+          "file": "matrix-runtime/1.21.8-fabric/phase2.log",
+          "sha256": "ea774372ed19612c7c65bb4b4a0b654db4a77027d77b8961e349486abcb7f333"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.7",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.7.jar",
+          "sha256": "b0162b1b1ec61ec03f1a7d1fc7ab948ab1ddcb4426fb16402a90bb5449283585"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.7-neoforge/phase1.log",
+          "sha256": "9ecd7a0ba7fa77a4abbda6056d3a224f2caedcb9d4e129ad1610af218e4b9e84"
+        },
+        {
+          "file": "matrix-runtime/1.21.7-neoforge/phase2.log",
+          "sha256": "1481269b46cb7b794957a8128218601f6f9c78e603f422d8d654f48fdd50abbb"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.7",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.7.jar",
+          "sha256": "ecd9bfa5ee6a32c044f23f3867b9772ef2003fbca35df52aa971d973feb0c653"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.7-fabric/phase1.log",
+          "sha256": "e4c856689d3e17d93c9a298f738541639c7045ec73a5db19dbb28f5eac39ca63"
+        },
+        {
+          "file": "matrix-runtime/1.21.7-fabric/phase2.log",
+          "sha256": "9836aee1cc3c0f4858d7f954a7eccf53ed49866709d83f024cf4021796200860"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.6",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.6.jar",
+          "sha256": "6381c128210d391aeb5709f50896708d143385d061efe6d57bd91f1f64be2a8a"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.6-neoforge/phase1.log",
+          "sha256": "8f5399a1d45047763bcf3c32b2d564147f64b680292256b7ef065b515b69eb0a"
+        },
+        {
+          "file": "matrix-runtime/1.21.6-neoforge/phase2.log",
+          "sha256": "3ec67cb9d7209d2d3bc5120ce66dd92b434940f41ad3741fe09acc36a9687897"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.6",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.6.jar",
+          "sha256": "3839e7bfb7b22541922bf6d4445b6e37ba567c374d608c863bb8b21346bdf58a"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.21.6-fabric/phase1.log",
+          "sha256": "a07f94a4febcf229fd1eb3402fd15b116142b6af1e378f7ca9731999a47a5a6c"
+        },
+        {
+          "file": "retry/1.21.6-fabric/phase2.log",
+          "sha256": "217703b4fc34b0c28276208c2ecd6252ab1fbdcf58e6b084bb8a9dc4b4e00bf6"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.5",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.5.jar",
+          "sha256": "f7fb24745e7946c731eff8f4cd843638e310f40d7c5ecfa1e6a2b6fc98be457c"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.5-neoforge/phase1.log",
+          "sha256": "e9770d2cdf35dc19560223c6673b161a0480cc2a3abee598a2f3f49d5bceb910"
+        },
+        {
+          "file": "matrix-runtime/1.21.5-neoforge/phase2.log",
+          "sha256": "9d2d2cbc7ab2244de256e0b34e59a41ab4c13ce997a704081e78b3bb4e2c5343"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.5",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.5.jar",
+          "sha256": "5157216bcd1d0b564dbb615bb4eac5e93ee223f0107f3c8e85a944aad82ff1e3"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.5-fabric/phase1.log",
+          "sha256": "6515ccdd8c985bc84caaa0c4df96a884795ba92f45b817954187396098f2d091"
+        },
+        {
+          "file": "matrix-runtime/1.21.5-fabric/phase2.log",
+          "sha256": "a2213430053147b09109f2771a7f905d6d4f6e7c0a07ec2362f3d8595e03aa3d"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.4",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.4.jar",
+          "sha256": "b59552cdff00b8cb2e5642bb3b906663d33fbcca7be1030151a33da65e7cd08d"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.4-neoforge/phase1.log",
+          "sha256": "bb6b7813d8e377d2665244c1f6abdce86e91e3c0733011b03c1ffba6b0ff4612"
+        },
+        {
+          "file": "matrix-runtime/1.21.4-neoforge/phase2.log",
+          "sha256": "9d342c095827d4d9df0cb979599a1eeb7efba14977289da03023ecba3500e34d"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.4",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.4.jar",
+          "sha256": "0c7f4d090e7fe805dbfd0756dc63c96bed62e2cae30f1090cd57bbb995936d60"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.21.4-fabric/phase1.log",
+          "sha256": "d694c802ed0561aef96304ba7a8cca07ebe08f968a9435ec382dc48dce77d3dd"
+        },
+        {
+          "file": "retry/1.21.4-fabric/phase2.log",
+          "sha256": "a8cc547b022047bcc0a391338c788d695057114d8b89375ffb90f78e3e610dbb"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.3",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.3.jar",
+          "sha256": "d3f30a36abc75da9f9c796ad13a5f072807a2b89ce817dae22cf6eb9fea46ecb"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.3-neoforge/phase1.log",
+          "sha256": "ba35d3dccfa0dfbfeaaa21c7b8c4f5c25b17917080105bf3dc798270cf87461b"
+        },
+        {
+          "file": "matrix-runtime/1.21.3-neoforge/phase2.log",
+          "sha256": "20d5cffa12623b14eaebaecbcb41007abd1cd6186fa6b7818798398d7aaf331b"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.3",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.3.jar",
+          "sha256": "00486b2cb206e983f948b89a725c37c2e72ad3dd251488a29d0c12443ca8747e"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.3-fabric/phase1.log",
+          "sha256": "8620d24b3dd6bba4d50a0c2a0d141ed0840ce434150f7b944783d555e8db7eff"
+        },
+        {
+          "file": "matrix-runtime/1.21.3-fabric/phase2.log",
+          "sha256": "dad6814760372f2a7b2f73be84df3631d2fd4a39498d7cf81370c14102cc811c"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.2",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.2.jar",
+          "sha256": "3e195854b4b4ca68d8ec997e4e75c2c9154fd9a113dd2f9447b09d2c44575348"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": true,
+      "logs": [
+        {
+          "file": "retry-core/1.21.2-neoforge/phase1.log",
+          "sha256": "836eacc53133c4a2508fc8061f2651e8ea0060c04439f32626f948193c25b8e9"
+        },
+        {
+          "file": "retry-core/1.21.2-neoforge/phase2.log",
+          "sha256": "e3ee3fdc906a52b6d7ce82b610cf604710b1daea146bbde29d925d7a6db2bb69"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.2",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.2.jar",
+          "sha256": "556c97ea23d63061af256f83f97d8736b70827755aa586b4e15e7a574835ecfd"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": true,
+      "logs": [
+        {
+          "file": "retry-core-r3/1.21.2-fabric/phase1.log",
+          "sha256": "ad81186f043dd3a26ab75d01c1e017d96dbc75187892f6b3fb496404e7338cda"
+        },
+        {
+          "file": "retry-core-r3/1.21.2-fabric/phase2.log",
+          "sha256": "7867a3462f35cdb88a90c9aedffefe86b534dc6238b0406229cba3f450acf93d"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.11",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.11.jar",
+          "sha256": "69d744a0416e8853efbb14aa7b6b741451c7f59e59ae76003516aedb9d6b0030"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.21.11-neoforge/phase1.log",
+          "sha256": "bf197eec11bcb0081acf6d87c48dcf469ba91fa7613dde781e78498289223605"
+        },
+        {
+          "file": "retry/1.21.11-neoforge/phase2.log",
+          "sha256": "ffc8710fc473044dc64034bf014a3675175be2493dea65f09bc773e41113a1dd"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.11",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.11.jar",
+          "sha256": "ef91560ecdd3bb97467a9d3b5b7159fe3401c0e0b0534aba532bbc3ab492d869"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.11-fabric/phase1.log",
+          "sha256": "615498ab98e8823e0bc4c077f296e0cf2aabb7a024fd0ea3ef57369a0ec9c340"
+        },
+        {
+          "file": "matrix-runtime/1.21.11-fabric/phase2.log",
+          "sha256": "4adbb11f476541dd4d7bbab8ee1cc62198cc141f852cd03ee4d1a0fb69638e04"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.10",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.10.jar",
+          "sha256": "59465dd610add5ee132e5a3bb32e405b826db01b990f292aa10dfc7707b6a368"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.10-neoforge/phase1.log",
+          "sha256": "965eb92830358cf94829b6d05ddcbfa9af52a2d6b9bffc8536fd372073a31651"
+        },
+        {
+          "file": "matrix-runtime/1.21.10-neoforge/phase2.log",
+          "sha256": "0bdd096dcd943cecc00d2f04e8b2da6d0ccb88d5e4f2753354759c280a7286e4"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.10",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.10.jar",
+          "sha256": "f3a7bd41965a30332c91f444b8faa3448d61dd8540c5e95a48069fcc44580ca6"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21.10-fabric/phase1.log",
+          "sha256": "30108ba44627c18b2fbbf5e785a1364679d4283cb66df6043c8f9404e4647025"
+        },
+        {
+          "file": "matrix-runtime/1.21.10-fabric/phase2.log",
+          "sha256": "89238d113be7d1749969a76dffae91853c197dbe0b0d81cb032b2bf0d04d2cc3"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.1",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.1.jar",
+          "sha256": "781ca923938f3306ab5127442d6c146936da2bfa7b11d4d263e1cc0ccd8ed826"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "verified/1.21.1-neoforge/phase1.log",
+          "sha256": "aa840b0bda2960d854307fb3c8ace1db2f6b94311c5e27a1e748b6e9d463c231"
+        },
+        {
+          "file": "verified/1.21.1-neoforge/phase2.log",
+          "sha256": "7d7b0118cda7228c74c50d45dfc50c34e1d10d119eecd3c0ef0b67caa6c23a60"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.1.jar",
+          "sha256": "b614096afa3b4f51d38bb5d257f1c8f476a0bcaeafcc5a3a7cf3d9b8f629708b"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "verified/1.21.1-fabric/phase1.log",
+          "sha256": "497b13978fc79cbe3df0d6a485a52c3c4f46aa980e04cfde41262a6bdf7fa91e"
+        },
+        {
+          "file": "verified/1.21.1-fabric/phase2.log",
+          "sha256": "01416118f836fa7d5d77e410b6b9227c84be247b03a3cf0711a934bce774547b"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.21.jar",
+          "sha256": "e5341a011a673ce90591634482fdc3bc2f69bb92a930b0bcf906f8bf38130557"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21-neoforge/phase1.log",
+          "sha256": "5d318ae2700ff015c2050748d2e507dee8f6df54a5b1c15063c7781878a15411"
+        },
+        {
+          "file": "matrix-runtime/1.21-neoforge/phase2.log",
+          "sha256": "58817507df811cec2e4c34093554b96aa217ae9f7dd9145636979edfa80512bd"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.3.3+1.21.jar",
+          "sha256": "5351a8d595653af9d92f6b19384ee02499e12393f448550addbf9512daae8d4f"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "matrix-runtime/1.21-fabric/phase1.log",
+          "sha256": "584deedc31e96d51419455d67cab3ed1a334ca11ad5831d1f447f07447db4da7"
+        },
+        {
+          "file": "matrix-runtime/1.21-fabric/phase2.log",
+          "sha256": "9be607eee75444c4828b06fa7455a21377d636292d65db14cc689f026f17f432"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.4",
+      "loader": "neoforge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-neoforge-1.3.3+1.20.4.jar",
+          "sha256": "33592af7e06b84e473e63f5138d05131e13d699babf43f0214daad443f569b21"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry-r4/1.20.4-neoforge/phase1.log",
+          "sha256": "fd354d2f14d9e7dbb04e3df507f9b6984b9c0cac69c652664cbbecdb459333d0"
+        },
+        {
+          "file": "retry-r4/1.20.4-neoforge/phase2.log",
+          "sha256": "9a3c9b935119f507caa4628354b793d116509bc20622084b6a4fb7c0fd7cbb3b"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.4",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.20.4-1.3.3+1.20.4.jar",
+          "sha256": "5e8c822bdbe186aaaa10db914e866de2418e1d5f9e69245e6684b5f41e0a8327"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.20.4-fabric/phase1.log",
+          "sha256": "ad0a1d94cd42d1d75c7e1cc4a077f9c6161c47e0de773f9e797a67a316c2b1e6"
+        },
+        {
+          "file": "old-runtime/1.20.4-fabric/phase2.log",
+          "sha256": "36a0d5bb5feb14c9a5dcdcd4acbe2928c49affc33241c614ec4e336be0b134a3"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.1",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.20.1-1.3.3+1.20.1.jar",
+          "sha256": "697992bb9f1f39776aa7b249a21696a69e6f41e3b31f2b407e95a9c9c7b0a0c3"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.20.1-forge/phase1.log",
+          "sha256": "b6fbeef65def3925e0c5400b2d113c7e05fa4e81c83225e8c8194995a376e901"
+        },
+        {
+          "file": "retry/1.20.1-forge/phase2.log",
+          "sha256": "11e171357fd9700117c79e4908f95bb3dd92b70bca90a9bc7cea19969f31589d"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.20.1-1.3.3+1.20.1.jar",
+          "sha256": "3f335be7352156c52b9f8739ba419105fe01fe7b886b6b3dc2261250e61c5091"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.20.1-fabric/phase1.log",
+          "sha256": "4c5ecc6ce69b104a508d6b13bfd023560c8eb9140450b2d6dd5fd2b2a08bdb0b"
+        },
+        {
+          "file": "retry/1.20.1-fabric/phase2.log",
+          "sha256": "7287f6a48cc3a921bb49660186ba99e8656481c9c508d328e951b1b0ed1b6243"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.20-1.3.3+1.20.jar",
+          "sha256": "8180d9c694bb0eae75d7fb748b79abcdcc7c4f90506fcf926d57719d19080e2e"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.20-forge/phase1.log",
+          "sha256": "a2942ac2a70971a60e83b3bd5e75d1f82113b19130d1cb13d4a9654e3c9c11e1"
+        },
+        {
+          "file": "old-runtime/1.20-forge/phase2.log",
+          "sha256": "a20e11ffc32420cddf8fa6d40e5c024e41a08d7c3a0437a384725ba8bb0200ad"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.20-1.3.3+1.20.jar",
+          "sha256": "9a75a59615533e601b234de3404b2169d108a3cf9e47801a12e3c7428a26d521"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.20-fabric/phase1.log",
+          "sha256": "b45cf5f9f9978355e17f8db1d175f1aa9a9e4eefa6c0ec73157f8bb5a5783360"
+        },
+        {
+          "file": "old-runtime/1.20-fabric/phase2.log",
+          "sha256": "8d1c8236587a90079819073086d76832dd7e72ad581474cd3ee3f99d008b2197"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.4",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.19.4-1.3.3+1.19.4.jar",
+          "sha256": "64bb3a46d0c55c83b6db4726d9e0ea22a54a45492fcb543193f272ecd0ffa838"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19.4-fabric/phase1.log",
+          "sha256": "e91c960289a79f4fa33fe47e690adc1a1499fc2715660ff0ad201205a54ad4fb"
+        },
+        {
+          "file": "old-runtime/1.19.4-fabric/phase2.log",
+          "sha256": "7345978ec820317dce24705f2d0b084428d784ec5eca66f0bc01848da283ec6d"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.3",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.19.3-1.3.3+1.19.3.jar",
+          "sha256": "684d909734ead284cd8882dd03322745b2a4a0782a876762655994fdd45982cb"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19.3-fabric/phase1.log",
+          "sha256": "785bb3838c4811ea560cc8b367c3c590ed312762981ada2a67410c2bc5005f5c"
+        },
+        {
+          "file": "old-runtime/1.19.3-fabric/phase2.log",
+          "sha256": "be45588f046dbbcba2418ef0c0d8eab7c1e721e3071fefe28943a8decc97a8b1"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.2",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.19.2-1.3.3+1.19.2.jar",
+          "sha256": "df44968409d6a509da3214b539f7fa552a6fae73d278b13b6c7f72e61b68b8c4"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19.2-forge/phase1.log",
+          "sha256": "930f458c03af461b94ce4d3edfc231002bb02f7c7bf6fec3fcd214c659bd958a"
+        },
+        {
+          "file": "old-runtime/1.19.2-forge/phase2.log",
+          "sha256": "e430ee6b88ce22d4cdebac95eb187733d5a0db4408ed5243527bd27e29822dff"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.2",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.19.2-1.3.3+1.19.2.jar",
+          "sha256": "1e31533ccbd85bc88821b714efec37d21529d8ea1d555c2e2c0d474089488160"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19.2-fabric/phase1.log",
+          "sha256": "7fd9578f3e3429d9a3e5f8e3247bea89666717edb13283b1622711feb0cba36b"
+        },
+        {
+          "file": "old-runtime/1.19.2-fabric/phase2.log",
+          "sha256": "50cb8029d7d80f30ac30debe9efe500fb10703081d301231b24c4125bcb5033c"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.1",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.19.1-1.3.3+1.19.1.jar",
+          "sha256": "bf6b7da07a9d0d7ca510dcd42d58601990dca25997acd3fcfb2448636d151b0a"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.19.1-forge/phase1.log",
+          "sha256": "b6c4db0a69c458ea8386f53cf62226672b7f89b99997802b6441bb5ca1d8b2ab"
+        },
+        {
+          "file": "retry/1.19.1-forge/phase2.log",
+          "sha256": "3dac398eb8751ce2a81489a6b5bcaeac18684afaf124d60295642614f093b2cd"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.19.1-1.3.3+1.19.1.jar",
+          "sha256": "60fc7798331d3a61ea89cbb844395ef23968343b3e43f4b39ffeeca386c4e299"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19.1-fabric/phase1.log",
+          "sha256": "b5fbd9f4f187ebb714dcc51fcd03272b316c766b139d0893535e889f4cbca409"
+        },
+        {
+          "file": "old-runtime/1.19.1-fabric/phase2.log",
+          "sha256": "d05d09fd5790de986afe8a1f00bdcb0b3f7dd374e49a6fd8d55a3e816c260ad2"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.19-1.3.3+1.19.jar",
+          "sha256": "cf87186a9834e60fe044201a3a3886215633e9de8ccbbf6ea09d8b5bf089729e"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19-forge/phase1.log",
+          "sha256": "58714f2acd19f42a8ba134769367af62f91e2f5bc77c86c8c70cc11b68688377"
+        },
+        {
+          "file": "old-runtime/1.19-forge/phase2.log",
+          "sha256": "fcdf398529457f7f62ebbaee0d88e186de09fca1af23595404e7092019ac5a80"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.19",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.19-1.3.3+1.19.jar",
+          "sha256": "1c7a247d48ee3003cbb194a371289fa9fad40f30cb263e5836ec0f19ef8df3af"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.19-fabric/phase1.log",
+          "sha256": "b7012f1aabbd5b19ecb1b4471366e6c937f56f23961645efff06d6ced3d8df61"
+        },
+        {
+          "file": "old-runtime/1.19-fabric/phase2.log",
+          "sha256": "27e00c9b90b048dcb18242272788e230ce06a91c6e75d02900422425a3c367a0"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18.2",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.18.2-1.3.3+1.18.2.jar",
+          "sha256": "3f3d066c431864a50cc2961df009b6f0b2b38986015a2190500f3856a55e5b23"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18.2-fabric/phase1.log",
+          "sha256": "eee22f27c927f6696835b89d3f5b27e94360a8356fa9134db5fdb384f49eab9e"
+        },
+        {
+          "file": "old-runtime/1.18.2-fabric/phase2.log",
+          "sha256": "77c5f9cb3f5ea2ce6b18a515de83de3d444f2947fe60064bf15de75110fe5e9e"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18.1",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.18.1-1.3.3+1.18.1.jar",
+          "sha256": "a63ed5a1f00d25408ba510c91240dd590b0f8309e56e6ab3b8822c7b16537447"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18.1-forge/phase1.log",
+          "sha256": "316e1451176183aa7448941d39067bc979c96f582db978061e5d4f31638b1ecb"
+        },
+        {
+          "file": "old-runtime/1.18.1-forge/phase2.log",
+          "sha256": "f41ee63d5350737fe6eb7e85ce11abeda49f98be551fe9cb01d0cb9d22d8f479"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18.1",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.18.1-1.3.3+1.18.1.jar",
+          "sha256": "d9ecf10baa5501121ade882e1e8d17e1d1549cfcefa2cbfb9ff9698de1112c41"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18.1-fabric/phase1.log",
+          "sha256": "c4d82fe200f58928b810e08f293c95fa0cd3c859df4f1c18fcef7ef3a81c8290"
+        },
+        {
+          "file": "old-runtime/1.18.1-fabric/phase2.log",
+          "sha256": "a4bcd207bd167833542bbd7c897056fee0173da96794fb24fb73613006df4c93"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.18-1.3.3+1.18.jar",
+          "sha256": "f7af13314448e96d53fbc54c0c2ad1c297b4bdf30e9a2ff3a357466141003d33"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18-forge/phase1.log",
+          "sha256": "de74d49006c77ed6bc1bda9aefd9fb60bca29021622d85cbc7ae337ce99fbeba"
+        },
+        {
+          "file": "old-runtime/1.18-forge/phase2.log",
+          "sha256": "95b2338f1825b3b3b910800c47ae760ff9d5c0745272b118fcb92f7c9b8ee435"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18",
+      "loader": "fabric",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-fabric-1.18-1.3.3+1.18.jar",
+          "sha256": "02fda27340feb352f1df8dcb50af4da8a48fbf837280bb85b49d58f6f6a9ed32"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18-fabric/phase1.log",
+          "sha256": "5aec92f24366f9c22ec66086a7305e5298acdcb871e6ff9bdee611cfcac58056"
+        },
+        {
+          "file": "old-runtime/1.18-fabric/phase2.log",
+          "sha256": "25f9c097835ca4436434bd2e2f4dd2d48e7978eb6a6a38d1d50d16c5db417512"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.17.1",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.17.1-1.3.3+1.17.1.jar",
+          "sha256": "d14d27850855a95e4fad5e0e8bb1b186f318c06d42fec0c0baf8df4c70215777"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "retry/1.17.1-forge/phase1.log",
+          "sha256": "c2232b5a1bb03bafdac3f3debc7a00a12c01fbc800ed834a99643cb249d398d6"
+        },
+        {
+          "file": "retry/1.17.1-forge/phase2.log",
+          "sha256": "0e57c4d4e5b6663bca007e884e09e976e5f28523b1873760bc8bdbc4c2e33a1f"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.16.5",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.16.5-1.3.3+1.16.5.jar",
+          "sha256": "13e1c7a4a6bb5910e6dfcf28ed199e98c0968957df53ff647b4ff0841669e6ba"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "verified-r2/1.16.5-forge/phase1.log",
+          "sha256": "fb34c7a0935edae9331257121c00a3d30a8d52bccb379c51a84a9d312249d12d"
+        },
+        {
+          "file": "verified-r2/1.16.5-forge/phase2.log",
+          "sha256": "dc053db557e68167aead6329ed82b02377dbe6e1d99e7ed233685d221b625278"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.12.2",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.12.2-1.3.3+1.12.2.jar",
+          "sha256": "ad3f3e9e1eb54f477268901d32a73b55ff8351b10137ded1c01d5237a1130a0f"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Packaged production JAR on standalone Forge 14.23.5.2847",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "instances/1.12.2-forge/phase1.log",
+          "sha256": "2c82f032035c7bfe2180c9fe0b710c2a6419d9f8bf1609f088d9b6ca19af4d82"
+        },
+        {
+          "file": "instances/1.12.2-forge/phase2.log",
+          "sha256": "f7cc774ff7b21df4d93f5a7bb1375e5e2d7635701a902eba80eaed0f1aec7005"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.18.2",
+      "loader": "forge",
+      "build_passed": true,
+      "runtime_passed": true,
+      "artifacts": [
+        {
+          "file": "shared_lootr-forge-1.18.2-1.3.3+1.18.2.jar",
+          "sha256": "5e051a2088839d2ae9d27bf50ba71e8bde7d2f8c3c942136b4ea49cc33409eb4"
+        }
+      ],
+      "source_fingerprint": "0c5ae4bc8cf04de4886e89cdb397bdda70dc47ef69c4dbb34f5cd3883e0fcff8",
+      "runtime_scope": "Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients",
+      "jade_excluded": false,
+      "logs": [
+        {
+          "file": "old-runtime/1.18.2-forge/phase1.log",
+          "sha256": "ba3c10fca29f54bda8a1caca5e291e5312f479407394051f95e775aaa55c61d6"
+        },
+        {
+          "file": "old-runtime/1.18.2-forge/phase2.log",
+          "sha256": "4dd12e9281f02c1bb3230a0fbe773d99992a3762c418597ba6847227f371b2fb"
+        }
+      ]
+    }
+  ]
+}

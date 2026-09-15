@@ -20,7 +20,6 @@
   "depends": {
     "fabricloader": ">=0.14.19",
     "fabric-api": "*",
-    "fabric": "*",
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}",
     "rinlib": "${rinlib_version}",

@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"shared_lootr_probe","version":"1.0.0","name":"Shared Lootr local runtime probe","entrypoints":{"main":["dev.rinchan.sharedlootrprobe.ProbeEntrypoint"]}}

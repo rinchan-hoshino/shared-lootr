@@ -8,5 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'shared-lootr-chest-data-1.20.1'
-include 'forge'
+rootProject.name = 'shared-lootr-chest-data-forge-1.16'
+
+def selectedLoader = providers.gradleProperty('loader').getOrElse('all')
+if (selectedLoader == 'all' || selectedLoader == 'forge') include 'forge'

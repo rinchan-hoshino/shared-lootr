@@ -8,7 +8,6 @@ base {
     archivesName = "${rootProject.mod_id}-neoforge"
 }
 
-sourceSets.main.java.srcDirs rootProject.file('shared/src/main/java'), file('src/main/java')
 sourceSets.main.resources.srcDir rootProject.file('shared/src/main/resources')
 sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessResources) {
     def replaceProperties = [
@@ -52,10 +51,12 @@ neoForge {
 
 neoForge.ideSyncTask tasks.named('generateModMetadata')
 
+apply from: rootProject.file('../sources.gradle')
+
 dependencies {
     jarJar(implementation('io.github.llamalad7:mixinextras-neoforge:0.5.0'))
-    implementation "maven.modrinth:lootr:${rootProject.lootr_neoforge_version}"
-    implementation "dev.rinchan:rinlib-neoforge:${rootProject.rinlib_version}"
+    implementation lootrCoordinate
+    implementation rinlibCoordinate
     compileOnly "maven.modrinth:jade:${rootProject.jade_neoforge_version}"
     if (!Boolean.getBoolean('sharedLootr.omitJadeRuntime')) {
         runtimeOnly "maven.modrinth:jade:${rootProject.jade_neoforge_version}"

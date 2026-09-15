@@ -8,5 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'shared-lootr-chest-data-1.20.1'
-include 'fabric'
+rootProject.name = 'shared-lootr-chest-data-fabric-1.20.4'
+
+def selectedLoader = providers.gradleProperty('loader').getOrElse('all')
+if (selectedLoader == 'all' || selectedLoader == 'fabric') include 'fabric'

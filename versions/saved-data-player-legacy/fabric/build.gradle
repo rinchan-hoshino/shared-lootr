@@ -12,16 +12,17 @@ base {
     archivesName = "${modId}-fabric"
 }
 
-sourceSets.main.java.setSrcDirs([root.file('shared/src/main/java'), file('src/main/java')])
 sourceSets.main.resources.setSrcDirs([root.file('shared/src/main/resources'), file('src/main/resources')])
+
+apply from: rootProject.file('../sources.gradle')
 
 dependencies {
     minecraft "com.mojang:minecraft:${root.property('minecraft_version')}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${root.property('fabric_loader_version')}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${root.property('fabric_api_version')}"
-    modImplementation "maven.modrinth:lootr:${root.property('lootr_fabric_version')}"
-    modImplementation "dev.rinchan:rinlib-fabric:${root.property('rinlib_version')}"
+    modImplementation lootrCoordinate
+    modImplementation rinlibCoordinate
     modCompileOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
     modRuntimeOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
     modCompileOnly "me.shedaniel.cloth:cloth-config-fabric:${root.property('fabric_cloth_config_version')}"
