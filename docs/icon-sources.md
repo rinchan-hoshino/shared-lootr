@@ -1,6 +1,6 @@
 # Icon sources
 
-The Shared Lootr icon is an orthographic composition of original game textures, rasterized at 160 × 160 pixels and enlarged with nearest-neighbor sampling.
+The Shared Lootr icon is an orthographic composition of original game textures, rasterized at 200 × 200 pixels and enlarged with nearest-neighbor sampling.
 
 - Chest texture: [Lootr](https://github.com/LootrMinecraft/Lootr), `assets/lootr/textures/chest.png`, from Lootr 1.21.1-1.11.38.125. MIT license reproduced below.
 - Arm textures: Minecraft Java Edition 1.21.1 default Steve and Alex skins. Minecraft textures belong to Mojang Studios / Microsoft.
