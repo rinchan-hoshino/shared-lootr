@@ -1,7 +1,8 @@
-# Project icon
+# Current project icon
 
-The current icon is an original 48 × 48 pixel illustration of an open treasure chest and three reaching hands. Its shapes and flat-color shading are drawn directly in Python; no Lootr or Minecraft texture files are loaded, copied, traced, or resampled. The published PNG uses nearest-neighbor enlargement.
+The current icon is AI-assisted artwork finalized on a native 32 × 32 pixel grid. Generated artwork was used together with pixel-grid linework/reconstruction and limited-palette processing. The final image contains only fully opaque or fully transparent pixels.
 
-The reproducible drawing is in `scripts/draw_icon.py`; the native-resolution image is `docs/shared-lootr-icon-48.png`.
+- Native file: `docs/shared-lootr-icon-32.png`
+- Page/platform file: `docs/shared-lootr-icon.png` (512 × 512, exact nearest-neighbor enlargement)
 
-The previous icon used game textures and has been replaced. Lootr code licensing does not grant permission to use its separately licensed assets.
+The current artwork was selected by the project owner. Historical drawing scripts and earlier 48-pixel exports describe previous icon revisions, not the current file.
