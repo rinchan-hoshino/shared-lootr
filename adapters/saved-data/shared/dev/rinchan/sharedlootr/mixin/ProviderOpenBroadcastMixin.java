@@ -11,7 +11,10 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = DefaultLootrAPIImpl.class, remap = false)
 public abstract class ProviderOpenBroadcastMixin {
     @Redirect(
-            method = "handleProviderOpen(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/MenuBuilder;)V",
+            method = {
+                    "handleProviderOpen(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/MenuBuilder;)V",
+                    "handleProviderOpen(Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;Lnet/minecraft/server/level/ServerPlayer;Lnoobanidus/mods/lootr/common/api/MenuBuilder;Z)V"
+            },
             at = @At(value = "INVOKE", target = "Lnoobanidus/mods/lootr/common/api/data/ILootrInfoProvider;performOpen(Lnet/minecraft/server/level/ServerPlayer;)V", remap = false),
             require = 1,
             remap = false

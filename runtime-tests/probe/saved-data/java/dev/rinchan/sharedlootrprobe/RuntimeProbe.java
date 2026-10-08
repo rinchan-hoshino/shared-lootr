@@ -10,11 +10,15 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import noobanidus.mods.lootr.common.api.LootrAPI;
+import noobanidus.mods.lootr.common.api.ILootrAPI;
+import noobanidus.mods.lootr.common.api.MenuBuilder;
+import noobanidus.mods.lootr.common.api.data.ILootrInfoProvider;
 import noobanidus.mods.lootr.common.api.data.LootFiller;
 import noobanidus.mods.lootr.common.block.entity.LootrChestBlockEntity;
 import noobanidus.mods.lootr.common.data.DataStorage;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.lang.reflect.Proxy;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public final class RuntimeProbe {
@@ -48,10 +52,40 @@ public final class RuntimeProbe {
                 var a = LootrAPI.getInventory(chest, first, filler);
                 var b = LootrAPI.getInventory(chest, second, filler);
                 require(a != null && a == b, "Two players resolve the same physical chest inventory");
-                LootrAPI.handleProviderOpen(chest, second);
+                AtomicInteger sharedOpens = new AtomicInteger();
+                AtomicInteger playerOpens = new AtomicInteger();
+                // Observe the actual provider calls without replacing the chest's behavior.
+                var observedChest = (ILootrInfoProvider) Proxy.newProxyInstance(
+                        ILootrInfoProvider.class.getClassLoader(), new Class<?>[]{ILootrInfoProvider.class},
+                        (proxy, method, arguments) -> {
+                            if (method.getName().equals("performOpen")) {
+                                (method.getParameterCount() == 0 ? sharedOpens : playerOpens).incrementAndGet();
+                            }
+                            return method.invoke(chest, arguments);
+                        });
+                LootrAPI.handleProviderOpen(observedChest, second);
+                require(sharedOpens.get() == 1 && playerOpens.get() == 0,
+                        "Opening the real chest broadcasts shared state instead of a player-only event");
                 require(second.containerMenu.getSlot(0).getItem().getCount() == (restart ? 6 : 7),
                         "Actual chest menu exposes shared inventory");
                 second.closeContainer();
+                java.lang.reflect.Method flaggedOpen = null;
+                try {
+                    flaggedOpen = ILootrAPI.class.getMethod("handleProviderOpen", ILootrInfoProvider.class,
+                            ServerPlayer.class, MenuBuilder.class, boolean.class);
+                } catch (NoSuchMethodException legacyApi) {
+                    // Older releases expose only the three-argument method tested above.
+                }
+                if (flaggedOpen != null) {
+                    flaggedOpen.invoke(LootrAPI.INSTANCE, observedChest, first, null, true);
+                    require(first.containerMenu == first.inventoryMenu && sharedOpens.get() == 2 && playerOpens.get() == 0,
+                            "The true flag preserves the closed menu and still broadcasts shared opened state");
+                    flaggedOpen.invoke(LootrAPI.INSTANCE, observedChest, first, null, false);
+                    require(first.containerMenu != first.inventoryMenu
+                                    && first.containerMenu.getSlot(0).getItem().getCount() == (restart ? 6 : 7),
+                            "The false flag opens the actual shared inventory menu");
+                    first.closeContainer();
+                }
                 if (!restart) {
                     require(generations.get() == 1, "Loot generated once in same tick");
                     require(a.removeItem(0, 1).getCount() == 1 && b.getItem(0).getCount() == 6,

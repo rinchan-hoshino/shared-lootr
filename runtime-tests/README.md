@@ -11,7 +11,20 @@ python3 runtime-tests/run_server.py --profile 1.21.1 --loader neoforge
 python3 runtime-tests/run_server.py --profile 26.2 --loader fabric --probe inventory-store
 ```
 
+To check an updated Lootr API without changing the release dependency pins:
+
+```bash
+python3 runtime-tests/run_server.py --profile 1.21.1 --loader neoforge \
+  --lootr-version-id SPOrIzX8 --output build/runtime-lootr-127
+python3 runtime-tests/run_server.py --profile 1.21.1 --loader fabric \
+  --lootr-version-id nar56EsW --output build/runtime-lootr-127
+```
+
+The saved-data probe observes calls delegated to the real chest to verify that opening sends the shared `performOpen()` event. When Lootr exposes the four-argument API, it also checks both boolean values: skipping the menu still broadcasts opened state, and the normal path opens the shared inventory menu. Results record the tested Lootr version ID.
+
 Use a fresh `--output` directory for a new run. `--port` can select a different loopback port when another test server is running. The runner retains logs, world files, and its result JSON.
+
+The NeoForge test entrypoint waits for the normal server-stopped event and the server thread's termination before explicitly exiting the test JVM. This keeps dependency-owned non-daemon threads from blocking the second process. The phase assertions remain required; process exit alone never counts as a pass. This lifecycle code belongs only to the separate probe and is excluded from production JARs.
 
 Use `--without-jade` to test the required dependencies without optional Jade; the result records whether Jade was excluded. Some historical Jade builds fail on a dedicated server before Shared Lootr can be exercised.
 

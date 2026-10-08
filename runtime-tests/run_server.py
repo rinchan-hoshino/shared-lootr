@@ -48,6 +48,7 @@ def main():
     parser.add_argument('--without-jade', action='store_true', help='Test required dependencies only')
     parser.add_argument('--port', type=int, default=25585)
     parser.add_argument('--probe', help='Override the automatically selected Lootr API probe')
+    parser.add_argument('--lootr-version-id', help='Test a specific Modrinth Lootr version instead of the release pin')
     parser.add_argument('--output', type=Path, default=ROOT / 'build/runtime')
     args = parser.parse_args()
     targets = json.loads((ROOT / 'support/release-targets.json').read_text())['targets']
@@ -84,12 +85,16 @@ def main():
         f'-Dprobe.forgeEntrypoint={forge_entrypoint}', '--console=plain']
     if args.loader == 'forge':
         command.extend(['-x', 'downloadAssets'])  # Dedicated servers do not use client sound/texture assets.
+    if args.lootr_version_id:
+        command.extend(['-I', str(ROOT / 'runtime-tests/probe/lootr.init.gradle'),
+                        f'-Dprobe.lootrVersion={args.lootr_version_id}'])
     if args.without_jade:
         command.append('-DsharedLootr.omitJadeRuntime=true')
     java_paths = [value for key, value in env.items() if key.startswith('JAVA_') and key.endswith('_HOME')]
     if java_paths:
         command.append('-Porg.gradle.java.installations.paths=' + ','.join(java_paths))
-    record = {'minecraft': args.profile, 'loader': args.loader, 'jade_excluded': args.without_jade, 'phases': [],
+    record = {'minecraft': args.profile, 'loader': args.loader, 'jade_excluded': args.without_jade,
+              'lootr_version_id': args.lootr_version_id or target['lootr']['version_id'], 'phases': [],
               'scope': 'Server-world container inventory, two ServerPlayer objects, persistence and clear; no network clients'}
     for phase in [1, 2]:
         with (instance / f'phase{phase}.log').open('w') as log:

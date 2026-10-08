@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.3
+
+- Support Lootr's updated four-argument open API alongside the existing three-argument method.
+- Preserve shared inventory ownership and the broadcast of shared opened state.
+- This update covers Minecraft 1.21, 1.21.1, and 1.21.11 on Fabric and NeoForge.
+
 ## 1.3.2
 
 - Declared the required Fabric API and legacy MixinBooter dependencies in release metadata.
