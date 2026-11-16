@@ -142,6 +142,18 @@
     ],
     "inventory-store-26.1.2/fabric": [
       "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/mixin/OpenedStateMixin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/mixin/UpdateTagProjectionMixin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/state/SharedInventoryTruth.java",
+      "loaders/fabric/dev/rinchan/sharedlootr/SharedLootrFabric.java"
+    ],
+    "inventory-store-26.1.2/fabric/26.2": [
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
+      "inventory-store-26.2/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/mixin/OpenedStateMixin.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/mixin/UpdateTagProjectionMixin.java",
@@ -150,6 +162,18 @@
     ],
     "inventory-store-26.1.2/neoforge": [
       "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/mixin/OpenedStateMixin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/mixin/UpdateTagProjectionMixin.java",
+      "inventory-store/shared/dev/rinchan/sharedlootr/state/SharedInventoryTruth.java",
+      "loaders/neoforge/dev/rinchan/sharedlootr/SharedLootrNeoForge.java"
+    ],
+    "inventory-store-26.1.2/neoforge/26.2": [
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/InventoryStoreMixin.java",
+      "inventory-store-26.1.2/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
+      "inventory-store-26.2/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/mixin/OpenedStateMixin.java",
       "inventory-store/shared/dev/rinchan/sharedlootr/mixin/UpdateTagProjectionMixin.java",
@@ -158,17 +182,19 @@
     ],
     "saved-data-1.21.1/fabric": [
       "loaders/fabric/dev/rinchan/sharedlootr/SharedLootrFabric.java",
+      "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
       "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/mixin/SavedDataInventoryMixin.java",
+      "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
       "saved-data/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
-      "saved-data/shared/dev/rinchan/sharedlootr/mixin/ProviderOpenBroadcastMixin.java",
       "saved-data/shared/dev/rinchan/sharedlootr/mixin/SavedDataOpenedStateMixin.java",
       "saved-data/shared/dev/rinchan/sharedlootr/state/SharedSavedDataTruth.java"
     ],
     "saved-data-1.21.1/neoforge": [
       "loaders/neoforge/dev/rinchan/sharedlootr/SharedLootrNeoForge.java",
+      "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/mixin/LootrTeamConfigMixin.java",
       "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/mixin/SavedDataInventoryMixin.java",
+      "saved-data-1.21.1/shared/dev/rinchan/sharedlootr/team/SharedTeamResolver.java",
       "saved-data/shared/dev/rinchan/sharedlootr/integration/jade/SharedLootrJadePlugin.java",
-      "saved-data/shared/dev/rinchan/sharedlootr/mixin/ProviderOpenBroadcastMixin.java",
       "saved-data/shared/dev/rinchan/sharedlootr/mixin/SavedDataOpenedStateMixin.java",
       "saved-data/shared/dev/rinchan/sharedlootr/state/SharedSavedDataTruth.java"
     ],

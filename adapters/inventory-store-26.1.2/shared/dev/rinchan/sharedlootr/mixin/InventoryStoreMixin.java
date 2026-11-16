@@ -4,40 +4,17 @@ import dev.rinchan.rinlib.state.SharedOwnerState;
 import noobanidus.mods.lootr.common.data.LootrInventoryStore;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
-import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Normalizes direct UUID-based clear calls so player-scoped clears still target the shared inventory.
+ */
 @Mixin(value = LootrInventoryStore.class, remap = false)
 abstract class InventoryStoreMixin {
-    @Redirect(
-            method = "getInventory",
-            at = @At(value = "INVOKE", target = "Ljava/util/Map;get(Ljava/lang/Object;)Ljava/lang/Object;"),
-            require = 1,
-            remap = false
-    )
-    private Object sharedLootr$get(Map<UUID, ?> inventories, Object ignoredOwner) {
-        return SharedOwnerState.get(inventories);
-    }
-
-    @Redirect(
-            method = {"createInventory", "createInventoryRaw"},
-            at = @At(value = "INVOKE", target = "Ljava/util/Map;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"),
-            require = 2,
-            remap = false
-    )
-    private Object sharedLootr$put(Map<UUID, Object> inventories, Object ignoredOwner, Object inventory) {
-        return SharedOwnerState.put(inventories, inventory);
-    }
-
-    @Redirect(
-            method = "clearInventories(Ljava/util/UUID;)Z",
-            at = @At(value = "INVOKE", target = "Ljava/util/Map;remove(Ljava/lang/Object;)Ljava/lang/Object;"),
-            require = 1,
-            remap = false
-    )
-    private Object sharedLootr$remove(Map<UUID, ?> inventories, Object ignoredOwner) {
-        return SharedOwnerState.remove(inventories);
+    @ModifyVariable(method = "clearInventories(Ljava/util/UUID;)Z", at = @At("HEAD"), argsOnly = true, require = 1, remap = false)
+    private UUID sharedLootr$normalizeClearOwner(UUID ignoredOwner) {
+        return SharedOwnerState.OWNER;
     }
 }

@@ -4,9 +4,9 @@
   "package": "dev.rinchan.sharedlootr.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "LootrTeamConfigMixin",
     "SavedDataInventoryMixin",
-    "SavedDataOpenedStateMixin",
-    "ProviderOpenBroadcastMixin"
+    "SavedDataOpenedStateMixin"
   ],
   "injectors": {
     "defaultRequire": 1

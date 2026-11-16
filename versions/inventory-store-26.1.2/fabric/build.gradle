@@ -13,6 +13,7 @@ base {
 }
 
 sourceSets.main.resources.srcDir root.file('shared/src/main/resources')
+sourceSets.main.resources.srcDir root.file("shared/src/main/resources-${root.property('minecraft_version')}")
 
 loom {
 }

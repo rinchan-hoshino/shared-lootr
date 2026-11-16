@@ -9,6 +9,7 @@ base {
 }
 
 sourceSets.main.resources.srcDir rootProject.file('shared/src/main/resources')
+sourceSets.main.resources.srcDir rootProject.file("shared/src/main/resources-${rootProject.minecraft_version}")
 sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessResources) {
     def replaceProperties = [
         minecraft_version_range: rootProject.minecraft_version_range,

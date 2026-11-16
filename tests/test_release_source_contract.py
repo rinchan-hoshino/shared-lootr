@@ -109,7 +109,8 @@ class ReleaseSourceContractTest(unittest.TestCase):
     def test_loader_mixins_are_registered_by_release_resources(self) -> None:
         manifest = json.loads((REPOSITORY_ROOT / "support/source-sets.json").read_text())
         for module in manifest["modules"]:
-            directory = REPOSITORY_ROOT / "versions" / module
+            parts = module.split("/")
+            directory = REPOSITORY_ROOT / "versions" / "/".join(parts[:2])
             resource_dirs = [directory / "src/main/resources",
                              directory.parent / "shared/src/main/resources"]
             registered = "\n".join(path.read_text() for root in resource_dirs
@@ -184,6 +185,29 @@ class ReleaseSourceContractTest(unittest.TestCase):
             self.assertNotRegex(source, r"(?m)^\s*version\s*=\s*[\"']\d", str(path))
         for path in (REPOSITORY_ROOT / "versions").glob("*/gradle.properties"):
             self.assertNotRegex(path.read_text(), r"(?m)^mod_version=", str(path))
+
+    def test_team_resolver_migration_contract(self):
+        for loader in ("fabric", "neoforge"):
+            sources_1_21_1 = [p.name for p in module_sources(f"saved-data-1.21.1/{loader}")]
+            self.assertIn("SharedTeamResolver.java", sources_1_21_1)
+            self.assertIn("LootrTeamConfigMixin.java", sources_1_21_1)
+            self.assertNotIn("ProviderOpenBroadcastMixin.java", sources_1_21_1)
+
+            sources_26_1_2 = [p.name for p in module_sources(f"inventory-store-26.1.2/{loader}")]
+            self.assertIn("SharedTeamResolver.java", sources_26_1_2)
+            self.assertIn("LootrTeamConfigMixin.java", sources_26_1_2)
+
+            sources_26_2 = [p.name for p in module_sources(f"inventory-store-26.1.2/{loader}/26.2")]
+            self.assertIn("SharedTeamResolver.java", sources_26_2)
+            self.assertIn("LootrTeamConfigMixin.java", sources_26_2)
+
+        self.assertTrue((REPOSITORY_ROOT / "versions/saved-data-1.21.1/shared/src/main/resources/META-INF/services/noobanidus.mods.lootr.common.api.team.ITeamResolver").is_file())
+        self.assertTrue((REPOSITORY_ROOT / "versions/inventory-store-26.1.2/shared/src/main/resources-26.1.2/META-INF/services/noobanidus.mods.lootr.common.api.interfaces.team.ITeamResolver").is_file())
+        self.assertTrue((REPOSITORY_ROOT / "versions/inventory-store-26.1.2/shared/src/main/resources-26.2/META-INF/services/noobanidus.mods.lootr.common.api.interfaces.processor.ITeamResolver").is_file())
+
+    def test_no_probe_or_validation_artifacts_in_repo(self):
+        self.assertFalse((REPOSITORY_ROOT / "runtime-tests/probe").exists())
+        self.assertEqual([], list((REPOSITORY_ROOT / "docs").glob("validation-*")))
 
 
 if __name__ == "__main__":

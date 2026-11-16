@@ -1,7 +1,0 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="GPL-3.0-or-later"
-[[mods]]
-modId="shared_lootr_probe"
-version="1.0.0"
-displayName="Shared Lootr local runtime probe"

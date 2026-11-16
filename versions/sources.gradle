@@ -6,12 +6,15 @@ def moduleKey = rootProject.name == project.name
         ? rootProject.projectDir.name
         : "${rootProject.projectDir.name}/${project.name}"
 def manifest = new JsonSlurper().parse(new File(repository, 'support/source-sets.json'))
-def selected = manifest.modules[moduleKey]
+def selected = manifest.modules["${moduleKey}/${rootProject.minecraft_version}"] ?: manifest.modules[moduleKey]
 if (!selected) {
     throw new GradleException("No Lootr adapter sources registered for ${moduleKey}")
 }
 sourceSets.main.java.setSrcDirs([new File(repository, 'adapters')])
 sourceSets.main.java.setIncludes(selected as Set)
+tasks.withType(JavaCompile).configureEach {
+    inputs.file(new File(repository, 'support/source-sets.json'))
+}
 
 // Use the same pinned RinLib binary for compilation and runtime validation.
 def lock = new JsonSlurper().parse(new File(repository, 'support/release-targets.json'))
