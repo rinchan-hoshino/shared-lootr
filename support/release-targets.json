@@ -5,9 +5,6 @@
       "minecraft": "26.2",
       "loader": "neoforge",
       "source_line": "inventory-store-26.1.2",
-      "rinlib": {
-        "version_id": "d3EkzQNg"
-      },
       "lootr": {
         "version_id": "qsxWCPd3"
       },
@@ -17,9 +14,6 @@
       "minecraft": "26.2",
       "loader": "fabric",
       "source_line": "inventory-store-26.1.2",
-      "rinlib": {
-        "version_id": "RnND21nZ"
-      },
       "lootr": {
         "version_id": "HegkPUoM"
       },
@@ -29,9 +23,6 @@
       "minecraft": "26.1.2",
       "loader": "neoforge",
       "source_line": "inventory-store-26.1.2",
-      "rinlib": {
-        "version_id": "rKYheqQd"
-      },
       "lootr": {
         "version_id": "nGDBqS5U"
       },
@@ -41,9 +32,6 @@
       "minecraft": "26.1.2",
       "loader": "fabric",
       "source_line": "inventory-store-26.1.2",
-      "rinlib": {
-        "version_id": "Oyn7dgvT"
-      },
       "lootr": {
         "version_id": "RjolbdhC"
       },
@@ -53,9 +41,6 @@
       "minecraft": "26.1.1",
       "loader": "neoforge",
       "source_line": "inventory-store-26.1",
-      "rinlib": {
-        "version_id": "dPineRDm"
-      },
       "lootr": {
         "version_id": "L0hqF4wC"
       },
@@ -65,9 +50,6 @@
       "minecraft": "26.1.1",
       "loader": "fabric",
       "source_line": "inventory-store-26.1",
-      "rinlib": {
-        "version_id": "liGXuETn"
-      },
       "lootr": {
         "version_id": "vXoVbinO"
       },
@@ -77,9 +59,6 @@
       "minecraft": "26.1",
       "loader": "neoforge",
       "source_line": "inventory-store-26.1",
-      "rinlib": {
-        "version_id": "NEISMdd9"
-      },
       "lootr": {
         "version_id": "L0hqF4wC"
       },
@@ -89,9 +68,6 @@
       "minecraft": "26.1",
       "loader": "fabric",
       "source_line": "inventory-store-26.1",
-      "rinlib": {
-        "version_id": "cx5TYUz7"
-      },
       "lootr": {
         "version_id": "vXoVbinO"
       },
@@ -101,9 +77,6 @@
       "minecraft": "22w24a",
       "loader": "fabric",
       "source_line": "chest-data-snapshot",
-      "rinlib": {
-        "version_id": "2uFQ48l6"
-      },
       "lootr": {
         "version_id": "RXVA6nvn"
       },
@@ -113,9 +86,6 @@
       "minecraft": "1.21.9",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "63ZQBguE"
-      },
       "lootr": {
         "version_id": "vUmIsKx0"
       },
@@ -125,9 +95,6 @@
       "minecraft": "1.21.9",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "RPvD23QR"
-      },
       "lootr": {
         "version_id": "67HkQPZn"
       },
@@ -137,9 +104,6 @@
       "minecraft": "1.21.8",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "61t01Y4a"
-      },
       "lootr": {
         "version_id": "hC6JovnB"
       },
@@ -149,9 +113,6 @@
       "minecraft": "1.21.8",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "xFnNaT7a"
-      },
       "lootr": {
         "version_id": "KCO39N1z"
       },
@@ -161,9 +122,6 @@
       "minecraft": "1.21.7",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "dUbO9dMU"
-      },
       "lootr": {
         "version_id": "JqozAadU"
       },
@@ -173,9 +131,6 @@
       "minecraft": "1.21.7",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "kBShblMW"
-      },
       "lootr": {
         "version_id": "YWFcEVur"
       },
@@ -185,9 +140,6 @@
       "minecraft": "1.21.6",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "YQWPbyZz"
-      },
       "lootr": {
         "version_id": "z2WTRSw1"
       },
@@ -197,9 +149,6 @@
       "minecraft": "1.21.6",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "J4ZScv0G"
-      },
       "lootr": {
         "version_id": "tNxLeJ6M"
       },
@@ -209,9 +158,6 @@
       "minecraft": "1.21.5",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "3SotY4Hn"
-      },
       "lootr": {
         "version_id": "QKFussTX"
       },
@@ -221,9 +167,6 @@
       "minecraft": "1.21.5",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "VAXjegyI"
-      },
       "lootr": {
         "version_id": "C5cP6if7"
       },
@@ -233,9 +176,6 @@
       "minecraft": "1.21.4",
       "loader": "neoforge",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "rCxektNG"
-      },
       "lootr": {
         "version_id": "Z0vjfoTl"
       },
@@ -245,9 +185,6 @@
       "minecraft": "1.21.4",
       "loader": "fabric",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "fq7KOm8d"
-      },
       "lootr": {
         "version_id": "HmnhGIXV"
       },
@@ -257,9 +194,6 @@
       "minecraft": "1.21.3",
       "loader": "neoforge",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "zWjLZJUk"
-      },
       "lootr": {
         "version_id": "BOekLUYi"
       },
@@ -269,9 +203,6 @@
       "minecraft": "1.21.3",
       "loader": "fabric",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "4I7st99w"
-      },
       "lootr": {
         "version_id": "JG1WQ9lU"
       },
@@ -281,9 +212,6 @@
       "minecraft": "1.21.2",
       "loader": "neoforge",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "GPmuPUnQ"
-      },
       "lootr": {
         "version_id": "BOekLUYi"
       },
@@ -293,9 +221,6 @@
       "minecraft": "1.21.2",
       "loader": "fabric",
       "source_line": "saved-data-player-legacy",
-      "rinlib": {
-        "version_id": "WpjwHxMz"
-      },
       "lootr": {
         "version_id": "JG1WQ9lU"
       },
@@ -305,9 +230,6 @@
       "minecraft": "1.21.11",
       "loader": "neoforge",
       "source_line": "saved-data-player",
-      "rinlib": {
-        "version_id": "1CkcwKxq"
-      },
       "lootr": {
         "version_id": "TBkxTN54"
       },
@@ -317,9 +239,6 @@
       "minecraft": "1.21.11",
       "loader": "fabric",
       "source_line": "saved-data-player",
-      "rinlib": {
-        "version_id": "MxFwfv0D"
-      },
       "lootr": {
         "version_id": "efKMR8nl"
       },
@@ -329,9 +248,6 @@
       "minecraft": "1.21.10",
       "loader": "neoforge",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "LDZequfk"
-      },
       "lootr": {
         "version_id": "72pESX4q"
       },
@@ -341,9 +257,6 @@
       "minecraft": "1.21.10",
       "loader": "fabric",
       "source_line": "saved-data-player-modern",
-      "rinlib": {
-        "version_id": "ue7hJlzC"
-      },
       "lootr": {
         "version_id": "tBqlJU85"
       },
@@ -353,9 +266,6 @@
       "minecraft": "1.21.1",
       "loader": "neoforge",
       "source_line": "saved-data-1.21.1",
-      "rinlib": {
-        "version_id": "SmxLzsqd"
-      },
       "lootr": {
         "version_id": "SPOrIzX8"
       },
@@ -365,9 +275,6 @@
       "minecraft": "1.21.1",
       "loader": "fabric",
       "source_line": "saved-data-1.21.1",
-      "rinlib": {
-        "version_id": "iUySGbgL"
-      },
       "lootr": {
         "version_id": "nar56EsW"
       },
@@ -377,9 +284,6 @@
       "minecraft": "1.21",
       "loader": "neoforge",
       "source_line": "saved-data-player-legacy-menu",
-      "rinlib": {
-        "version_id": "Mlet7TWG"
-      },
       "lootr": {
         "version_id": "q5IlMBVM"
       },
@@ -389,9 +293,6 @@
       "minecraft": "1.21",
       "loader": "fabric",
       "source_line": "saved-data-player-legacy-menu",
-      "rinlib": {
-        "version_id": "86XgbWrN"
-      },
       "lootr": {
         "version_id": "cOrO8AXN"
       },
@@ -401,9 +302,6 @@
       "minecraft": "1.20.4",
       "loader": "neoforge",
       "source_line": "chest-data-neoforge-1.20.4",
-      "rinlib": {
-        "version_id": "6SbSlFlO"
-      },
       "lootr": {
         "version_id": "oENq02ZK"
       },
@@ -413,9 +311,6 @@
       "minecraft": "1.20.4",
       "loader": "fabric",
       "source_line": "chest-data-fabric-1.20.4",
-      "rinlib": {
-        "version_id": "RZVz3Vii"
-      },
       "lootr": {
         "version_id": "xuoeOnYI"
       },
@@ -425,9 +320,6 @@
       "minecraft": "1.20.1",
       "loader": "forge",
       "source_line": "chest-data-1.20.1",
-      "rinlib": {
-        "version_id": "iWLGJ1Po"
-      },
       "lootr": {
         "version_id": "mWTXC1ZX"
       },
@@ -437,9 +329,6 @@
       "minecraft": "1.20.1",
       "loader": "fabric",
       "source_line": "chest-data-1.20.1",
-      "rinlib": {
-        "version_id": "4j8sLIll"
-      },
       "lootr": {
         "version_id": "nj1zDLc6"
       },
@@ -449,9 +338,6 @@
       "minecraft": "1.20",
       "loader": "forge",
       "source_line": "chest-data-modern",
-      "rinlib": {
-        "version_id": "wofqvVxr"
-      },
       "lootr": {
         "version_id": "mWTXC1ZX"
       },
@@ -461,9 +347,6 @@
       "minecraft": "1.20",
       "loader": "fabric",
       "source_line": "chest-data-modern",
-      "rinlib": {
-        "version_id": "9LRkcNPe"
-      },
       "lootr": {
         "version_id": "nj1zDLc6"
       },
@@ -473,9 +356,6 @@
       "minecraft": "1.19.4",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "tEd9b0MV"
-      },
       "lootr": {
         "version_id": "vswD4Si0"
       },
@@ -485,9 +365,6 @@
       "minecraft": "1.19.3",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "oBIlUrJD"
-      },
       "lootr": {
         "version_id": "pFr53NCP"
       },
@@ -497,9 +374,6 @@
       "minecraft": "1.19.2",
       "loader": "forge",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "IT6zA0vW"
-      },
       "lootr": {
         "version_id": "6ULhni05"
       },
@@ -509,9 +383,6 @@
       "minecraft": "1.19.2",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "qG3vDdTN"
-      },
       "lootr": {
         "version_id": "7WyuvACZ"
       },
@@ -521,9 +392,6 @@
       "minecraft": "1.19.1",
       "loader": "forge",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "tZHeAgCR"
-      },
       "lootr": {
         "version_id": "6ULhni05"
       },
@@ -533,9 +401,6 @@
       "minecraft": "1.19.1",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "8xN5obUo"
-      },
       "lootr": {
         "version_id": "7WyuvACZ"
       },
@@ -545,9 +410,6 @@
       "minecraft": "1.19",
       "loader": "forge",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "kd9j2KLY"
-      },
       "lootr": {
         "version_id": "6ULhni05"
       },
@@ -557,9 +419,6 @@
       "minecraft": "1.19",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "FxMaRPLo"
-      },
       "lootr": {
         "version_id": "7WyuvACZ"
       },
@@ -569,9 +428,6 @@
       "minecraft": "1.18.2",
       "loader": "fabric",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "JyiTZV6n"
-      },
       "lootr": {
         "version_id": "w2hEo5la"
       },
@@ -581,9 +437,6 @@
       "minecraft": "1.18.1",
       "loader": "forge",
       "source_line": "chest-data-legacy-direct",
-      "rinlib": {
-        "version_id": "dzYB1IHD"
-      },
       "lootr": {
         "version_id": "5k9iUxGP"
       },
@@ -593,9 +446,6 @@
       "minecraft": "1.18.1",
       "loader": "fabric",
       "source_line": "chest-data-legacy-direct",
-      "rinlib": {
-        "version_id": "Nxkv4tLi"
-      },
       "lootr": {
         "version_id": "z6mkEaZp"
       },
@@ -605,9 +455,6 @@
       "minecraft": "1.18",
       "loader": "forge",
       "source_line": "chest-data-legacy-direct",
-      "rinlib": {
-        "version_id": "O3GtZZ7n"
-      },
       "lootr": {
         "version_id": "5k9iUxGP"
       },
@@ -617,9 +464,6 @@
       "minecraft": "1.18",
       "loader": "fabric",
       "source_line": "chest-data-legacy-direct",
-      "rinlib": {
-        "version_id": "Gk2mos5L"
-      },
       "lootr": {
         "version_id": "z6mkEaZp"
       },
@@ -629,9 +473,6 @@
       "minecraft": "1.17.1",
       "loader": "forge",
       "source_line": "chest-data-forge-1.17.1",
-      "rinlib": {
-        "version_id": "8OTr7rdF"
-      },
       "lootr": {
         "version_id": "zemwxYHC"
       },
@@ -641,9 +482,6 @@
       "minecraft": "1.16.5",
       "loader": "forge",
       "source_line": "chest-data-forge-1.16",
-      "rinlib": {
-        "version_id": "JjHawBEW"
-      },
       "lootr": {
         "version_id": "msdGS3NS"
       },
@@ -653,9 +491,6 @@
       "minecraft": "1.12.2",
       "loader": "forge",
       "source_line": "legacy-1.12.2",
-      "rinlib": {
-        "version_id": "d3H657k0"
-      },
       "lootr": {
         "version_id": "fTrJqmfv"
       },
@@ -665,9 +500,6 @@
       "minecraft": "1.18.2",
       "loader": "forge",
       "source_line": "chest-data-legacy",
-      "rinlib": {
-        "version_id": "ceVQXsOx"
-      },
       "lootr": {
         "version_id": "LQP5jrCT"
       },

@@ -22,7 +22,6 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${root.property('fabric_loader_version')}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${root.property('fabric_api_version')}"
     modImplementation lootrCoordinate
-    modImplementation rinlibCoordinate
     modCompileOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
     modRuntimeOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
     modCompileOnly "me.shedaniel.cloth:cloth-config-fabric:${root.property('fabric_cloth_config_version')}"
@@ -38,8 +37,7 @@ def resourceProperties = [
     mod_description: root.property('mod_description'),
     minecraft_version: root.property('minecraft_version'),
     fabric_loader_version: root.property('fabric_loader_version'),
-    lootr_version: root.property('lootr_version'),
-    rinlib_version: root.property('rinlib_version')
+    lootr_version: root.property('lootr_version')
 ]
 
 processResources {

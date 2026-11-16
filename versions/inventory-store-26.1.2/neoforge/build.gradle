@@ -55,7 +55,6 @@ apply from: rootProject.file('../sources.gradle')
 
 dependencies {
     implementation lootrCoordinate
-    implementation rinlibCoordinate
     compileOnly "maven.modrinth:jade:${rootProject.jade_neoforge_version}"
     runtimeOnly "maven.modrinth:jade:${rootProject.jade_neoforge_version}"
 }

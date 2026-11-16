@@ -38,7 +38,6 @@ apply from: rootProject.file('../sources.gradle')
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf(lootrCoordinate)
-    implementation fg.deobf(rinlibCoordinate)
     compileOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
     runtimeOnly fg.deobf("maven.modrinth:jade:${jade_forge_version}")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

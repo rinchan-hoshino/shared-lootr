@@ -32,7 +32,6 @@ minecraft {
 apply from: rootProject.file('../sources.gradle')
 
 dependencies {
-    compile rinlibCoordinate
     compile lootrCoordinate
     testCompile 'junit:junit:4.13.2'
 }

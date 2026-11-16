@@ -1,6 +1,6 @@
 package dev.rinchan.sharedlootr.state;
 
-import dev.rinchan.rinlib.state.SharedOwnerState;
+import dev.rinchan.sharedlootr.rinlib.state.SharedOwnerState;
 import noobanidus.mods.lootr.common.api.data.ILootrContainerInstance;
 import noobanidus.mods.lootr.common.data.DataStorage;
 import noobanidus.mods.lootr.common.data.LootrInventoryStore;

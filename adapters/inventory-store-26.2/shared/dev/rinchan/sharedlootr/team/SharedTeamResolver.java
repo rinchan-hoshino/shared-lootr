@@ -1,6 +1,6 @@
 package dev.rinchan.sharedlootr.team;
 
-import dev.rinchan.rinlib.state.SharedOwnerState;
+import dev.rinchan.sharedlootr.rinlib.state.SharedOwnerState;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
 import noobanidus.mods.lootr.common.api.interfaces.processor.ITeamResolver;

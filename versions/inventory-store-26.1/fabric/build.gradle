@@ -24,7 +24,6 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${root.property('fabric_loader_version')}"
     implementation "net.fabricmc.fabric-api:fabric-api:${root.property('fabric_api_version')}"
     implementation lootrCoordinate
-    implementation rinlibCoordinate
     compileOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
     runtimeOnly "maven.modrinth:jade:${root.property('jade_fabric_version')}"
 }

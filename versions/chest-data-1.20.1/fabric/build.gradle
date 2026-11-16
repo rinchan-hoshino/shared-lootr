@@ -32,9 +32,6 @@ dependencies {
     modRuntimeOnly "maven.modrinth:cloth-config:${cloth_config_version}"
     modCompileOnly "maven.modrinth:jade:${jade_fabric_version}"
     modRuntimeOnly "maven.modrinth:jade:${jade_fabric_version}"
-    modImplementation(rinlibCoordinate) {
-        transitive = false
-    }
 }
 
 processResources {

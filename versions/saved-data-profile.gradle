@@ -18,7 +18,6 @@ if (requestedProfile != null) {
             fabric_cloth_config_version: profile.cloth_config_version,
             neo_version: profile.neo_version,
             neo_version_range: "[${profile.neo_version},)",
-            rinlib_version: profile.rinlib_version,
             lootr_version: profile.lootr_version,
             lootr_fabric_version: profile.lootr_fabric_versionId,
             lootr_neoforge_version: profile.lootr_neoforge_versionId,

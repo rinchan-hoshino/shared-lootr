@@ -24,7 +24,6 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version}",
-    "lootr": "*",
-    "rinlib": ">=0.2.0"
+    "lootr": "*"
   }
 }

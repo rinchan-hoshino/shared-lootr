@@ -14,14 +14,12 @@ java {
 
 
 processResources {
-    inputs.properties minecraft_version: minecraft_version, minecraft_upper: minecraft_upper,
-            forge_major: forge_major, rinlib_version: rinlib_version
+    inputs.properties minecraft_version: minecraft_version, minecraft_upper: minecraft_upper
     filesMatching('META-INF/mods.toml') {
         filter { line -> line
                 .replace('@minecraft_version@', minecraft_version.toString())
                 .replace('@minecraft_upper@', minecraft_upper.toString())
-                .replace('@forge_major@', forge_major.toString())
-                .replace('@rinlib_version@', rinlib_version.toString()) }
+                .replace('@forge_major@', forge_major.toString()) }
     }
 }
 
@@ -50,7 +48,6 @@ apply from: rootProject.file('../sources.gradle')
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf(lootrCoordinate)
-    implementation fg.deobf(rinlibCoordinate)
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 

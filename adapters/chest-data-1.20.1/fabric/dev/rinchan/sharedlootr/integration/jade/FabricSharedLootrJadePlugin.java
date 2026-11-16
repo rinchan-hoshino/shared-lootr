@@ -1,6 +1,6 @@
 package dev.rinchan.sharedlootr.integration.jade;
 
-import dev.rinchan.rinlib.state.SharedOwnerState;
+import dev.rinchan.sharedlootr.rinlib.state.SharedOwnerState;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;

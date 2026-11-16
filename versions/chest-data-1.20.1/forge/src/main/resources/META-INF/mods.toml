@@ -21,14 +21,6 @@ mandatory=true
 versionRange="[1.20.1,1.21)"
 ordering="NONE"
 side="BOTH"
-
-[[dependencies.shared_lootr]]
-modId="rinlib"
-mandatory=true
-versionRange="[0.2.0,)"
-ordering="AFTER"
-side="BOTH"
-
 [[dependencies.shared_lootr]]
 modId="lootr"
 mandatory=true

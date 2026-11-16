@@ -1,6 +1,6 @@
 package dev.rinchan.sharedlootr.mixin;
 
-import dev.rinchan.rinlib.state.SharedOwnerState;
+import dev.rinchan.sharedlootr.rinlib.state.SharedOwnerState;
 import net.zestyblaze.lootr.client.block.LootrShulkerBlockRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

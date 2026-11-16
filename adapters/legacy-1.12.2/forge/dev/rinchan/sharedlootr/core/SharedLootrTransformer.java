@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public final class SharedLootrTransformer implements IClassTransformer {
-    private static final String OWNER = "dev/rinchan/rinlib/state/SharedOwnerState";
+    private static final String OWNER = "dev/rinchan/sharedlootr/rinlib/state/SharedOwnerState";
     private static final Set<String> TARGETS = new HashSet<String>(Arrays.asList(
             "noobanidus.mods.lootr.data.ChestData",
             "noobanidus.mods.lootr.block.tile.LootrChestTileEntity",

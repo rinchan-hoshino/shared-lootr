@@ -163,7 +163,6 @@ class ReleaseSourceContractTest(unittest.TestCase):
             if module != "legacy-1.12.2":
                 module += "/" + target["loader"]
             self.assertTrue(module_sources(module))
-            self.assertTrue(target["rinlib"]["version_id"])
             self.assertTrue(target["lootr"]["version_id"])
 
     def test_identical_lootr_releases_share_core_source_files(self):

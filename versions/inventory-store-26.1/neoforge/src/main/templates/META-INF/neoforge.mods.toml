@@ -32,10 +32,3 @@ type="required"
 versionRange="[${lootr_version},)"
 ordering="AFTER"
 side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="rinlib"
-type="required"
-versionRange="[0.2.0,)"
-ordering="AFTER"
-side="BOTH"

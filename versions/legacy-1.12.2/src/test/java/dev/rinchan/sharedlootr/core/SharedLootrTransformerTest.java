@@ -42,7 +42,7 @@ public class SharedLootrTransformerTest {
                     if (call.equals("put")) previous = previousReal(previous.getPrevious());
                     if (previous instanceof FieldInsnNode) {
                         FieldInsnNode field = (FieldInsnNode) previous;
-                        if (field.owner.equals("dev/rinchan/rinlib/state/SharedOwnerState") && field.name.equals("OWNER")) {
+                        if (field.owner.equals("dev/rinchan/sharedlootr/rinlib/state/SharedOwnerState") && field.name.equals("OWNER")) {
                             projected = true;
                         }
                     }

@@ -24,7 +24,6 @@ def target = lock.targets.find {
 if (target == null) {
     throw new GradleException("No release target for ${moduleKey}/${rootProject.minecraft_version}")
 }
-ext.rinlibCoordinate = "maven.modrinth:rinlib:${target.rinlib.version_id}"
 ext.lootrCoordinate = "maven.modrinth:lootr:${target.lootr.version_id}"
 
 if (project.name == 'fabric') {

@@ -20,7 +20,6 @@ The one feature I don't like is each player having their own loot container. To 
 Install the following mods as dependencies:
 
 - Lootr
-- RinLib
 
 ## How it works
 

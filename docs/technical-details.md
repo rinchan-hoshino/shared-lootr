@@ -21,11 +21,11 @@ Shared Lootr 1.2.0 does not migrate per-player inventories created by Lootr or S
 
 ## Source layout
 
-RinLib supplies the shared-owner state contract, including the stable UUID and map operations. Lootr owns container persistence and inventory generation. Shared Lootr's adapters connect those contracts to each supported Lootr API.
+Shared Lootr embeds the shared-owner state contract (`SharedOwnerState`), including the stable UUID and map operations, with no external RinLib dependency. Lootr owns container persistence and inventory generation. Shared Lootr's adapters connect those contracts to each supported Lootr API.
 
 Production Java lives in `adapters/`. `support/source-sets.json` selects existing source files at compile time for each loader module; matching implementations share one physical source file. API families cover legacy 1.12.2, ChestData, LootrSavedData, and LootrInventoryStore. Loader and Minecraft API differences remain in their adapters.
 
-`support/release-targets.json` lists the 56 supported loader/Minecraft combinations across 31 Minecraft versions and pins their Lootr and RinLib releases. The root `gradle.properties` is the only Shared Lootr release version setting.
+`support/release-targets.json` lists the 56 supported loader/Minecraft combinations across 31 Minecraft versions and pins their Lootr releases. The root `gradle.properties` is the only Shared Lootr release version setting.
 
 ## Build
 

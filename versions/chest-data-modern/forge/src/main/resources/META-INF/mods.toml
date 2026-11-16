@@ -21,14 +21,6 @@ mandatory=true
 versionRange="[@minecraft_version@,@minecraft_upper@)"
 ordering="NONE"
 side="BOTH"
-
-[[dependencies.shared_lootr]]
-modId="rinlib"
-mandatory=true
-versionRange="[@rinlib_version@]"
-ordering="AFTER"
-side="BOTH"
-
 [[dependencies.shared_lootr]]
 modId="lootr"
 mandatory=true
