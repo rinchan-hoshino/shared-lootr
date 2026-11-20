@@ -64,7 +64,9 @@ def resolve_java_home(java_version: int) -> str | None:
 def run_gradle(args: list[str], java_version: int | None = None) -> None:
     env = os.environ.copy()
     if java_version is not None:
-        java_home = resolve_java_home(java_version)
+        # fabric-loom 1.14+ requires Gradle itself to run on Java 21+, while Java 17 is used via toolchain.
+        daemon_java = max(java_version, 21)
+        java_home = resolve_java_home(daemon_java)
         if java_home:
             env["JAVA_HOME"] = java_home
             env["PATH"] = f"{Path(java_home) / 'bin'}{os.pathsep}{env.get('PATH', '')}"
