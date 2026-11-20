@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -35,10 +36,49 @@ FORBIDDEN_ENTRIES = (
 )
 
 
-def run_gradle(args: list[str]) -> None:
-    cmd = [str(ROOT / "gradlew"), "--no-daemon", "--console=plain", *args]
+JAVA_ENV_KEYS = (
+    "JAVA_17_HOME",
+    "JAVA_21_HOME",
+    "JAVA_25_HOME",
+    "JAVA_HOME_17_X64",
+    "JAVA_HOME_21_X64",
+    "JAVA_HOME_25_X64",
+    "JAVA_HOME_17_arm64",
+    "JAVA_HOME_21_arm64",
+    "JAVA_HOME_25_arm64",
+)
+
+
+def resolve_java_home(java_version: int) -> str | None:
+    for key in (
+        f"JAVA_{java_version}_HOME",
+        f"JAVA_HOME_{java_version}_X64",
+        f"JAVA_HOME_{java_version}_arm64",
+    ):
+        val = os.environ.get(key)
+        if val and Path(val).is_dir():
+            return val
+    return None
+
+
+def run_gradle(args: list[str], java_version: int | None = None) -> None:
+    env = os.environ.copy()
+    if java_version is not None:
+        java_home = resolve_java_home(java_version)
+        if java_home:
+            env["JAVA_HOME"] = java_home
+            env["PATH"] = f"{Path(java_home) / 'bin'}{os.pathsep}{env.get('PATH', '')}"
+
+    from_env = ",".join(JAVA_ENV_KEYS)
+    cmd = [
+        str(ROOT / "gradlew"),
+        "--no-daemon",
+        "--console=plain",
+        f"-Dorg.gradle.java.installations.fromEnv={from_env}",
+        *args,
+    ]
     print(f">>> {' '.join(cmd)}", flush=True)
-    subprocess.run(cmd, cwd=ROOT, check=True)
+    subprocess.run(cmd, cwd=ROOT, env=env, check=True)
 
 
 def find_primary_jar(mc_version: str, loader: str) -> Path:
@@ -93,7 +133,7 @@ def main() -> int:
 
     profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
     if not args.skip_tests:
-        run_gradle(["-Pminecraft_version=1.21.1", "-Ploader=neoforge", ":neoforge:test"])
+        run_gradle(["-Pminecraft_version=1.21.1", "-Ploader=neoforge", ":neoforge:test"], java_version=profiles["1.21.1"]["java"])
 
     DIST_DIR.mkdir(parents=True, exist_ok=True)
     built: list[Path] = []
@@ -107,7 +147,7 @@ def main() -> int:
 
         tasks = [f":{loader}:build" for loader in loaders]
         loader_prop = loaders[0] if len(loaders) == 1 else "all"
-        run_gradle([f"-Pminecraft_version={mc_version}", f"-Ploader={loader_prop}", *tasks])
+        run_gradle([f"-Pminecraft_version={mc_version}", f"-Ploader={loader_prop}", *tasks], java_version=spec["java"])
 
         for loader in loaders:
             jar = find_primary_jar(mc_version, loader)

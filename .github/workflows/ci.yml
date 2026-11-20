@@ -12,18 +12,32 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-java@v4
+        id: java17
         with:
           distribution: temurin
-          java-version: |
-            17
-            21
-            25
+          java-version: '17'
+
+      - uses: actions/setup-java@v4
+        id: java21
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: actions/setup-java@v4
+        id: java25
+        with:
+          distribution: temurin
+          java-version: '25'
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Run unit tests and build 8-target matrix
+        env:
+          JAVA_17_HOME: ${{ steps.java17.outputs.path }}
+          JAVA_21_HOME: ${{ steps.java21.outputs.path }}
+          JAVA_25_HOME: ${{ steps.java25.outputs.path }}
         run: python3 scripts/build-matrix.py
 
       - name: Upload built JARs
