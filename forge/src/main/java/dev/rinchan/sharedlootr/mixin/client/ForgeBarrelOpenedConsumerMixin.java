@@ -1,4 +1,4 @@
-package dev.rinchan.sharedlootr.mixin;
+package dev.rinchan.sharedlootr.mixin.client;
 
 import dev.rinchan.sharedlootr.pool.PlayerPoolResolver;
 import net.minecraft.client.Minecraft;

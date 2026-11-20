@@ -8,6 +8,7 @@ def root = rootProject
 def modId = root.property('mod_id')
 def apiLayer = root.api_layer
 def resolverLayer = root.resolver_layer
+def enableE2eGameTest = root.minecraft_version == '1.21.1'
 
 base {
     archivesName = "${modId}-neoforge"
@@ -24,6 +25,16 @@ if (resolverLayer != apiLayer) {
 sourceSets.test.java.srcDir root.file('common/src/test/java')
 sourceSets.test.compileClasspath += sourceSets.main.compileClasspath
 sourceSets.test.runtimeClasspath += sourceSets.main.runtimeClasspath
+
+if (enableE2eGameTest) {
+    sourceSets {
+        e2e {
+            compileClasspath += sourceSets.main.compileClasspath + sourceSets.main.output
+            runtimeClasspath += sourceSets.main.runtimeClasspath
+        }
+    }
+}
+
 sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessResources) {
     def replaceProperties = [
         minecraft_version_range: root.minecraft_version_range,
@@ -45,11 +56,26 @@ sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessRe
     into layout.buildDirectory.dir('generated/sources/modMetadata')
 }
 
+def e2eRunDir = layout.buildDirectory.dir('e2e-run')
+
+if (enableE2eGameTest) {
+    tasks.register('preparePackagedE2eMods', Sync) {
+        dependsOn tasks.named('jar')
+        from(tasks.named('jar').flatMap { it.archiveFile })
+        into e2eRunDir.map { it.dir('mods') }
+    }
+}
+
 neoForge {
     version = root.neo_version
     mods {
         "${modId}" {
             sourceSet(sourceSets.main)
+        }
+        if (enableE2eGameTest) {
+            shared_lootr_e2e {
+                sourceSet(sourceSets.e2e)
+            }
         }
     }
     unitTest {
@@ -62,6 +88,16 @@ neoForge {
             server()
             programArgument '--nogui'
         }
+        if (enableE2eGameTest) {
+            e2eGameTestServer {
+                type = 'gameTestServer'
+                gameDirectory = e2eRunDir
+                loadedMods = [mods.shared_lootr_e2e]
+                systemProperty 'forge.enabledGameTestNamespaces', 'shared_lootr_e2e'
+                systemProperty 'neoforge.enabledGameTestNamespaces', 'shared_lootr_e2e'
+                systemProperty 'sharedlootr.e2e.expectedJar', "${modId}-neoforge-${project.version}.jar"
+            }
+        }
         configureEach {
             logLevel = org.slf4j.event.Level.INFO
         }
@@ -69,6 +105,15 @@ neoForge {
 }
 
 neoForge.ideSyncTask tasks.named('generateModMetadata')
+
+if (enableE2eGameTest) {
+    tasks.matching { it.name == 'runE2eGameTestServer' }.configureEach {
+        dependsOn tasks.named('preparePackagedE2eMods')
+    }
+    tasks.named('check') {
+        dependsOn tasks.named('runE2eGameTestServer')
+    }
+}
 
 dependencies {
     implementation "maven.modrinth:lootr:${root.lootr_neoforge_version}"
@@ -78,7 +123,12 @@ dependencies {
 }
 
 tasks.named('test', Test) {
+    dependsOn tasks.named('jar')
     useJUnitPlatform()
+    doFirst {
+        systemProperty 'sharedlootr.verify.jar', tasks.named('jar').get().archiveFile.get().asFile.absolutePath
+        systemProperty 'sharedlootr.project.root', root.projectDir.absolutePath
+    }
 }
 
 publishing {

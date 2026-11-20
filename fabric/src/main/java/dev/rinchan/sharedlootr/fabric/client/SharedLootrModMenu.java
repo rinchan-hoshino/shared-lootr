@@ -1,4 +1,4 @@
-package dev.rinchan.sharedlootr.fabric;
+package dev.rinchan.sharedlootr.fabric.client;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

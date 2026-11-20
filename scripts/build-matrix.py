@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build, unit-test, and audit all 8 golden targets of Shared Lootr 2.0.0."""
+"""Build, audit, and run all 3 hard verification gates across Shared Lootr 2.0.0 targets."""
 
 from __future__ import annotations
 
@@ -127,16 +127,16 @@ def audit_jar(jar_path: Path, mc_version: str, loader: str) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build and audit Shared Lootr matrix.")
+    parser = argparse.ArgumentParser(description="Build, audit, and verify Shared Lootr matrix.")
     parser.add_argument("--mc", help="Only build a specific Minecraft version (e.g. 1.21.1)")
     parser.add_argument("--loader", help="Only build a specific loader (fabric/forge/neoforge)")
-    parser.add_argument("--skip-tests", action="store_true", help="Skip JUnit 5 test suite")
+    parser.add_argument("--skip-tests", action="store_true", help="Skip JUnit 5 and Packaged-JAR GameTest gates")
     args = parser.parse_args()
 
     profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
-    if not args.skip_tests:
-        run_gradle(["-Pminecraft_version=1.21.1", "-Ploader=neoforge", ":neoforge:test"], java_version=profiles["1.21.1"]["java"])
 
+    if not args.mc and not args.loader and DIST_DIR.exists():
+        shutil.rmtree(DIST_DIR)
     DIST_DIR.mkdir(parents=True, exist_ok=True)
     built: list[Path] = []
 
@@ -147,7 +147,7 @@ def main() -> int:
         if not loaders:
             continue
 
-        tasks = [f":{loader}:build" for loader in loaders]
+        tasks = [f":{loader}:assemble" for loader in loaders]
         loader_prop = loaders[0] if len(loaders) == 1 else "all"
         run_gradle([f"-Pminecraft_version={mc_version}", f"-Ploader={loader_prop}", *tasks], java_version=spec["java"])
 
@@ -158,7 +158,22 @@ def main() -> int:
             shutil.copy2(jar, dest)
             built.append(dest)
 
-    print(f"\nAll {len(built)} target JAR(s) built and audited successfully in {DIST_DIR}:", flush=True)
+    if not args.skip_tests:
+        # Run all 3 hard verification gates against freshly built JARs in build/dist/:
+        # - JUnit 5 Unit + >=1,000 Property Fuzz + SharedLootrConfigScreen Lifecycle + ArchitectureContractTest
+        # - Packaged-JAR real-runtime NeoForge 1.21.1 GameTestServer (against shared_lootr-neoforge-2.0.0+1.21.1.jar)
+        run_gradle(
+            [
+                "-Pminecraft_version=1.21.1",
+                "-Ploader=neoforge",
+                ":neoforge:test",
+                ":neoforge:runE2eGameTestServer",
+                "--rerun-tasks",
+            ],
+            java_version=profiles["1.21.1"]["java"],
+        )
+
+    print(f"\nAll {len(built)} target JAR(s) built, audited, and verified in {DIST_DIR}:", flush=True)
     for jar in built:
         print(f"  - {jar.name} ({jar.stat().st_size:,} bytes)")
     return 0

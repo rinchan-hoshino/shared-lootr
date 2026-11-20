@@ -4,15 +4,15 @@
   "package": "dev.rinchan.sharedlootr.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "FabricBarrelOpenedConsumerMixin",
     "FabricChestDataMixin",
     "FabricMinecartOpenBroadcastMixin",
     "FabricMinecartOpenedConsumerMixin",
     "FabricOpenedProjectionMixin"
   ],
   "client": [
-    "FabricChestOpenedConsumerMixin",
-    "FabricShulkerOpenedConsumerMixin"
+    "client.FabricBarrelOpenedConsumerMixin",
+    "client.FabricChestOpenedConsumerMixin",
+    "client.FabricShulkerOpenedConsumerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

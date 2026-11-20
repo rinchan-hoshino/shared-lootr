@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="GPL-3.0-or-later"
+
+[[mods]]
+modId="shared_lootr_e2e"
+version="1.0.0"
+displayName="Shared Lootr Packaged-JAR E2E Harness"
+description="Automated GameTest harness verifying the packaged Shared Lootr JAR against real Lootr."
+
+[[dependencies.shared_lootr_e2e]]
+modId="shared_lootr"
+type="required"
+versionRange="[2.0.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.shared_lootr_e2e]]
+modId="lootr"
+type="required"
+versionRange="[1.11,)"
+ordering="AFTER"
+side="BOTH"

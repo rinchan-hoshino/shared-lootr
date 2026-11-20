@@ -20,7 +20,7 @@
       "dev.rinchan.sharedlootr.fabric.SharedLootrFabric"
     ],
     "modmenu": [
-      "dev.rinchan.sharedlootr.fabric.SharedLootrModMenu"
+      "dev.rinchan.sharedlootr.fabric.client.SharedLootrModMenu"
     ]
   },
   "mixins": [

@@ -36,10 +36,13 @@ Special thanks to **noobanidus** (author of [Lootr](https://github.com/LootrMine
 
 ---
 
-### Building from Source
+### Building & Verification
+
+Install the pre-push verification hook once per clone, then run the full 3-gate verification suite (natively when JDK 17/21/25 are installed, or automatically inside `Dockerfile.verify` with `--container`):
 
 ```bash
-python3 scripts/build-matrix.py
+./scripts/setup-hooks.sh
+./scripts/verify.sh [--container]
 ```
 
-All 8 target JARs are compiled, unit-tested, audited, and copied to `build/dist/`.
+This builds and audits all 8 target JARs into `build/dist/`, runs JUnit 5 unit + randomized property (`>= 1,000` fixed-seed trials) + architecture contract guardrails + `SharedLootrConfigScreen` lifecycle checks, and executes the real-runtime NeoForge `1.21.1` Packaged-JAR GameTest suite against upstream Lootr.

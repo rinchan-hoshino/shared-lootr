@@ -1,4 +1,4 @@
-package dev.rinchan.sharedlootr.neoforge;
+package dev.rinchan.sharedlootr.neoforge.client;
 
 import dev.rinchan.sharedlootr.SharedLootr;
 import dev.rinchan.sharedlootr.client.SharedLootrConfigScreen;

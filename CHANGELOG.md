@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1
+
+### Fixed
+- **Dedicated Server Isolation**: Moved all 1.20.1 Fabric/Forge visual container-open mixins into the `"client"` mixin configuration section and isolated loader-specific client config screen registration into dedicated `.client` packages, eliminating client/GUI class references on dedicated servers.
+- **Verification & Build Tooling**: Added local 3-gate verification (`./scripts/verify.sh` with optional `--container` Docker runner) covering all 8 matrix JARs, property fuzzing, `ArchitectureContractTest`, and packaged-JAR NeoForge 1.21.1 `GameTestServer` E2E tests.
+
 ## 2.0.0
 
 ### Highlights
