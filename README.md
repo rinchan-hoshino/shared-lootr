@@ -5,13 +5,13 @@
 
 <h1 align="center">Shared Lootr</h1>
 
-**Shared Lootr** keeps everything players love about [Lootr](https://modrinth.com/mod/lootr) — anti-griefing break protection, unopened golden highlight visuals, vanilla chest advancements, and decay/refresh mechanics — while preventing multiplayer servers from duplicating dungeon loot by player count. Instead of generating an extra copy of every chest for every player who walks by, each Lootr container shares one inventory globally across the server (`GLOBAL`, default) or per team (`TEAMS`). Out of the box, it stays 100% save-compatible with Shared Lootr 1.x while giving co-op groups native FTB Teams and vanilla scoreboard team sharing.
+**Shared Lootr** keeps everything players love about [Lootr](https://modrinth.com/mod/lootr) — anti-griefing break protection, unopened golden highlight visuals, vanilla chest advancements, and decay/refresh mechanics — while preventing multiplayer servers from duplicating dungeon loot by player count. Instead of generating an extra copy of every chest for every player who walks by, each Lootr container shares one inventory globally across the server (`GLOBAL`, default) or per team (`TEAMS`), with native FTB Teams and vanilla scoreboard team sharing.
 
 ---
 
 ### Sharing Modes (`config/shared_lootr.toml`)
 
-- **`GLOBAL` (Default)** — Every player resolves to the fixed shared pool UUID `00000000-0000-0000-0000-000000000001`. One player looting a chest updates the inventory and opened visual state for everyone, preserving full 1.x compatibility.
+- **`GLOBAL` (Default)** — Every player resolves to the fixed shared pool UUID `00000000-0000-0000-0000-000000000001`. One player looting a chest updates the inventory and opened visual state for everyone.
 - **`TEAMS`** — Teammates share a single loot pool while separate teams keep independent pools:
   1. If **FTB Teams** is installed and the player belongs to a party or server team, Shared Lootr uses that FTB Team UUID (zero hard dependency).
   2. Otherwise, if the player belongs to a vanilla scoreboard `PlayerTeam`, Shared Lootr deterministically derives `UUID.nameUUIDFromBytes("shared_lootr:vanilla_team:" + teamName)`.
