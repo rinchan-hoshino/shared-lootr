@@ -1,0 +1,54 @@
+{
+  "1.20.1": {
+    "java": 17,
+    "api": "v120",
+    "resolver": "v120",
+    "loaders": ["fabric", "forge"],
+    "forge": "47.4.20",
+    "fabric_api": "0.92.2+1.20.1",
+    "lootr_fabric": "nj1zDLc6",
+    "lootr_forge": "mWTXC1ZX",
+    "lootr_version": "0.7.35.86",
+    "range": "[1.20.1,1.21)",
+    "fabric_range": "~1.20.1"
+  },
+  "1.21.1": {
+    "java": 21,
+    "api": "v121",
+    "resolver": "v121",
+    "loaders": ["fabric", "neoforge"],
+    "neo": "21.1.250",
+    "fabric_api": "0.116.15+1.21.1",
+    "lootr_fabric": "nar56EsW",
+    "lootr_neoforge": "SPOrIzX8",
+    "lootr_version": "1.11.38.127",
+    "range": "[1.21.1,1.21.2)",
+    "fabric_range": "~1.21.1"
+  },
+  "26.1.2": {
+    "java": 25,
+    "api": "v26",
+    "resolver": "v26_1_2",
+    "loaders": ["fabric", "neoforge"],
+    "neo": "26.1.2.99",
+    "fabric_api": "0.148.2+26.1.2",
+    "lootr_fabric": "RjolbdhC",
+    "lootr_neoforge": "nGDBqS5U",
+    "lootr_version": "1.23.38.123",
+    "range": "[26.1.2,26.2)",
+    "fabric_range": "~26.1.2"
+  },
+  "26.2": {
+    "java": 25,
+    "api": "v26",
+    "resolver": "v26_2",
+    "loaders": ["fabric", "neoforge"],
+    "neo": "26.2.0.69",
+    "fabric_api": "0.158.0+26.2",
+    "lootr_fabric": "HegkPUoM",
+    "lootr_neoforge": "qsxWCPd3",
+    "lootr_version": "1.24.41.124",
+    "range": "[26.2,26.3)",
+    "fabric_range": "~26.2"
+  }
+}

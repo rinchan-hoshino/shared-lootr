@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/shared-lootr",
+    "sources": "https://github.com/rinchan-hoshino/shared-lootr",
+    "issues": "https://github.com/rinchan-hoshino/shared-lootr/issues"
+  },
+  "license": "${mod_license}",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.rinchan.sharedlootr.fabric.SharedLootrFabric"
+    ],
+    "modmenu": [
+      "dev.rinchan.sharedlootr.fabric.SharedLootrModMenu"
+    ]
+  },
+  "mixins": [
+    "shared_lootr.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_min_version}",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}",
+    "lootr": ">=${lootr_version}"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "ftbteams": "*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "screen.shared_lootr.title": "Shared Lootr Settings",
+  "screen.shared_lootr.sharing_mode": "Sharing Mode",
+  "screen.shared_lootr.mode.global": "Global (Server-Wide)",
+  "screen.shared_lootr.mode.teams": "Teams (FTB / Scoreboard)",
+  "screen.shared_lootr.mode_desc.global": "Everyone shares one pool per Lootr container.",
+  "screen.shared_lootr.mode_desc.teams": "Teammates share one pool; other teams remain separate.",
+  "screen.shared_lootr.solo_share_pool": "Solo Players Share Pool",
+  "screen.shared_lootr.reset": "Reset",
+  "screen.shared_lootr.cancel": "Cancel",
+  "screen.shared_lootr.save": "Save & Close"
+}

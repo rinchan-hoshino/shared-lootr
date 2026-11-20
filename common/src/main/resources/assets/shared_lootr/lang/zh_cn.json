@@ -1,0 +1,12 @@
+{
+  "screen.shared_lootr.title": "Shared Lootr 设置",
+  "screen.shared_lootr.sharing_mode": "共享模式",
+  "screen.shared_lootr.mode.global": "全服共享 (GLOBAL)",
+  "screen.shared_lootr.mode.teams": "小队共享 (TEAMS)",
+  "screen.shared_lootr.mode_desc.global": "全服所有玩家共享同一个 Lootr 容器战利品池。",
+  "screen.shared_lootr.mode_desc.teams": "同队玩家共享战利品池（优先 FTB Teams，其次原版记分板队伍）。",
+  "screen.shared_lootr.solo_share_pool": "无队散人共用独立池",
+  "screen.shared_lootr.reset": "重置默认",
+  "screen.shared_lootr.cancel": "取消",
+  "screen.shared_lootr.save": "保存并关闭"
+}

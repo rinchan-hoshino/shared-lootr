@@ -1,0 +1,12 @@
+{
+  "screen.shared_lootr.title": "Shared Lootr 設定",
+  "screen.shared_lootr.sharing_mode": "共有モード",
+  "screen.shared_lootr.mode.global": "全体共有 (GLOBAL)",
+  "screen.shared_lootr.mode.teams": "チーム共有 (TEAMS)",
+  "screen.shared_lootr.mode_desc.global": "サーバー全員が各 Lootr コンテナの戦利品プールを共有します。",
+  "screen.shared_lootr.mode_desc.teams": "同じチームで共有します（FTB Teams 優先、未導入時はバニラチーム）。",
+  "screen.shared_lootr.solo_share_pool": "無所属プレイヤー同士で共有",
+  "screen.shared_lootr.reset": "初期化",
+  "screen.shared_lootr.cancel": "キャンセル",
+  "screen.shared_lootr.save": "保存して閉じる"
+}

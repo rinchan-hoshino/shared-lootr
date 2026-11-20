@@ -1,15 +1,63 @@
-plugins { id 'base' }
-
-tasks.register('sourceContracts', Exec) {
-    commandLine 'python3', '-m', 'unittest', 'discover', '-s', 'tests', '-v'
+plugins {
+    id 'fabric-loom' version '1.14.10' apply false
+    id 'net.neoforged.moddev' version '2.0.143' apply false
+    id 'net.neoforged.moddev.legacyforge' version '2.0.143' apply false
 }
-check.dependsOn sourceContracts
 
-tasks.register('buildMatrix', Exec) {
-    def args = ['python3', 'tools/build_matrix.py']
-    if (project.hasProperty('profile')) args += ['--profile', project.property('profile')]
-    if (project.hasProperty('loader')) args += ['--loader', project.property('loader')]
-    if (project.hasProperty('jobs')) args += ['--jobs', project.property('jobs')]
-    commandLine args
+def profiles = new groovy.json.JsonSlurper().parse(file('profiles.json'))
+def selected = providers.gradleProperty('minecraft_version').get()
+def target = profiles[selected]
+if (target == null) throw new GradleException("Unsupported Minecraft profile: ${selected}")
+
+ext.java_version = target.java
+ext.api_layer = target.api
+ext.resolver_layer = target.resolver
+ext.forge_version = target.forge ?: ''
+ext.neo_version = target.neo ?: ''
+ext.fabric_api_version = target.fabric_api ?: ''
+ext.lootr_fabric_version = target.lootr_fabric ?: ''
+ext.lootr_forge_version = target.lootr_forge ?: ''
+ext.lootr_neoforge_version = target.lootr_neoforge ?: ''
+ext.lootr_version = target.lootr_version ?: ''
+ext.minecraft_version_range = target.range
+ext.fabric_minecraft_range = target.fabric_range
+ext.neo_version_range = target.neo ? "[${target.neo},)" : ''
+
+subprojects {
+    layout.buildDirectory = rootProject.layout.projectDirectory.dir("build/profiles/${rootProject.minecraft_version}/${project.name}")
+    group = rootProject.mod_group_id
+    version = "${rootProject.mod_version}+${rootProject.minecraft_version}"
+
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven { url = 'https://api.modrinth.com/maven' }
+            }
+            filter {
+                includeGroup 'maven.modrinth'
+            }
+        }
+        mavenLocal()
+        mavenCentral()
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.neoforged.net/releases' }
+        maven { url = 'https://maven.minecraftforge.net/' }
+    }
+
+    tasks.withType(AbstractArchiveTask).configureEach {
+        preserveFileTimestamps = false
+        reproducibleFileOrder = true
+    }
+
+    tasks.withType(Jar).configureEach {
+        from(rootProject.file('LICENSE'))
+    }
+
+    plugins.withType(JavaPlugin).configureEach {
+        java.toolchain.languageVersion = JavaLanguageVersion.of(rootProject.java_version as int)
+        tasks.withType(JavaCompile).configureEach {
+            options.encoding = 'UTF-8'
+            options.release.set(rootProject.java_version as int)
+        }
+    }
 }
-assemble.dependsOn buildMatrix
