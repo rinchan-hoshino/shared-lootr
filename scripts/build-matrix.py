@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build, audit, and run all 3 hard verification gates across Shared Lootr 2.0.0 targets."""
+"""Build, audit, and run all 3 hard verification gates across Shared Lootr 2.0.2 targets."""
 
 from __future__ import annotations
 
@@ -28,6 +28,7 @@ EXPECTED_SERVICES = {
     "1.21.1": "META-INF/services/noobanidus.mods.lootr.common.api.team.ITeamResolver",
     "26.1.2": "META-INF/services/noobanidus.mods.lootr.common.api.interfaces.team.ITeamResolver",
     "26.2": "META-INF/services/noobanidus.mods.lootr.common.api.interfaces.processor.ITeamResolver",
+    "26.3": "META-INF/services/noobanidus.mods.lootr.common.api.interfaces.processor.ITeamResolver",
 }
 
 FORBIDDEN_ENTRIES = (
@@ -101,6 +102,16 @@ def audit_jar(jar_path: Path, mc_version: str, loader: str) -> None:
 
     with zipfile.ZipFile(jar_path, "r") as zf:
         names = set(zf.namelist())
+        if loader == "forge":
+            if "pack.mcmeta" not in names:
+                raise RuntimeError(f"{jar_path.name} is missing pack.mcmeta")
+            pack_meta = json.loads(zf.read("pack.mcmeta").decode("utf-8"))
+            if pack_meta.get("pack", {}).get("pack_format") != 15:
+                raise RuntimeError(f"{jar_path.name} pack.mcmeta must have pack_format == 15, got {pack_meta}")
+        elif "pack.mcmeta" in names:
+            pack_meta = json.loads(zf.read("pack.mcmeta").decode("utf-8"))
+            if pack_meta.get("pack", {}).get("pack_format") == 15:
+                raise RuntimeError(f"{jar_path.name} must NOT contain pack_format == 15 pack.mcmeta")
 
     for forbidden in FORBIDDEN_ENTRIES:
         leaked = [n for n in names if forbidden in n]
@@ -147,7 +158,7 @@ def main() -> int:
         if not loaders:
             continue
 
-        tasks = [f":{loader}:assemble" for loader in loaders]
+        tasks = [t for loader in loaders for t in (f":{loader}:clean", f":{loader}:assemble")]
         loader_prop = loaders[0] if len(loaders) == 1 else "all"
         run_gradle([f"-Pminecraft_version={mc_version}", f"-Ploader={loader_prop}", *tasks], java_version=spec["java"])
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.2
+
+### Added & Fixed
+- **Minecraft 26.3 Support**: Added `26.3` (Fabric & NeoForge) targets using Lootr `1.25.42.124` and the `ITeamResolver` SPI, expanding the release matrix to 10 targets.
+- **1.20.1 Forge `pack.mcmeta` Fix**: Added `pack.mcmeta` (`pack_format: 15`) to the `1.20.1` Forge JAR root so Forge 47 loads mod resources cleanly without `failed to load a valid ResourcePackInfo` warnings.
+
 ## 2.0.1
 
 ### Fixed

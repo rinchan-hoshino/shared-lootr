@@ -50,5 +50,18 @@
     "lootr_version": "1.24.41.124",
     "range": "[26.2,26.3)",
     "fabric_range": "~26.2"
+  },
+  "26.3": {
+    "java": 25,
+    "api": "v26",
+    "resolver": "v26_2",
+    "loaders": ["fabric", "neoforge"],
+    "neo": "26.3.0.115",
+    "fabric_api": "0.166.2+26.3",
+    "lootr_fabric": "gVwn7m2v",
+    "lootr_neoforge": "PdFGq3vT",
+    "lootr_version": "1.25.42.124",
+    "range": "[26.3,26.4)",
+    "fabric_range": "~26.3"
   }
 }

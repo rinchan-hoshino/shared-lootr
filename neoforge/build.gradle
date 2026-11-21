@@ -47,7 +47,7 @@ sourceSets.main.resources.srcDir tasks.register('generateModMetadata', ProcessRe
         mod_authors            : root.property('mod_authors'),
         mod_description        : root.property('mod_description'),
         lootr_version          : root.lootr_version,
-        icon_property          : root.minecraft_version == '26.2' ? 'iconFile' : 'logoFile'
+        icon_property          : root.minecraft_version in ['26.2', '26.3'] ? 'iconFile' : 'logoFile'
     ]
     inputs.properties replaceProperties
     filteringCharset = 'UTF-8'
