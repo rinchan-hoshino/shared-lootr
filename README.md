@@ -1,49 +1,51 @@
 <!-- PROJECT_PAGE_START -->
 <p align="center">
-  <img src="docs/artwork/icon.png" alt="Shared Lootr icon" width="128" height="128">
+  <img src="docs/artwork/icon.png" alt="Shared Lootr" width="128" height="128" />
 </p>
 
 <h1 align="center">Shared Lootr</h1>
 
-**Shared Lootr** keeps everything players love about [Lootr](https://modrinth.com/mod/lootr) — anti-griefing break protection, unopened golden highlight visuals, vanilla chest advancements, and decay/refresh mechanics — while preventing multiplayer servers from duplicating dungeon loot by player count. Instead of generating an extra copy of every chest for every player who walks by, each Lootr container shares one inventory globally across the server (`GLOBAL`, default) or per team (`TEAMS`), with native FTB Teams and vanilla scoreboard team sharing.
+**Shared Lootr** keeps the best parts of [Lootr](https://modrinth.com/mod/lootr) — chest break protection, golden unopened highlights, advancements, and refresh/decay timers — without multiplying dungeon loot by player count on multiplayer servers. Instead of generating a separate chest copy for every player who walks by, each Lootr container shares a single inventory across the whole server (`GLOBAL`) or within each team (`TEAMS`).
+
+![Shared Lootr Chest](docs/screenshots/01-shared-chest.png)
 
 ---
 
 ### Sharing Modes (`config/shared_lootr.toml`)
 
-- **`GLOBAL` (Default)** — Every player resolves to the fixed shared pool UUID `00000000-0000-0000-0000-000000000001`. One player looting a chest updates the inventory and opened visual state for everyone.
-- **`TEAMS`** — Teammates share a single loot pool while separate teams keep independent pools:
-  1. If **FTB Teams** is installed and the player belongs to a party or server team, Shared Lootr uses that FTB Team UUID (zero hard dependency).
-  2. Otherwise, if the player belongs to a vanilla scoreboard `PlayerTeam`, Shared Lootr deterministically derives `UUID.nameUUIDFromBytes("shared_lootr:vanilla_team:" + teamName)`.
-  3. Players not in any team keep their own private pool by default (`soloPlayersSharePool = false`), or can opt into a shared solo pool (`soloPlayersSharePool = true`).
+- **`GLOBAL` (Default)** — Everyone on the server shares the same loot inside each Lootr container. Once someone opens and loots a chest, its contents and opened visual state update for everyone else.
+- **`TEAMS`** — Teammates share one chest inventory together, while separate teams still get independent loot:
+  - Automatically detects **FTB Teams** parties and server teams when FTB Teams is installed (optional).
+  - Falls back to vanilla `/team` scoreboard teams when FTB Teams is not used.
+  - Players who aren't in a team keep their own private loot by default (`soloPlayersSharePool = false`), or can share one common pool (`soloPlayersSharePool = true`).
 
-Configure in-game via **Mod Menu** (Fabric) or the native **Mods → Config** button (Forge / NeoForge), or by editing `config/shared_lootr.toml`.
+![Config Screen](docs/screenshots/02-config-screen.png)
 
-### Supported Matrix (10 Targets)
+Change modes anytime in-game via **Mod Menu** (Fabric) or **Mods → Config** (Forge / NeoForge), or by editing `config/shared_lootr.toml`.
 
-| Minecraft | Fabric | Forge | NeoForge | Integration |
+### Supported Versions
+
+Requires **[Lootr](https://modrinth.com/mod/lootr)**.
+
+| Minecraft | Fabric | Forge | NeoForge | Lootr Version |
 | :--- | :---: | :---: | :---: | :--- |
-| **26.3** | ✅ | — | ✅ | Official Lootr `ITeamResolver` (`1.25.42+`) |
-| **26.2** | ✅ | — | ✅ | Official Lootr `ITeamResolver` (`1.24.41+`) |
-| **26.1.2** | ✅ | — | ✅ | Official Lootr `ITeamResolver` (`1.23.38+`) |
-| **1.21.1** | ✅ | — | ✅ | Official Lootr `ITeamResolver` (`1.11.38+`) |
-| **1.20.1** | ✅ | ✅ | — | Minimal UUID projection Mixin (`0.7.35.x`) |
+| `26.3` | ✅ | — | ✅ | `1.25.42+` |
+| `26.2` | ✅ | — | ✅ | `1.24.41+` |
+| `26.1.2` | ✅ | — | ✅ | `1.23.38+` |
+| `1.21.1` | ✅ | — | ✅ | `1.11.38+` |
+| `1.20.1` | ✅ | ✅ | — | `0.7.35+` |
 
 ### Credits
 
-Special thanks to **noobanidus** (author of [Lootr](https://github.com/LootrMinecraft/Lootr)) for designing and shipping the official `ITeamResolver` ServiceLoader API on Minecraft `1.21.1`, `26.1.2`, `26.2`, and `26.3`, making Shared Lootr 2.0 dramatically lighter and future-proof.
+Thanks to **noobanidus** (author of [Lootr](https://github.com/LootrMinecraft/Lootr)) for adding official team-resolution hooks in modern Lootr releases.
 
 <!-- PROJECT_PAGE_END -->
 
 ---
 
-### Building & Verification
-
-Install the pre-push verification hook once per clone, then run the full 3-gate verification suite (natively when JDK 17/21/25 are installed, or automatically inside `Dockerfile.verify` with `--container`):
+### Building
 
 ```bash
 ./scripts/setup-hooks.sh
 ./scripts/verify.sh [--container]
 ```
-
-This builds and audits all 10 target JARs into `build/dist/`, runs JUnit 5 unit + randomized property (`>= 1,000` fixed-seed trials) + architecture contract guardrails + `SharedLootrConfigScreen` lifecycle checks, and executes the real-runtime NeoForge `1.21.1` Packaged-JAR GameTest suite against upstream Lootr.
