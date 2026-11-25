@@ -1,4 +1,3 @@
-<!-- PROJECT_PAGE_START -->
 <p align="center">
   <img src="docs/artwork/icon.png" alt="Shared Lootr" width="128" height="128" />
 </p>
@@ -23,29 +22,10 @@
 
 Change modes anytime in-game via **Mod Menu** (Fabric) or **Mods → Config** (Forge / NeoForge), or by editing `config/shared_lootr.toml`.
 
-### Supported Versions
+### Requirements
 
 Requires **[Lootr](https://modrinth.com/mod/lootr)**.
-
-| Minecraft | Fabric | Forge | NeoForge | Lootr Version |
-| :--- | :---: | :---: | :---: | :--- |
-| `26.3` | ✅ | — | ✅ | `1.25.42+` |
-| `26.2` | ✅ | — | ✅ | `1.24.41+` |
-| `26.1.2` | ✅ | — | ✅ | `1.23.38+` |
-| `1.21.1` | ✅ | — | ✅ | `1.11.38+` |
-| `1.20.1` | ✅ | ✅ | — | `0.7.35+` |
 
 ### Credits
 
 Thanks to **noobanidus** (author of [Lootr](https://github.com/LootrMinecraft/Lootr)) for adding official team-resolution hooks in modern Lootr releases.
-
-<!-- PROJECT_PAGE_END -->
-
----
-
-### Building
-
-```bash
-./scripts/setup-hooks.sh
-./scripts/verify.sh [--container]
-```
