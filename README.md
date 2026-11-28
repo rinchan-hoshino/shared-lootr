@@ -26,8 +26,6 @@ Change modes anytime in-game via **Mod Menu** (Fabric) or **Mods → Config** (F
 
 Requires **[Lootr](https://modrinth.com/mod/lootr)**.
 
-Shared Lootr 2.0+ is standalone and only requires Lootr (the legacy 1.x RinLib dependency is no longer needed).
-
 ### Credits
 
 Thanks to **noobanidus** (author of [Lootr](https://github.com/LootrMinecraft/Lootr)) for adding official team-resolution hooks in modern Lootr releases.
